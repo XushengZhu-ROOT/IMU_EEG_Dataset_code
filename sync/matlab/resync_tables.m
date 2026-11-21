@@ -1,11 +1,8 @@
 function T = resync_tables(tables_dir)
-%RESYNC_TABLES  Read the cut tables: segments.csv and pieces.csv.
+%RESYNC_TABLES  Read the cut tables segments.csv and pieces.csv into T.segments and T.pieces.
 %
 %   T = resync_tables()             tables/ of this repository
 %   T = resync_tables(tables_dir)
-%
-%   T.segments  one row per segment; T.pieces  one row per piece; T.dir  the tables folder (for the slot maps).
-%   Text columns are strings; positions, counts and reference numbers are doubles. All numbers are 1-based.
 
 if nargin < 1 || isempty(tables_dir)
     tables_dir = fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), 'tables');

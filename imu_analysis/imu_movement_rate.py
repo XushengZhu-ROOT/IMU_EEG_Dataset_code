@@ -1,17 +1,11 @@
-"""Speed and intensity of every Move segment with usable IMU data, from the head IMU of the dataset.
-
-Main measure: straight walking, one-way time across the room (s; median time between U-turns, a U-turn = the heading,
-the integral of the angular rate about gravity with the gyroscope / 4, changes by at least 130 deg within 3 s); curved
-walking and stairs, steps per minute (autocorrelation of the vertical acceleration at 0.7-4 Hz; for walking not reported
-below a peak height of 0.4); head shaking and nodding, cycles per minute (first principal component of the gyroscope at
-0.08-3 Hz, one cycle = past -threshold, then past +threshold); picking up, pick-ups per minute (dips of the head height,
-the double integral of the vertical acceleration high-passed at 0.15 Hz). Intensity: rms of the three-axis acceleration
-band-passed at 0.3-10 Hz (g). The same main measure for the first and the last 60 s of each segment.
+"""Movement rate and intensity of every Move segment with usable IMU data. Rate: one-way time across the room in s
+(straight walking), steps per minute (curved walking, stairs), cycles per minute (head shaking, nodding), pick-ups per
+minute (picking up); also for the first and last 60 s. Intensity: rms acceleration at 0.3-10 Hz (g).
 
     python imu_analysis/imu_movement_rate.py --bids /path/to/dataset --out /path/to/output
 
--> imu_movement_rate.csv (one row per segment); imu_movement_rate_summary.csv (per task: slow vs fast; first vs last
-   60 s, with slow_median and fast_median = first and last)
+Writes imu_movement_rate.csv (per segment) and imu_movement_rate_summary.csv (per task: slow vs fast, and first vs last
+60 s with first in slow_median and last in fast_median).
 """
 import argparse
 import pathlib
@@ -54,8 +48,7 @@ def intensity(acc):
 
 
 def turn_times(gyro, ghat, scale, half_s=1.5, deg=130):
-    """Times (s) of the U-turns of straight walking: the heading (integral of the angular rate about gravity) changes by
-    at least `deg` degrees between half_s before and after."""
+    """Times (s) of the U-turns: the heading about gravity changes by at least deg degrees within +/-half_s."""
     th = np.cumsum((gyro @ ghat) / scale) / FS
     h = int(half_s * FS)
     d = np.zeros(len(th))
@@ -65,8 +58,7 @@ def turn_times(gyro, ghat, scale, half_s=1.5, deg=130):
 
 
 def cadence(a_v, lo_s=0.33, hi_s=2.2):
-    """Steps per minute and the height of the autocorrelation peak: the first peak that reaches 60 % of the highest,
-    its lag refined by a parabola."""
+    """Steps per minute from the autocorrelation of the vertical acceleration, and the height of its peak."""
     x = band(a_v, 0.7, 4.0)
     x = x - x.mean()
     n = len(x)
@@ -86,8 +78,7 @@ def cadence(a_v, lo_s=0.33, hi_s=2.2):
 
 
 def cycles(gyro):
-    """Times (s) of the cycles of the main rotation (first principal component of the gyroscope, 0.08-3 Hz). One cycle =
-    the rotation goes past +threshold after having been past -threshold (threshold: 35 % of the 90th percentile)."""
+    """Times (s) of the cycles of the main head rotation, and the axis of that rotation."""
     x = band(gyro - gyro.mean(0), 0.08, 3.0)
     u, s, vt = np.linalg.svd(x, full_matrices=False)
     pc = u[:, 0] * s[0]

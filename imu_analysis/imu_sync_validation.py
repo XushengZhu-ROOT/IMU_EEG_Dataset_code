@@ -1,15 +1,10 @@
-"""Lag between the head IMU and the EEG clock in every window of every segment, for the IMU as originally released
-(before) and the IMU of the dataset (after). Reference: the accelerometer of the EEG headset (CGX), signals as in
-sync/resync.prepare() (CGX low-passed at 20 Hz on the IMU sample times; both band-passed at 0.3-10 Hz).
-
-Windows of 5 s, hop 2 s. In each window the lag d with the highest rotation-invariant rho (after: +/-1.5 s; before:
-+/-6 s), refined below one sample by a parabola through the three points around the peak; d > 0: the IMU would have to
-move later. A window counts when the head moves (CGX >= 0.02 g) and the best rho is >= 0.8. Per segment: median lag,
-largest lag, share of windows within +/-1 sample, drift = Theil-Sen slope of the lag against time (ms per minute).
+"""Lag between the head IMU and the EEG headset accelerometer (CGX) in 5-s windows of every segment, for the IMU as
+originally released (before) and as corrected (after). A positive lag means the IMU would have to be shifted later.
 
     python imu_analysis/imu_sync_validation.py --bids /path/to/dataset --out /path/to/output [--workers 3]
 
--> imu_lag_windows.csv (every window), imu_lag_segments.csv (every segment), imu_lag_summary.csv (printed)
+Writes imu_lag_windows.csv (per window), imu_lag_segments.csv (per segment: median lag, drift) and imu_lag_summary.csv
+(printed).
 """
 import argparse
 import pathlib

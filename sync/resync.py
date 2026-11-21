@@ -1,15 +1,12 @@
-"""Cut EEG and IMU segments from the raw recordings with the cut tables, and measure how well the IMU follows the EEG
-clock.
+"""Cut a segment from the raw recordings and measure how well its IMU follows the headset accelerometer.
 
     from sync import resync as rs
-    T = rs.load_tables()                                      # tables/ of this repository
-    C = rs.cut(T, 'Sub01', 'movement3_speed0', 'Move')        # positions of one segment
-    eeg, imu = rs.cut_from_raw(C, '/path/to/dataset')         # EEG stream rows (n x rows), IMU (m x 6)
-    A = rs.alignment(rs.cgx_acc(eeg, C), imu[:, :3])          # rho, best lag, 5-s windows
+    T = rs.load_tables()
+    C = rs.cut(T, 'Sub01', 'movement3_speed0', 'Move')
+    eeg, imu = rs.cut_from_raw(C, '/path/to/dataset')         # (samples x rows), (slots x 6)
+    A = rs.alignment(rs.cgx_acc(eeg, C), imu[:, :3])          # rho, best lag
 
-Every sample, row and slot number in the tables is 1-based (Python index = number - 1). EEG sample k of a segment lies
-(k - 1) / 500 s and IMU slot u lies (u - 1) / 49.647537 s after the segment's first EEG sample. The raw files are read
-from sourcedata/sub-XX/eeg (xdf) and sourcedata/sub-XX/motion (txt) of the dataset.
+Positions are 1-based. Both eeg and imu start at the segment's first EEG sample.
 """
 import os, re, warnings
 import numpy as np, pandas as pd
@@ -29,7 +26,7 @@ warnings.filterwarnings('ignore', category=RuntimeWarning, message='.*matmul.*')
 
 
 def load_tables(tables=TABLES):
-    """segments.csv and pieces.csv as text; the numbers that are needed become ints."""
+    """Read segments.csv and pieces.csv."""
     S = pd.read_csv(os.path.join(tables, 'segments.csv'), keep_default_na=False, dtype=str)
     P = pd.read_csv(os.path.join(tables, 'pieces.csv'), keep_default_na=False, dtype=str)
     for c in ('piece', 'first', 'last', 'n', 'seg_first', 'seg_last'):
@@ -40,14 +37,12 @@ def load_tables(tables=TABLES):
 
 
 def source_file(bids, sub, name):
-    """Raw recording of a subject in the dataset: sourcedata/sub-XX/eeg/<name> (xdf) or sourcedata/sub-XX/motion/<name>
-    (txt), with sub = 'SubXX'."""
+    """Path of a raw xdf (sourcedata/sub-XX/eeg) or txt (sourcedata/sub-XX/motion) in the dataset; sub = 'SubXX'."""
     return os.path.join(bids, 'sourcedata', 'sub-' + sub[3:], 'eeg' if name.endswith('.xdf') else 'motion', name)
 
 
 def read_txt(path):
-    """Raw rabboni txt -> (N, 6): accX accY accZ (g), gyroX gyroY gyroZ. Row i (1-based) = the i-th line that starts
-    with a number and has at least 6 comma-separated numbers; header and trailer lines are skipped."""
+    """Data rows of a raw IMU txt as (N x 6): accX accY accZ (g), gyroX gyroY gyroZ."""
     rows = []
     with open(path, errors='replace') as fh:
         for line in fh:
@@ -64,8 +59,7 @@ def read_txt(path):
 
 
 def load_eeg_stream(path, name):
-    """The EEG stream of an xdf: (samples x rows) as stored (float32) and the row labels. Row r of the stream (1-based)
-    is column r - 1; sample s (1-based) is line s - 1, in file order."""
+    """EEG stream `name` of an xdf as (samples x rows) in file order, and its row labels."""
     import pyxdf
     streams, _ = pyxdf.load_xdf(path, dejitter_timestamps=False, synchronize_clocks=False)
     for s in streams:
@@ -101,10 +95,8 @@ def cut(T, sub, cond, seg):
 
 
 def apply(C, eeg_src, imu_src):
-    """Cut the data: eeg_src = {xdf: (samples x rows)} of continuous EEG whose lines are still the xdf samples (any
-    rows, any processing that keeps every sample in its line); imu_src = {txt: (N x 6)} raw rows.
-    -> EEG (n x rows), pieces one after the other; IMU (m x 6): raw slots = their row, interpolated slots = straight
-    line between the raw slots on either side (per column), missing slots = NaN."""
+    """Cut a segment from eeg_src {xdf: (samples x rows)} and imu_src {txt: (N x 6)}; missing IMU slots are NaN.
+    eeg_src may be processed, as long as each line is still one xdf sample."""
     eeg = np.vstack([eeg_src[f][a - 1:b] for f, a, b in C['eeg']]) if eeg_src is not None else None
     imu = None
     if imu_src is not None and len(C['imu']):
@@ -142,12 +134,12 @@ def rows_of(spec):
 
 
 def cgx_acc(eeg, C):
-    """CGX accelerometer of the cut EEG (n x 3, g): rows eeg_acc_rows of the stream / 1e6."""
+    """Headset (CGX) accelerometer of the cut EEG, (n x 3) in g."""
     return np.asarray(eeg[:, rows_of(C['info'].eeg_acc_rows)], float) / 1e6
 
 
 def _filter(x, sos):
-    """zero-phase filter after odd reflection of PAD samples at both ends (keeps the ends of a segment usable)."""
+    """Zero-phase filter after odd reflection of PAD samples at both ends."""
     n = min(PAD, len(x) - 1)
     xp = np.vstack([2 * x[0] - x[n:0:-1], x, 2 * x[-1] - x[-2:-n - 2:-1]])
     return sosfiltfilt(sos, xp, axis=0)[n:n + len(x)]
@@ -163,7 +155,7 @@ def on_imu_grid(acc, m):
 
 
 def kabsch_rho(X, Y):
-    """rotation-invariant Procrustes correlation of two (n, 3) signals (1 = same movement up to a sensor rotation)."""
+    """Rotation-invariant Procrustes correlation of two (n, 3) signals (1 = the same movement)."""
     X = X - X.mean(0); Y = Y - Y.mean(0)
     U, S, Vt = np.linalg.svd(X.T @ Y)
     d = np.sign(np.linalg.det(Vt.T @ U.T))
@@ -184,13 +176,8 @@ def prepare(acc, imu3):
 
 
 def alignment(acc, imu3, win_s=5.0, hop_s=1.0, low=0.5):
-    """Whole segment: rho at lag 0 and the best lag (+/-0.5 s), 2 s left out at both ends (shorter segments: 1/8),
-    1 s left out around empty slots. Windows of win_s seconds (hop hop_s, the whole segment): rho at lag 0 and the
-    CGX movement; for windows below `low` also the best lag within +/-1.5 s and a class:
-      quiet     CGX moves less than 0.02 g rms: too little movement to judge
-      offset    the IMU fits clearly better at another lag, at least in part of the window
-                (rho there at least 0.2 above the rho at lag 0)
-      no match  movement, but the IMU does not follow the CGX at any lag."""
+    """Whole-segment rho and best lag (> 0: the IMU fits best shifted later), and rho per win_s window, with a best
+    lag and a class (quiet, offset or no match) for windows below `low`."""
     X, Y, miss = prepare(acc, imu3)
     m = len(X)
     edge = min(int(2 * FS_IMU), max(m // 8, LAG + 1))

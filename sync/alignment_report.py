@@ -1,14 +1,10 @@
-"""Agreement of the IMU with the headset accelerometer in every segment, as released and after the correction.
+"""Agreement of the IMU with the headset accelerometer in every segment, before and after the timing correction.
 
     python sync/alignment_report.py --bids /path/to/dataset --out alignment_out [--tables tables] [--workers 3]
 
-Headset (CGX) accelerometer: rows eeg_acc_rows of the xdf's EEG stream / 1e6 (g) at the segment's samples, i.e. the
-channels ACC1-3 of the dataset's EEG; as released, with the tail pieces of pieces.csv. IMU as released: the released
-rows of every piece of imu_pieces.csv (tail pieces included) from the raw txt. IMU after the correction: the dataset's
-_motion.tsv. rho: CGX low-passed at 20 Hz and interpolated at the IMU slot times, both band-passed 0.3-10 Hz (zero
-phase, scipy's default padding), IMU turned into the CGX axes by the best proper rotation; 2 s left out at both ends and
-1 s around empty IMU slots; best lag within +/-0.5 s (> 0: IMU moved later).
--> <out>/alignment_release_vs_final.csv (one row per segment), <out>/alignment_summary.txt
+Writes <out>/alignment_release_vs_final.csv (one row per segment) and <out>/alignment_summary.txt.
+*_release: the IMU rows as first released (imu_pieces.csv); *_final: the dataset's _motion.tsv.
+best_lag is in IMU slots; > 0: the IMU fits best shifted later.
 """
 import os, sys, argparse, pathlib
 from concurrent.futures import ProcessPoolExecutor
@@ -23,7 +19,7 @@ ARGS = T = IMU = None
 
 
 def on_imu_grid(acc, m):
-    """CGX (n x 3, 500 Hz) low-passed at 20 Hz and interpolated at the times of IMU slots 1..m within the EEG."""
+    """CGX low-passed at 20 Hz and interpolated at the times of IMU slots 1..m within the EEG."""
     c = sosfiltfilt(rs.SOS_LP, acc, axis=0)
     t_c = np.arange(len(c)) / rs.FS_EEG
     t_i = np.arange(m) / rs.FS_IMU

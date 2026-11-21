@@ -1,27 +1,18 @@
 function A = resync_alignment(acc, imu, win_s, hop_s, low)
-%RESYNC_ALIGNMENT  How well the IMU accelerometer follows the CGX accelerometer (EEG clock) in one segment.
+%RESYNC_ALIGNMENT  How well the IMU accelerometer follows the headset (CGX) accelerometer in one segment.
 %
 %   A = resync_alignment(acc, imu)
 %   A = resync_alignment(acc, imu, win_s, hop_s, low)       defaults 5 s, 1 s, 0.5
 %
-%   acc  [n x 3] CGX accelerometer of the cut EEG (g, 500 Hz): rows eeg_acc_rows of the stream / 1e6, transposed
-%   imu  [m x 3] IMU accelerometer of the cut (g, 49.647537 Hz; NaN = empty slot)
+%   acc  [n x 3] CGX accelerometer of the cut EEG (g, 500 Hz)
+%   imu  [m x 3] IMU accelerometer of the cut (g, NaN = empty slot)
 %
-%   Method (the same as resync.alignment in Python):
-%     1. CGX: 4th-order Butterworth low-pass 20 Hz, zero phase; linear interpolation at the IMU slot times.
-%     2. Both: empty IMU slots bridged by straight lines; 4th-order Butterworth band-pass 0.3-10 Hz, zero phase.
-%        Before each filter the signal is extended by odd reflection (3 s), so the ends of a segment stay usable.
-%     3. rho: rotation-invariant Procrustes correlation (the IMU turned into the CGX axes by the best proper
-%        rotation); 1 = the same movement.
-%   A.rho, A.best_lag, A.rho_best  whole segment: rho at lag 0; best lag within +/-25 slots (+/-0.5 s), d > 0 = the
-%                                  IMU moved d slots later. 2 s left out at both ends (shorter segments: 1/8 of their
-%                                  length, at least 26 slots) and 1 s around empty slots.
-%   A.windows  windows of win_s s (hop hop_s s) over the whole segment: t_start_s, t_end_s, rho (lag 0), amp_g (CGX
-%              rms, g). Windows with rho < low also get best_lag (+/-1.5 s), rho_best and a class:
-%                quiet     CGX moves less than 0.02 g rms: too little movement to judge
-%                offset    the IMU fits clearly better at another lag (rho there >= rho + 0.2), at least in part
-%                no match  movement, but the IMU does not follow the CGX at any lag
-%   A.X, A.Y, A.miss  the band-passed CGX and IMU on the IMU slots, and the empty IMU slots
+%   A.rho       rotation-invariant correlation at lag 0 of the band-passed signals (1 = the same movement)
+%   A.best_lag  lag within +/-0.5 s with the highest rho, in IMU slots (> 0: the IMU fits best shifted later)
+%   A.rho_best  rho at best_lag
+%   A.windows   per win_s window: rho, amp_g (CGX rms); if rho < low also best_lag, rho_best and cls
+%               (quiet, offset or no match)
+%   A.X, A.Y, A.miss  band-passed CGX and IMU on the IMU slots, and the empty IMU slots
 
 if nargin < 3 || isempty(win_s), win_s = 5; end
 if nargin < 4 || isempty(hop_s), hop_s = 1; end

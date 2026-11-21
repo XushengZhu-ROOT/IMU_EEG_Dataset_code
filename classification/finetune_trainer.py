@@ -1,6 +1,6 @@
-"""Fine-tuning loop: the epoch with the best validation balanced accuracy gives the model and the test predictions.
+"""Fine-tuning loop; keeps the best validation epoch.
 
-Adapted from finetune_trainer.py of CBraMod (https://github.com/wjq-learning/CBraMod, MIT licence).
+Adapted from https://github.com/wjq-learning/CBraMod (MIT licence).
 """
 import json
 import os
@@ -207,7 +207,7 @@ class Trainer(object):
         print(f"Training summary saved to {summary_path}")
 
     def save_fold_results(self, best_metrics):
-        """Test predictions of the selected epoch's weights (<prefix>_foldNN.npz) and the fold settings (.json)."""
+        """Save the test predictions (.npz) and fold settings (.json)."""
         self.model.load_state_dict(self.best_model_states)
         fold_idx = self.params.fold_idx
         base = os.path.join(self.params.out, f"{RESULT_PREFIX}_fold{fold_idx:02d}")

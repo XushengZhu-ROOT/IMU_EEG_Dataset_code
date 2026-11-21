@@ -1,7 +1,4 @@
-"""Dataset access for the IMU analysis: the IMU tables, the files of a segment (EEG, headset accelerometer, IMU), the IMU
-as originally released (rebuilt from the raw txt with tables/imu_pieces.csv) and the output folder.
-
-Segments are the rows of tables/imu_segments.csv; bids_file is the segment's _motion.tsv in the dataset.
+"""Helpers for the IMU scripts: read the IMU tables, the EEG and IMU of a segment, and the IMU as originally released.
 """
 import os
 import pathlib
@@ -105,7 +102,7 @@ def rows_to_values(raw, txt, rows):
 
 
 def released_imu(raw, P, g):
-    """IMU of a segment as the original segmentation cut it: the released rows of every piece, tails left out."""
+    """IMU of a segment as originally released: the released rows of its pieces, without tail pieces."""
     pcs = P[(P['sub'] == g.sub) & (P.cond == g.cond) & (P.seg == g.seg) & (P['tail_piece'] != 'yes')]
     return np.vstack([rows_to_values(raw, p.txt, np.arange(p.released_first_row, p.released_last_row + 1))
                       for p in pcs.itertuples()])

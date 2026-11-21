@@ -1,8 +1,7 @@
 #!/bin/bash
-# Leave-one-subject-out fine-tuning of CBraMod on the six movements: 20 folds, each with one test participant,
-# one validation participant (model selection by balanced accuracy) and the other 18 participants for training.
+# Fine-tunes CBraMod in 20 leave-one-subject-out folds.
 # Set the paths below, then run: bash classification/run_loso.sh
-# Each fold writes to $OUT/cbramod_loso/foldNN_test-sub-XX; a fold with a saved .json is skipped.
+# Each fold writes to $OUT/cbramod_loso/foldNN_test-sub-XX; finished folds are skipped.
 
 EPOCHS=/path/to/epochs                        # folder written by make_epochs.py
 WEIGHTS=/path/to/pretrained_weights.pth       # pretrained CBraMod weights

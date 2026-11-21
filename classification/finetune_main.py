@@ -1,7 +1,6 @@
-"""Fine-tune CBraMod to classify 1-s epochs into the six movements, for one leave-one-subject-out fold.
+"""Fine-tune CBraMod on one leave-one-subject-out fold; see run_loso.sh.
 
-Adapted from finetune_main.py of CBraMod (https://github.com/wjq-learning/CBraMod, MIT licence).
-run_loso.sh runs the 20 folds.
+Adapted from https://github.com/wjq-learning/CBraMod (MIT licence).
 """
 import argparse
 import os

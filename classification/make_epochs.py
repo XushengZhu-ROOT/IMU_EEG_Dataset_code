@@ -1,9 +1,7 @@
 """Cut the cleaned movement segments into 1-s epochs for CBraMod.
 
-Input: one .mat file per movement segment with the EEGLAB structure EEG (cleaned with preprocess_eeg_forASR.m and
-apply_asr.m, 20 channels), named after its dataset segment, e.g. sub-01_task-walkstraight_acq-slowmove.mat.
-Each segment is band-pass filtered at 0.3-75 Hz, resampled to 200 Hz and cut into non-overlapping 1-s epochs, written
-as <out>/<epoch_id>.pickle with signal (channels x 200), label (0-5) and epoch_id.
+Input: one .mat file (EEGLAB structure EEG) per segment, e.g. sub-01_task-walkstraight_acq-slowmove.mat.
+Output: <out>/<epoch_id>.pickle with signal, label and epoch_id.
 
     python classification/make_epochs.py --segments /path/to/clean_segments --out /path/to/epochs
 """
@@ -30,7 +28,7 @@ def load_mat_to_raw(mat_path):
 
 
 def segment_epochs(mat_path):
-    """Band-pass 0.3-75 Hz, resample to 200 Hz and cut into non-overlapping 1-s epochs (a shorter tail is left out)."""
+    """Band-pass 0.3-75 Hz, resample to 200 Hz, cut into non-overlapping 1-s epochs."""
     raw = load_mat_to_raw(mat_path)
     raw.filter(0.3, 75.0, verbose=False)
     if raw.info['sfreq'] != SFREQ:

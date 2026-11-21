@@ -1,8 +1,6 @@
-"""Per raw XDF file: the EEG sample of every audio marker, its status, and the rest epochs for the N1.
+"""EEG sample, epoch status and rest N1 epochs of the audio markers of one raw XDF file.
 
-The mean of Fz and Cz as recorded is band-passed per gap-free segment and read off at the clock's sample times
-(eeg_clock.py) by linear interpolation. A trial's status refers to MARKER_EPOCH around its marker: 'outside' (runs
-past the recording), 'dropout' (lost samples), 'clock' (off-clock samples) or 'ok'.
+Status: 'outside' the recording, 'dropout' (lost samples), 'clock' (off-clock samples) or 'ok'.
 """
 import csv
 import json
@@ -23,11 +21,7 @@ META = [('file', 'U40'), ('subject', 'U5'), ('setup', 'U12'), ('tone', 'U8'), ('
 
 
 def table_gaps(tables):
-    """EEG gaps listed in the cut tables (segments.csv, column eeg_gaps).
-
-    Returns {xdf file: {0-based index of the first sample after the gap: lost samples}}. The packet counter counts a
-    gap of 128 or more samples short by a multiple of 128; these lengths are the full ones.
-    """
+    """EEG gaps of the cut tables: {xdf file: {0-based index of the sample after the gap: lost samples}}."""
     gaps = defaultdict(dict)
     with open(os.path.join(tables, 'segments.csv'), newline='') as f:
         for r in csv.DictReader(f):
@@ -42,8 +36,7 @@ def is_baseline(fname):
 
 
 def rest_trials(fname, marker_ts, key_ts, keys, actions):
-    """Trials at rest. Baseline files: all trials. Other files: trials inside the experimenter's S segments
-    (S pressed -> S released; a repeated press while S is held is ignored)."""
+    """Trials at rest: all trials of baseline files, otherwise trials between an S key press and its release."""
     if is_baseline(fname):
         return np.ones(len(marker_ts), bool)
     rest, start = np.zeros(len(marker_ts), bool), None
@@ -69,8 +62,7 @@ def bandpass(x, seg):
 
 
 def process_file(path, gaps=None):
-    """Markers of one raw XDF file (META), the rest standard epochs and their rows, and the file's sample numbering
-    (see numbering()). `gaps`: table_gaps()."""
+    """Markers (META), rest standard epochs (ep, rows) and sample numbering of one XDF file; `gaps`: table_gaps()."""
     r = xdf_reader.load(path, C.CHANNELS)
     t, seg, lost, off_clock = eeg_clock.sample_times(
         r['eeg_ts'], r['counter'], C.FS, C.SEGMENT_GAP, C.ENVELOPE_WINDOW, C.ENVELOPE_KEEP, C.COUNTER_MOD,
@@ -105,7 +97,7 @@ def process_file(path, gaps=None):
         i = slice(edges[seg_of[j]], edges[seg_of[j] + 1])
         ep[q] = np.interp(m[j] + GRID, t[i], fc[i])
 
-    # EEG sample of each marker: 1-based sample number of the EEG stream in the file, fractional
+    # fractional 1-based EEG sample of each marker
     sample = np.interp(m, t, np.arange(1, len(t) + 1))
     sample[(m < t[0]) | (m > t[-1])] = np.nan
     meta = np.array(list(zip([r['file']] * n, [subject] * n, [setup] * n, r['tone'], r['trial'], rest,
@@ -116,8 +108,7 @@ def process_file(path, gaps=None):
 
 
 def numbering(lost):
-    """Sample numbers with and without the lost samples counted (0-based, 1-based) at the first and last sample and on
-    both sides of every gap; np.interp between them converts one into the other."""
+    """Sample numbers with (0-based) and without (1-based) lost samples at the ends and around each gap."""
     g = np.flatnonzero(lost)
     at = np.unique(np.r_[0, g - 1, g, len(lost) - 1])
     return np.cumsum(lost + 1)[at] - 1, at + 1
@@ -131,8 +122,7 @@ def onset_sample(x, d, num):
 
 
 def in_gap(x, d, num):
-    """True if the place d samples before sample number x (lost samples counted) lies inside an EEG gap, more than one
-    sample from every recorded sample; num: numbering()."""
+    """True if the point d samples before sample x (lost samples counted) is inside an EEG gap; num: numbering()."""
     kb, ib = num
     k = np.interp(x, ib, kb) - d
     for i in np.flatnonzero((np.diff(ib) == 1) & (np.diff(kb) > 1)):

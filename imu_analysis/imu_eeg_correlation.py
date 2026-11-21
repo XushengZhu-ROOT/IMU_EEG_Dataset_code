@@ -1,21 +1,16 @@
-"""Correlation between every EEG channel and the head IMU in the Move segments with usable IMU data.
+"""Correlation of every EEG channel with the head IMU in the Move segments with usable IMU data: |r| with each IMU axis,
+multiple correlation with the accelerometer (Acc*) and the gyroscope (Gyro*), and chance levels (IMU shifted by half the
+segment).
 
     python imu_analysis/imu_eeg_correlation.py --bids /path/to/dataset --out /path/to/output [--workers 3]
     python imu_analysis/imu_eeg_correlation.py --bids /path/to/dataset --out /path/to/output --grid
 
-EEG of the dataset (as recorded): the 20 channels of the 20-channel montage, low-passed at 20 Hz and interpolated at the
-IMU sample times. IMU of the dataset, empty samples bridged by straight lines. Both band-passed (4th-order Butterworth,
-zero phase). In windows moved in 1-s steps (windows with an empty IMU sample left out), per EEG channel: |Pearson r| with
-each IMU axis and the multiple correlation rho with the three accelerometer axes (Acc*) and with the three gyroscope axes
-(Gyro*); per segment the mean over its windows. Chance level: the same with the IMU shifted circularly by half the segment.
-Settings: 40-s and 10-s windows at 0.3-10 Hz; --grid: windows of 5-40 s x bands of 0.3, 0.5 and 1-10 Hz.
-
--> imu_eeg_correlation_trials_<setting>.csv       per segment: Acc*, Gyro* and their chance level per channel; channel means
-   imu_eeg_correlation_group_<setting>.csv        per movement, speed (slow, fast, both), IMU column and channel
-   imu_eeg_correlation_axis_speed_<setting>.csv   per movement and speed: means over the channels, best single axis
-   imu_eeg_correlation_speed_test_<setting>.csv   fast vs slow: paired t-test across participants
-   imu_eeg_correlation_grid.csv (--grid)          per setting: Acc* rho, chance, split-half reliability, movements with
-                                                  fast > slow (rho above chance, p < 0.05)
+Writes, for <setting> 40s_0.3-10Hz and 10s_0.3-10Hz (window length and band):
+    imu_eeg_correlation_trials_<setting>.csv       per segment
+    imu_eeg_correlation_group_<setting>.csv        per movement, speed and channel
+    imu_eeg_correlation_axis_speed_<setting>.csv   per movement and speed, mean over channels
+    imu_eeg_correlation_speed_test_<setting>.csv   fast vs slow, paired t-test
+With --grid, only imu_eeg_correlation_grid.csv (one row per window length and band).
 """
 import argparse
 import pathlib
@@ -78,8 +73,7 @@ def windows(E, Y, bad, win_s):
 
 
 def eeg_on_imu_grid(eeg, m):
-    """EEG channels (n, k) low-passed at 20 Hz and interpolated at the times of IMU samples 1..m within the EEG (as
-    sync/resync.on_imu_grid for the headset accelerometer)."""
+    """EEG channels (n, k) low-passed at 20 Hz and interpolated at the times of IMU samples 1..m within the EEG."""
     c = rs._filter(np.asarray(eeg, float), rs.SOS_LP)
     t_c = np.arange(len(c)) / rs.FS_EEG
     t_i = np.arange(m) / FS
@@ -96,8 +90,7 @@ def bridge(Y, m):
 
 
 def segments(bids, sub, tables=dat.TABLES):
-    """Per Move segment of the subject with usable IMU data: the segment row, the 20 EEG channels on the IMU sample
-    times (m, 20), the bridged IMU (m, 6) and its empty samples."""
+    """Per usable Move segment: row, EEG at the IMU sample times (m, 20), bridged IMU (m, 6) and its empty samples."""
     S = dat.move_segments(tables)
     for g in S[S['sub'] == sub].itertuples():
         data, names = dat.read_eeg(bids, g)
@@ -108,8 +101,7 @@ def segments(bids, sub, tables=dat.TABLES):
 
 
 def first_seconds(Ei, Yb, miss, seconds=10.0):
-    """The first seconds of a segment band-passed at 0.3-10 Hz (whole segment): EEG, IMU, and whether no IMU sample
-    is empty there."""
+    """EEG, IMU and whether no IMU sample is empty, in the first seconds of a segment band-passed at 0.3-10 Hz."""
     n = int(round(seconds * FS))
     sos = butter(4, BAND, 'bandpass', fs=FS, output='sos')
     return rs._filter(Ei, sos)[:n], rs._filter(Yb, sos)[:n], not miss[:n].any()

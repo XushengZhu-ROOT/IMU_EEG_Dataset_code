@@ -1,6 +1,6 @@
-"""Scores on the validation or test participant, and the test predictions of a fold.
+"""Scores and predictions on one participant.
 
-Adapted from finetune_evaluator.py of CBraMod (https://github.com/wjq-learning/CBraMod, MIT licence).
+Adapted from https://github.com/wjq-learning/CBraMod (MIT licence).
 """
 import numpy as np
 import torch
@@ -14,7 +14,7 @@ class Evaluator:
         self.data_loader = data_loader
 
     def get_metrics_for_multiclass(self, model):
-        """Accuracy, balanced accuracy, kappa, macro-F1 over the classes present in the participant, confusion matrix."""
+        """Accuracy, balanced accuracy, kappa, macro-F1 and confusion matrix."""
         model.eval()
 
         truths = []
@@ -37,7 +37,7 @@ class Evaluator:
         return acc, bacc, kappa, f1, cm
 
     def predict(self, model):
-        """Per-epoch predictions sorted by epoch_id: epoch_id, y_true, y_pred, y_prob (softmax), subject_id."""
+        """Per-epoch predictions, sorted by epoch_id."""
         model.eval()
         epoch_ids, y_true, y_pred, y_prob = [], [], [], []
         with torch.no_grad():

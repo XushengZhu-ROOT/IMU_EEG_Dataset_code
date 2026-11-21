@@ -3,10 +3,7 @@ function X = read_rabboni_txt(path)
 %
 %   X = read_rabboni_txt(path)
 %
-%   Row i of X is txt row i of the cut tables: the i-th line of the file that starts with a number (leading spaces
-%   and a minus sign allowed) and has at least 6 comma-separated numbers; the first 6 are kept. Header and trailer
-%   lines are skipped, however many there are (13 header lines in most files; Sub12_all.txt has 19, plus 3 trailing
-%   lines). The txt has no time stamps; its rows are read at 49.647537 Hz.
+%   Row i of X is txt row i of the cut tables (header and trailer lines skipped).
 
 txt = fileread(char(path));
 lines = regexp(txt, '\r\n|\n|\r', 'split')';

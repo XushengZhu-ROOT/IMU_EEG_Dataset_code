@@ -1,40 +1,37 @@
-"""Figure of the single trials with the highest IMU-EEG correlation: for each movement, the trial whose first 10 s give
-the highest rho (imu_analysis/imu_eeg_correlation.py, 0.3-10 Hz).
+"""For each movement, the trial whose first 10 s give the highest IMU-EEG rho (0.3-10 Hz; usable trials without empty
+IMU samples): |r| and rho of every EEG channel, and z-scored waveforms of the best channel and sensor.
 
     python figures/make_fig_single_trial.py --bids /path/to/dataset --out /path/to/output [--workers 3]
 
-Candidates: Move segments with imu_usable = yes whose first 10 s hold no empty IMU sample. Heatmaps (a)-(f): |r| and rho
-of every channel in the first 10 s; waveforms (a1)-(f1): the EEG channel and sensor of the highest rho, the least-squares
-combination of the three axes (blue), the single axis with the highest |r| (orange, sign matched to the EEG) and the EEG
-(black), each z-scored over the 10 s.
-
--> fig_single_trial.png (300 dpi), fig_single_trial.pdf, fig_single_trial_values_heatmap.csv,
-   fig_single_trial_values_waveform.csv
+Writes fig_single_trial.png, fig_single_trial.pdf, fig_single_trial_values_heatmap.csv and
+fig_single_trial_values_waveform.csv.
 """
 import argparse
 import pathlib
 import sys
 from concurrent.futures import ProcessPoolExecutor
 
+import matplotlib
 import numpy as np
 import pandas as pd
 
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt  # noqa: E402
+
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-from figures import figstyle  # noqa: E402
 from imu_analysis import imu_data as dat  # noqa: E402
 from imu_analysis import imu_eeg_correlation as ec  # noqa: E402
-from matplotlib.lines import Line2D  # noqa: E402
 
 FS = ec.FS
 EEG20, COLS = ec.EEG20, ec.COLS
 NAMES = {0: 'Straight walking', 1: 'Curved walking', 2: 'Head shaking', 3: 'Head nodding', 4: 'Picking up an object',
          5: 'Stair climbing'}
-ABS_R = '∣r∣'                                    # |r| with a bar that cannot be read as 'l'
+ABS_R = '∣r∣'
 ARGS = None
 
 
 def run_subject(sub):
-    """First 10 s of every Move segment of the subject: the measures, the band-passed EEG and IMU."""
+    """Measures, band-passed EEG and IMU of the first 10 s of every Move segment of the subject."""
     out = []
     for g, Ei, Yb, miss in ec.segments(ARGS.bids, sub):
         E, Y, clean = ec.first_seconds(Ei, Yb, miss)
@@ -50,7 +47,7 @@ def init(a):
 
 
 def select(T):
-    """Per movement: the trial with the highest rho of any channel, its EEG channel, sensor and waveforms."""
+    """Per movement: the trial with the highest rho, its EEG channel, sensor and waveforms."""
     P = []
     for mv in ec.MOVEMENTS:
         best = None
@@ -77,64 +74,35 @@ def select(T):
 
 
 def draw(P, png, pdf):
-    W = 18.0
-    x0, pw, gap = 0.85, 4.95, 0.32                     # heatmaps: left edge, width, gap
-    hh = 5.4                                            # heatmap height: 20 rows of 0.27 cm
-    wx0, wpw, wgap = 1.05, 5.2, 0.5                     # waveforms
-    wh = 1.9
-    y_hm1 = 1.8                                         # top of the first heatmap row
-    y_hm2 = y_hm1 + hh + 0.65
-    y_w1 = y_hm2 + hh + 1.65
-    y_w2 = y_w1 + wh + 1.3
-    H = y_w2 + wh + 0.85
-    pg = figstyle.Page(W, H)
-    pg.title('Single-trial IMU–EEG correlation')
-    pg.legend([Line2D([], [], color='k', lw=1.0), Line2D([], [], color=figstyle.BLUE, lw=1.0),
-               Line2D([], [], color=figstyle.ORANGE, lw=1.0)],
-              ['EEG', 'IMU, best combination of the three axes', 'IMU, best single axis'])
-    im = None
-    for p in P:
-        mv = p['movement']
-        r_, c_ = divmod(mv, 3)
-        ax = pg.axes(x0 + c_ * (pw + gap), y_hm1 if r_ == 0 else y_hm2, pw, hh)
-        im = ax.pcolormesh(np.arange(9) - 0.5, np.arange(21) - 0.5, p['M'], cmap='viridis', vmin=0, vmax=1,
-                           shading='flat', edgecolors='none', antialiased=False, rasterized=False)
-        ax.set_xlim(-0.5, 7.5)
-        ax.set_ylim(19.5, -0.5)
-        ax.axvline(5.5, color='white', lw=1.2)
-        ax.set_xticks(range(8))
-        ax.set_xticklabels(COLS if r_ == 1 else [], rotation=90)
-        ax.set_yticks(range(20))
-        ax.set_yticklabels(EEG20 if c_ == 0 else [])
-        if c_:
-            ax.tick_params(axis='y', length=0)
-        ax.set_title(f"({'abcdef'[mv]}) {NAMES[mv]}, {p['sub']}, {p['speed']}")
-    cax = pg.axes(x0 + 3 * pw + 2 * gap + 0.3, y_hm1, 0.22, y_hm2 + hh - y_hm1)
-    cb = pg.fig.colorbar(im, cax=cax, ticks=np.arange(0, 1.01, 0.2))
-    cb.outline.set_linewidth(0.6)
-    cb.ax.tick_params(width=0.6, length=2.5, direction='out', colors='k')
-    cb.set_label(f'{ABS_R} or ρ', color='k', labelpad=4)
+    """Rows 1-2: heatmaps (a)-(f); rows 3-4: waveforms (a1)-(f1)."""
+    fig, axs = plt.subplots(4, 3, figsize=(12, 15), sharey='row', height_ratios=[3, 3, 1, 1], layout='constrained')
+    fig.suptitle('Single-trial IMU–EEG correlation')
     lim = max(np.abs(np.r_[p['eeg_z'], p['fit_z'], p['axis_z']]).max() for p in P)
     lim = np.ceil(lim * 2) / 2
     for p in P:
         mv = p['movement']
         r_, c_ = divmod(mv, 3)
-        ax = pg.axes(wx0 + c_ * (wpw + wgap), y_w1 if r_ == 0 else y_w2, wpw, wh)
-        ax.plot(p['t'], p['axis_z'], color=figstyle.ORANGE, lw=0.6)
-        ax.plot(p['t'], p['fit_z'], color=figstyle.BLUE, lw=0.7)
-        ax.plot(p['t'], p['eeg_z'], color='k', lw=0.7)
+        ax = axs[r_, c_]
+        im = ax.imshow(p['M'], vmin=0, vmax=1, aspect='auto')
+        ax.axvline(5.5, color='w')
+        ax.set_xticks(range(8), COLS, rotation=90)
+        ax.set_yticks(range(20), EEG20)
+        ax.set_title(f"({'abcdef'[mv]}) {NAMES[mv]}, {p['sub']}, {p['speed']}")
+        ax = axs[r_ + 2, c_]
+        ax.plot(p['t'], p['axis_z'], color='C1', lw=0.8, label='IMU, best single axis')
+        ax.plot(p['t'], p['fit_z'], color='C0', lw=0.8, label='IMU, best combination of the three axes')
+        ax.plot(p['t'], p['eeg_z'], color='k', lw=0.8, label='EEG')
         ax.set_xlim(0, 10)
-        ax.set_xticks(range(0, 11, 2))
         ax.set_ylim(-lim, lim)
-        ax.set_yticks(np.arange(-np.floor(lim), np.floor(lim) + 1, 2))
-        if c_ == 0:
-            ax.set_ylabel('Amplitude (z)')
-        else:
-            ax.set_yticklabels([])
-        figstyle.x_unit(ax, '(s)')
+        ax.set_xlabel('Time (s)')
         ax.set_title(f"({'abcdef'[mv]}1) {p['eeg']} and {p['sensor']}*, ρ = {p['rho']:.2f}")
-    figstyle.save(pg.fig, png, pdf)
-    return H
+    for ax in axs[2:, 0]:
+        ax.set_ylabel('Amplitude (z)')
+    fig.colorbar(im, ax=axs[:2], label=f'{ABS_R} or ρ')
+    handles, labels = axs[2, 0].get_legend_handles_labels()
+    fig.legend(handles[::-1], labels[::-1], loc='outside lower center', ncols=3)
+    fig.savefig(png)
+    fig.savefig(pdf)
 
 
 def values(P):
@@ -158,11 +126,10 @@ if __name__ == '__main__':
     with ProcessPoolExecutor(max_workers=ARGS.workers, initializer=init, initargs=(ARGS,)) as ex:
         T = pd.DataFrame([r for rows in ex.map(run_subject, dat.SUBJECTS) for r in rows])
     P = select(T)
-    with figstyle.paper_style():
-        H = draw(P, out / 'fig_single_trial.png', out / 'fig_single_trial.pdf')
+    draw(P, out / 'fig_single_trial.png', out / 'fig_single_trial.pdf')
     hm, wf = values(P)
     hm.to_csv(out / 'fig_single_trial_values_heatmap.csv', index=False)
     wf.to_csv(out / 'fig_single_trial_values_waveform.csv', index=False)
-    print(f'Move segments: {len(T)}; figure 18 x {H:.1f} cm')
+    print(f'Move segments: {len(T)}')
     for p in P:
         print(f"  {NAMES[p['movement']]:21s} {p['sub']} {p['speed']}: {p['eeg']} {p['sensor']}* rho {p['rho']:.4f}")

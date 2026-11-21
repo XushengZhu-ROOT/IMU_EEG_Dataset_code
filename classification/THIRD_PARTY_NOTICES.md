@@ -9,15 +9,13 @@ Files taken unchanged:
 - models/cbramod.py
 - models/criss_cross_transformer.py
 
-Files adapted (through `cbramod_finetune` of https://github.com/XushengZhu-ROOT/EEG-Review-Paper-Repo, commit c0a6ae6):
+Files adapted:
 
 - finetune_main.py
 - finetune_trainer.py
 - finetune_evaluator.py
 - models/model_for_motortask.py
 - datasets/motortask_dataset.py
-
-The pretrained weights (`pretrained_weights.pth`, https://huggingface.co/weighting666/CBraMod) are not included in this repository.
 
 ```
 MIT License

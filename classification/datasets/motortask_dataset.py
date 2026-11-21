@@ -1,6 +1,6 @@
-"""Epochs written by make_epochs.py, split by participant into training, validation and test sets for one fold.
+"""Train, validation and test loaders, split by participant.
 
-Adapted from the dataset loaders of CBraMod (https://github.com/wjq-learning/CBraMod, MIT licence).
+Adapted from https://github.com/wjq-learning/CBraMod (MIT licence).
 """
 import os
 import pickle
@@ -19,7 +19,7 @@ def epoch_id_of(path):
 
 
 class CustomDataset(Dataset):
-    """Epochs of the given files with channel_size channels; an item is (signal / 100, label, epoch_id)."""
+    """One item per epoch: (signal / 100, label, epoch_id)."""
 
     def __init__(self, files, mode, channel_size=20, window_size=1):
         super(CustomDataset, self).__init__()
@@ -58,8 +58,7 @@ class LoadDataset(object):
         self.params = params
 
     def get_data_loader(self):
-        """Test and validation sets: one participant each (params.test_subject, params.val_subject); training set:
-        all other participants."""
+        """Test and validation: one participant each; training: all others."""
         folder = self.params.datasets_dir
         by_subject = {}
         for name in sorted(os.listdir(folder)):

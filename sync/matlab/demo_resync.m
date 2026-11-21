@@ -1,7 +1,6 @@
-%DEMO_RESYNC  Cut one segment from the raw recordings of the dataset with the cut tables and check its alignment.
+%DEMO_RESYNC  Cut one segment from the raw recordings and check its alignment.
 %
-%   Set BIDS (root folder of the dataset) and EEGLAB (for load_xdf of its xdfimport plugin), then run.
-%   Continuous EEG can be processed before the cut, as long as every sample keeps its column.
+%   Set BIDS (dataset root) and EEGLAB (for load_xdf), then run.
 
 BIDS = '/path/to/dataset';
 EEGLAB = '/path/to/eeglab';

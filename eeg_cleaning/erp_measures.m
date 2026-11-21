@@ -1,21 +1,13 @@
 function erp_measures(V, bids, outdir)
-% ERPs of the Move segments for each cleaned version, and their measures.
+% Compute the ERPs of the Move segments for each cleaned version, and their measures.
 %   erp_measures(V, bids, outdir)
-%   V       struct array, one per version: V(i).label, V(i).folder (<outroot>/<version>/k<k> of clean_paper_versions.m)
-%   bids    BIDS dataset root (tone onsets and boundaries from the _events.tsv files)
-% ERP: every Move file and tone; epoch -200..800 ms, used when it lies within the file and crosses no boundary;
-% baseline -200..0 ms; per subject the plain mean over all its trials of the condition (all movement, each
-% movement, each speed), on the cleaned data with the A1 reference. Writes to outdir:
-%   erp_averages.mat     G{v}.<condition>.standard / .target: subjects x channels (Fz, Cz, Pz) x time; .n; t (ms);
-%                        V(v).label
-%   erp_measures.csv     per version and condition: subjects; N1 = Cz standard 80-120 ms; P3 = Pz target 300-500 ms;
-%                        Pz target - standard 300-500 ms (mean and SEM over subjects); residual noise = median over
-%                        subjects of the SD over -200..0 ms of the Pz standard average; subjects with target -
-%                        standard > 0
-%   erp_latency.csv      per version, condition and channel: peak of target - standard in 200-600 ms, of the mean
-%                        over subjects (ms, uV) and the median over subjects of their own peak times
-%   erp_windows.csv      per version, all movement, Pz: target peak in 250-450 ms of the mean over subjects (uV, ms);
-%                        mean over time of |mean over subjects of target - standard| in -100..100 ms and 600..800 ms
+%   V       struct array, one per version: label and folder (outroot/<version>/k<k> of clean_paper_versions)
+%   bids    BIDS dataset root, for the events
+% Epochs -200 to 800 ms, baseline -200 to 0 ms, averaged per subject and condition. Writes to outdir:
+%   erp_averages.mat   subject averages at Fz, Cz and Pz
+%   erp_measures.csv   N1, P3, target - standard and residual noise per version and condition
+%   erp_latency.csv    peak of target - standard per version, condition and channel
+%   erp_windows.csv    Pz target peak and mean |target - standard| at -100 to 100 and 600 to 800 ms
 if ~exist(outdir, 'dir'), mkdir(outdir); end
 fs = 500; k = -100:400; t = k / fs * 1000; base = t < 0; win = t >= 300 & t < 500;
 chans = {'Fz', 'Cz', 'Pz'};
@@ -71,7 +63,7 @@ writetable(cell2table(rows, 'VariableNames', {'version', 'Pz_target_peak_250_450
 end
 
 function R = load_version(folder, bids, chans, k, base, moves, conds)
-% per condition: subjects x channels x time plain means of standard and target trials
+% per condition: subject means of the standard and target trials (subjects x channels x time)
 fs = 500;
 F = dir(fullfile(folder, 'sub-*', '*move.mat'));
 E = struct('sub', {}, 'move', {}, 'speed', {}, 'S', {}, 'nS', {}, 'T', {}, 'nT', {});
@@ -106,7 +98,7 @@ for ci = 1:numel(conds)
         es = E(sel & strcmp({E.sub}, subs{s}));
         nS = sum([es.nS]); nT = sum([es.nT]);
         if nS == 0 || nT == 0, continue, end
-        St(end + 1, :, :) = reshape(sum(cat(3, es.S), 3) / nS, [1 numel(chans) numel(k)]);   % plain mean over trials
+        St(end + 1, :, :) = reshape(sum(cat(3, es.S), 3) / nS, [1 numel(chans) numel(k)]);   % mean over all trials
         Tt(end + 1, :, :) = reshape(sum(cat(3, es.T), 3) / nT, [1 numel(chans) numel(k)]);
     end
     R.(fld(nm)) = struct('standard', St, 'target', Tt, 'n', size(St, 1));

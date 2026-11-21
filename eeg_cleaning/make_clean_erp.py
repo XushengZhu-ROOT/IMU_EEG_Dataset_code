@@ -1,14 +1,10 @@
-"""Write the cleaned EEG of the Move segments (clean_paper_versions.m, version imureg_asr, k = 30) as the BIDS
-derivative derivatives/clean.
+"""Write the cleaned Move EEG (imureg_asr, k = 30) as the BIDS derivative derivatives/clean.
 
     python eeg_cleaning/make_clean_erp.py --bids <dataset root> --mat <OUT of run_all.m>/imureg_asr/k30 \
         --out <new folder> [--report <folder>]
 
-Per Move segment, in <out>/sub-XX/eeg/ with the raw file name + '_desc-clean': BrainVision _eeg.eeg/.vhdr/.vmrk
-(float32, with the channels, samples, time base and events of the raw file), _events.tsv (copied from the raw file),
-_channels.tsv (channels left out of ASR marked bad) and _eeg.json (filters, ASR calibration data, motion signals of
-the regression). At <out>: dataset_description.json, README and the task-<task>_events.json files of the raw
-dataset. Each written .eeg is read back and compared with the .mat data. --report writes clean_erp_files.csv.
+Writes, per Move segment, BrainVision EEG files with _events.tsv, _channels.tsv and _eeg.json, named as the raw
+file plus _desc-clean.
 """
 import argparse
 import glob
@@ -22,7 +18,7 @@ import pandas as pd
 from scipy.io import loadmat
 
 FS = 500
-GYRO_CLIP = 990      # |gyroscope value| counted as clipped, as in declip_gyro.m
+GYRO_CLIP = 990      # |gyroscope value| counted as clipped
 TASKS = ['walkstraight', 'walkcurved', 'headshake', 'headnod', 'pickup', 'stairs']
 SPEEDS = ['slow', 'fast']
 PIPELINE = (
@@ -73,7 +69,7 @@ def write_vmrk(d, stem, ev):
 
 
 def unusable_imu(anom, sub, task, acq):
-    """imu_usable = no in anomalies.tsv for this segment (matched on sub, cond and seg, as imu_unusable.m)."""
+    """True if anomalies.tsv marks this segment's IMU unusable."""
     for r in anom.itertuples():
         if r.imu_usable != 'no' or int(r.sub[3:]) != int(sub):
             continue
@@ -85,8 +81,7 @@ def unusable_imu(anom, sub, task, acq):
 
 
 def restored_by_declip(x):
-    """True at the samples of one gyroscope axis that declip_gyro.m replaces: runs of clipped values of one sign
-    with three unclipped, non-n/a samples right before and right after the run."""
+    """True at the samples of one gyroscope axis that declip_gyro.m restores."""
     clipped = np.abs(x) >= GYRO_CLIP
     usable = ~clipped & ~np.isnan(x)
     out = np.zeros(len(x), bool)

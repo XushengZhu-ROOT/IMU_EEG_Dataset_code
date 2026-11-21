@@ -1,12 +1,9 @@
-"""Agreement between the head IMU and the accelerometer of the EEG headset (CGX, on the EEG clock) in every segment, for
-the IMU as originally released (before) and the IMU of the dataset (after). The measure is sync/resync.alignment():
-whole-segment rho and best lag (+/-0.5 s), and 5-s windows (hop 1 s) below 0.5 with their class (quiet, offset,
-no match).
+"""Agreement between the head IMU and the EEG headset accelerometer (CGX) in every segment, for the IMU as originally
+released (before) and as corrected (after).
 
     python imu_analysis/imu_alignment.py --bids /path/to/dataset --out /path/to/output [--workers 3]
 
--> imu_alignment_segments.csv   one row per segment: rho, best lag, low windows, before and after
-   imu_low_windows.csv          one row per window below 0.5, before and after
+Writes imu_alignment_segments.csv (per segment) and imu_low_windows.csv (5-s windows with rho below 0.5).
 """
 import argparse
 import pathlib
@@ -31,8 +28,7 @@ def rotation(X, Y):
 
 
 def segment_data(sub, bids, tables=dat.TABLES):
-    """Per segment of the subject with IMU data: the segment row, the CGX accelerometer (n, 3) in g, the IMU as
-    originally released and the IMU of the dataset (m, 6)."""
+    """Per segment with IMU data: row, CGX accelerometer (n, 3) in g, IMU before and after correction (m, 6)."""
     S, P = dat.load_tables(tables)
     S = S[(S['sub'] == sub) & (S.imu_slots.astype(int) > 0)]
     raw = dat.read_raw_imu(bids, sub, S)

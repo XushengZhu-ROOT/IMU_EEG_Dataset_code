@@ -1,10 +1,8 @@
 function make_gyro_figure(bids, outdir)
-% Clipped gyroscope peaks of the head IMU and their restoration with declip_gyro.m, 10 s of one Move segment.
+% Plot clipped head-IMU gyroZ and its restoration by declip_gyro.m (must be on the path), 10 s of the Move segment
+% with the most clipped samples.
 %   make_gyro_figure(bids, outdir)
-% The segment is the Move segment with the most clipped gyroZ samples (|value| >= 990); the window is 10 s from 5 s
-% before the start of its longest run that declip_gyro changes. Writes fig_gyro_declip.png (300 dpi),
-% fig_gyro_declip.pdf and fig_gyro_declip_values.csv (the plotted values) to outdir. Needs eeg_cleaning/declip_gyro.m
-% on the path.
+% Writes fig_gyro_declip.png, fig_gyro_declip.pdf and fig_gyro_declip_values.csv to outdir.
 F = dir(fullfile(bids, 'sub-*', 'motion', '*move_motion.tsv'));
 best = 0;
 for i = 1:numel(F)
@@ -16,7 +14,7 @@ name = F(pick).name(1:end - 11);                        % without _motion.tsv
 M = readmatrix(fullfile(F(pick).folder, F(pick).name), 'FileType', 'text', 'Delimiter', '\t', 'TreatAsMissing', 'n/a');
 t = M(:, 7); g = M(:, 6); y = declip_gyro(g);
 
-% runs of clipped samples with the same sign; the longest run that declip_gyro changed
+% runs of clipped samples with the same sign; the 10-s window starts 5 s before the longest run that declip_gyro changed
 s = sign(g) .* (abs(g) >= 990); s(isnan(s)) = 0;
 runs = zeros(0, 2); k = 1;
 while k <= numel(s)
@@ -31,7 +29,7 @@ s0 = t(runs(r, 1)) - 5; w = find(t >= s0 & t < s0 + 10);
 fprintf('%s: %d clipped gyroZ samples in %d runs (%d changed); window %.3f-%.3f s of the segment, %d samples\n', ...
     name, best, size(runs, 1), sum(fixed), s0, s0 + 10, numel(w));
 
-% title from the file name, e.g. 'Fast head shake (Sub19)'
+% title from the file name
 tok = regexp(name, '^sub-(\d+)_task-([a-z]+)_tracksys-imu_acq-([a-z]+)move$', 'tokens', 'once');
 words = containers.Map({'walkstraight', 'walkcurved', 'headshake', 'headnod', 'pickup', 'stairs'}, ...
     {'walk straight', 'walk curved', 'head shake', 'head nod', 'pick up', 'stairs'});
@@ -63,7 +61,7 @@ fprintf('restored samples in the window: %d; largest |value| recorded %.1f, rest
 end
 
 function fig_legend(fig, labels, cols)
-% legend in the top-left corner of the figure, outside the plot: a line sample, then the label
+% legend above the plot: a line sample, then the label
 ax = axes(fig, 'Units', 'normalized', 'Position', [0.02 0.8 0.96 0.07], 'Visible', 'off'); hold(ax, 'on');
 xlim(ax, [0 1]); ylim(ax, [0 1]); x = 0.005;
 for i = 1:numel(labels)

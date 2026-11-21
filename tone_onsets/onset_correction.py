@@ -1,9 +1,7 @@
-"""One value of c = (LSL marker time) - (sound onset) per audio set-up.
+"""c = (LSL marker time) - (sound onset), one value per audio set-up.
 
-audio.py pushes the LSL marker only after sd.wait() returns, so the marker follows the sound by a delay set by the
-laptop's audio output. c places the grand-average N1 to standard tones at rest (mean of Fz and Cz) N1_LATENCY = 100 ms
-after the corrected onset: c = N1_LATENCY - (N1 peak time relative to the marker). Subject averages (trimmed means)
-come first, then the mean over subjects; the 95% CI resamples subjects (trials for a set-up with one subject).
+c = N1_LATENCY minus the latency of the grand-average N1 to standard tones at rest, relative to the marker, with a
+bootstrap 95% CI.
 """
 import numpy as np
 from scipy.stats import trim_mean
@@ -48,7 +46,7 @@ def estimate(fc, meta):
 
 
 def baseline_check(fc, meta, table):
-    """c again, from the trials of the sitting / standing baseline files only (no key press decides rest there)."""
+    """c from the sitting / standing baseline files only, as lines of text."""
     rows = estimate(fc[meta['baseline_file']], meta[meta['baseline_file']])
     c_all = {r['setup']: r['c_ms'] for r in table}
     return ['c from the sitting / standing baseline files only:'] + \

@@ -1,10 +1,7 @@
 function plot_erp_figures(resdir, figtitle, outname)
-% ERPs at Pz to standard and target tones over all movement, one panel per cleaned version.
+% Plot ERPs at Pz to standard and target tones (all movement), one panel per cleaned version.
 %   plot_erp_figures(resdir, figtitle, outname)
-%   resdir    folder with the erp_averages.mat of erp_measures.m
-%   figtitle  title above the panels
-%   outname   output file without extension: writes <outname>.png (300 dpi) and <outname>.pdf
-% Curves: mean over subjects; bands: +-1 SEM over subjects; grey: 300-500 ms. All panels share the y-axis.
+% resdir holds erp_averages.mat from erp_measures.m. Writes <outname>.png and <outname>.pdf.
 S = load(fullfile(resdir, 'erp_averages.mat'), 'G', 'V', 't', 'chans');
 G = S.G; t = S.t; pz = find(strcmp(S.chans, 'Pz'));
 cS = [42 120 214] / 255; cT = [235 104 52] / 255;           % standard (blue), target (orange)
@@ -47,7 +44,7 @@ plot(ax, t, m, '-', 'Color', col, 'LineWidth', 1.1);
 end
 
 function yl = shared_lim(X)
-% y-limits covering mean +-1 SEM of every array in X (each subjects x 1 x time), with 5% margin
+% y-limits covering mean +-1 SEM of every array in X, with 5% margin
 lo = inf; hi = -inf;
 for i = 1:numel(X)
     Y = reshape(X{i}, size(X{i}, 1), []); m = mean(Y, 1); se = std(Y, 0, 1) / sqrt(size(Y, 1));
@@ -57,7 +54,7 @@ yl = [lo hi] + [-1 1] * 0.05 * (hi - lo);
 end
 
 function fig_legend(fig, labels, cols)
-% legend in the top-left corner of the figure, outside the panels: a line sample, then the label
+% legend above the panels: a line sample, then the label
 ax = axes(fig, 'Units', 'normalized', 'Position', [0.02 0.905 0.96 0.035], 'Visible', 'off'); hold(ax, 'on');
 xlim(ax, [0 1]); ylim(ax, [0 1]); x = 0.005;
 for i = 1:numel(labels)

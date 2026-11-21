@@ -1,6 +1,6 @@
-"""CBraMod backbone with a three-layer MLP classification head over all patch features.
+"""CBraMod with an MLP classification head.
 
-Adapted from the model_for_*.py files of CBraMod (https://github.com/wjq-learning/CBraMod, MIT licence).
+Adapted from https://github.com/wjq-learning/CBraMod (MIT licence).
 """
 import torch
 import torch.nn as nn

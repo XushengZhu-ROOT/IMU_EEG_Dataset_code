@@ -1,12 +1,8 @@
-"""Write the BIDS dataset from the raw recordings and the tables of this repository.
+"""Write the BIDS dataset from the raw recordings (sourcedata/ of --bids) and the tables in tables/.
 
     python bids/make_bids.py --bids /path/to/dataset --out /path/to/new_folder [--workers 3]
 
-Reads sourcedata/sub-XX/eeg/*.xdf and sourcedata/sub-XX/motion/*.txt of --bids and, from tables/: the cut tables
-(segments.csv, pieces.csv) for the EEG, the IMU tables (imu_segments.csv, imu_pieces.csv, imu_time_base_runs.csv) for the
-IMU, tone_onsets.csv and onset_correction.csv for the tones. Writes the root files and sub-XX/eeg, sub-XX/motion of every
-segment into --out. sourcedata/ comes with the dataset; derivatives/ is written by eeg_cleaning/make_clean_erp.py and
-bids/make_eeg_text.py.
+Writes the root files, sub-XX/eeg/ and sub-XX/motion/ into --out.
 """
 import argparse
 import json
@@ -164,7 +160,7 @@ BrainVision file in the same order and units (`_channels.tsv`); values identical
 `derivatives/eeg_text/README`.
 """
 
-# Rest files that are short or lie between the two speeds: RestNote in their _eeg.json and _motion.json
+# Rest files that get a RestNote: short rests and transitions between speeds
 SHORT_REST = {
     'sub-01_task-walkstraight_acq-slowrest': 'The S key was held for 24.6 s only.',
     'sub-02_task-walkstraight_acq-slowrest': 'The S key was held for 12.2 s only; the recording started 2.5 s before.',
@@ -201,7 +197,7 @@ def write_tsv(frame, path):
 
 
 def load_tables(tables):
-    """The tables as data frames; imu_pieces without the tail pieces, tone_onsets without tones that have no EEG sample."""
+    """The tables as data frames, without tail pieces and without tones that have no EEG sample."""
     S = pd.read_csv(os.path.join(tables, 'imu_segments.csv'), keep_default_na=False)
     P = pd.read_csv(os.path.join(tables, 'imu_pieces.csv'), keep_default_na=False)
     return dict(cut=rs.load_tables(tables), segments=S, pieces=P[P.tail_piece != 'yes'],
@@ -211,7 +207,7 @@ def load_tables(tables):
 
 
 def num(x):
-    """Table value -> number (None if empty); integers stay integers unless the column is a float column."""
+    """Table value -> int or float (None if empty)."""
     if x == '' or x is None:
         return None
     v = float(x)
@@ -251,7 +247,7 @@ def boundaries(C):
 
 
 def place_tones(tones, pieces):
-    """(1-based sample of the segment, label, trial) of every tone whose EEG sample lies in one of the EEG pieces."""
+    """(1-based sample of the segment, label, trial) of every tone inside the EEG pieces."""
     out, offset = [], 0
     for f, first, last in pieces:
         e = tones[(tones.file == f) & (tones.corrected_eeg_sample >= first) & (tones.corrected_eeg_sample <= last)]
@@ -365,23 +361,21 @@ def orientation(Y):
 
 
 def movement_rate(g, Y, rest):
-    """Quality.MeasuredMovementRate of a Move segment: the main measure of imu_movement_rate.py and the intensity;
-    for head shaking, nodding and picking up the median of three estimates (cycle_rate.py); for stairs the intensity."""
+    """Quality.MeasuredMovementRate of a Move segment (stairs: intensity only)."""
     m = mr.one_segment(g, Y)
     mv = int(g.cond[8])
     if mv == 5:
         return {'IntensityAccelG': m['intensity_acc_g']}
     v = m['main_measure']
-    v = None if v != v else int(v) if float(v).is_integer() else float(v)      # a whole number is written as an integer
-    if mv in cr.MOVEMENTS:                         # the median of three estimates, where it differs from the event count
+    v = None if v != v else int(v) if float(v).is_integer() else float(v)      # NaN -> None, whole numbers -> int
+    if mv in cr.MOVEMENTS:                         # head shaking, nodding, picking up: median of three estimates
         rate = cr.segment_rates(g, Y, rest)['rate']
         v = rate if rate != v else v
     return {'Value': v, 'Unit': m['main_unit'], 'IntensityAccelG': m['intensity_acc_g']}
 
 
 def head_motion(acc_ug):
-    """Head motion of the headset accelerometer (n, 3; micro-g): 0.3-10 Hz, RMS of the 3-axis norm in 1-s windows ->
-    median and 90th percentile (mg)."""
+    """Median and 90th percentile (mg) of the 1-s RMS head motion of the headset accelerometer (n, 3; micro-g)."""
     a = sosfiltfilt(SOS_HEAD, np.asarray(acc_ug, float) / 1e6, axis=0)
     m = [1e3 * np.sqrt(np.mean(np.sum(a[k:k + FS_EEG] ** 2, 1))) for k in range(0, len(a) - FS_EEG + 1, FS_EEG)]
     return float(np.median(m)), float(np.percentile(m, 90))
@@ -422,7 +416,7 @@ def run_subject(sub, bids, out, tables):
         c0, c1 = map(int, C['info'].eeg_acc_rows.split('-'))
         arr = np.asarray(eeg[:, list(range(a - 1, b)) + list(range(c0 - 1, c1)) + [labels.index('Packet Counter')]],
                          np.float32)
-        for f in files:                            # an xdf is kept in memory while later segments still need it
+        for f in files:                            # free an xdf once no later segment needs it
             left[f] -= 1
             if not left[f]:
                 del xdf[f]
@@ -480,8 +474,8 @@ def quiet_span(bids, tables, stem):
 
 
 def add_rest_notes(out, bids, tables, rest):
-    """RestNote in the sidecars of the short Rest files and of the transitions between speeds. rest = (stem, median mg,
-    90th percentile mg, duration s) of every Rest file; the median over all of them is the reference."""
+    """Add RestNote to the sidecars of SHORT_REST and TRANSITION; rest = (stem, median mg, p90 mg, duration s) of
+    every Rest file. Returns the median over all Rest files."""
     stats = {r[0]: r[1:] for r in rest}
     ref = float(np.median([r[1] for r in rest]))
     for stem in list(SHORT_REST) + TRANSITION:

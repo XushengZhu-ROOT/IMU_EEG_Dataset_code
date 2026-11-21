@@ -1,12 +1,8 @@
-"""Tone onsets of the auditory oddball: corrected time = LSL marker time - c, one c per audio set-up.
+"""Corrected onset time (LSL marker time - c) of every oddball tone, one c per audio set-up.
 
     python tone_onsets/run.py --data <dataset>/sourcedata --out <folder> [--tables <folder>] [--jobs 3]
 
-Reads sub-*/eeg/*.xdf under --data and the EEG gaps of the cut tables (--tables, default: tables/ of this
-repository). Writes to --out:
-  tone_onsets.csv        one row per audio marker, with its corrected time and EEG sample
-  onset_correction.csv   c per audio set-up, with its 95% CI
-  summary.txt            c per set-up, the epoch status counts, and c from the baseline recordings alone
+Writes to --out: tone_onsets.csv (one row per tone), onset_correction.csv (c per set-up) and summary.txt.
 """
 import argparse
 import csv

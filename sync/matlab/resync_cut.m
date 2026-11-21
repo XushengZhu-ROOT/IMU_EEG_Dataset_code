@@ -1,19 +1,14 @@
 function C = resync_cut(T, sub, cond, seg)
-%RESYNC_CUT  Where one segment is in the raw files: EEG pieces and IMU slots (cut tables, tails left out).
+%RESYNC_CUT  Where one segment is in the raw files: EEG pieces and IMU slots.
 %
 %   C = resync_cut(T, sub, cond, seg)     e.g. resync_cut(T, 'Sub01', 'movement3_speed0', 'Move')
 %
-%   C.eeg   one row per EEG piece, in order: file (xdf), first, last (samples of the xdf's EEG stream, 1-based,
-%           inclusive), n, seg_first, seg_last (the same samples counted inside the segment)
-%   C.imu   one row per IMU slot (49.647537 Hz): file (txt), row (1-based data row of the txt; 0 = no row),
-%           status: "raw" = the values of that row, "interpolated" = a sample the IMU lost (straight line between the
-%           raw slots on either side), "missing" = no data (NaN)
-%   C.info  the segment's row of segments.csv (eeg_stream, eeg_acc_rows, imu_usable, problem, eeg_gaps, ...)
-%   C.eeg_start, C.eeg_end  first / last EEG sample (file, sample); C.imu_start, C.imu_end  first / last IMU slot with
-%           a txt row (file, row)
+%   C.eeg   one row per EEG piece: file (xdf), first, last, n, seg_first, seg_last
+%   C.imu   one row per IMU slot: file (txt), row (0 = none), status (raw, interpolated or missing)
+%   C.info  the segment's row of segments.csv
+%   C.eeg_start, C.eeg_end, C.imu_start, C.imu_end  first and last EEG sample and IMU row
 %
-%   Time: EEG sample k of the segment lies (k-1)/500 s and IMU slot u (u-1)/49.647537 s after the segment's first
-%   EEG sample.
+%   All positions are 1-based.
 
 sub = string(sub); cond = string(cond); seg = string(seg);
 S = T.segments;
@@ -53,7 +48,7 @@ C.info = G;
 C.eeg_start = struct('file', C.eeg.file(1), 'sample', C.eeg.first(1));
 C.eeg_end = struct('file', C.eeg.file(end), 'sample', C.eeg.last(end));
 r = find(C.imu.status == "raw");
-if isempty(r)                                          % Sub11 movement3_speed0: no IMU accelerometer
+if isempty(r)                                          % no IMU accelerometer
     C.imu_start = struct('file', "", 'row', NaN); C.imu_end = C.imu_start;
 else
     C.imu_start = struct('file', C.imu.file(r(1)), 'row', C.imu.row(r(1)));

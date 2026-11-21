@@ -1,4 +1,4 @@
-"""Read the streams of one raw XDF recording that the tone onset estimate needs."""
+"""Read one raw XDF recording."""
 import os
 
 import numpy as np
@@ -6,18 +6,14 @@ import pyxdf
 
 
 def load(path, channels):
-    """EEG channels as recorded, packet counter and raw arrival times; audio markers; keyboard.
-
-    Time stamps are kept as recorded (dejitter_timestamps=False); eeg_clock.py turns the EEG arrival times
-    into sample times. All streams of a file come from the same laptop, so they share one LSL clock.
-    """
+    """EEG channels, packet counter and raw arrival times; audio markers; keyboard events."""
     streams, _ = pyxdf.load_xdf(path, dejitter_timestamps=False)
     eeg = next(s for s in streams if s['info']['type'][0] == 'EEG')
     named = {s['info']['name'][0]: s for s in streams}
     labels = [c['label'][0] for c in eeg['info']['desc'][0]['channels'][0]['channel']]
     data = eeg['time_series']
 
-    # audio.py marker text: "<tone>,<trial>,<stimulus id>,<time.time() just before sd.play()>"
+    # marker text: "<tone>,<trial>,<stimulus id>,<time of the play command>"
     audio = named['AudioMarkers']
     fields = [v[0].split(',') for v in audio['time_series']]
     kb = named.get('Keyboard', {'time_stamps': np.zeros(0), 'time_series': []})

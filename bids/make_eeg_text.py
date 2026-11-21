@@ -1,11 +1,8 @@
-"""Raw EEG of every recording of the dataset as tab-separated text (derivatives/eeg_text).
+"""Write the raw EEG of every recording as tab-separated text (derivatives/eeg_text).
 
     python bids/make_eeg_text.py --bids /path/to/dataset --out /path/to/dataset/derivatives/eeg_text [--workers 3]
 
-For every sub-XX/eeg/*_eeg.vhdr (BINARY, MULTIPLEXED, IEEE_FLOAT_32, 2000 us, resolution 1, channel names as in
-_channels.tsv) one file <out>/sub-XX/eeg/<same name>_eeg.tsv: a header row, latency_s (sample index / 500), then the
-channels of the .vhdr in the same order, values with 9 significant digits, which give back the same float32. Every file
-is read back and compared with the .eeg value by value; the script stops at the first difference. Also writes
+Writes <out>/sub-XX/eeg/<name>_eeg.tsv for every sub-XX/eeg/<name>_eeg.vhdr (latency_s, then the channels), plus
 dataset_description.json and README.
 """
 import argparse
@@ -63,7 +60,7 @@ Made with make_eeg_text.py (see dataset_description.json).
 
 
 def read_vhdr(vhdr):
-    """Channel names of a BrainVision header; stops unless it has the format above."""
+    """Channel names of a BrainVision header; stops if its format differs from FORMAT."""
     with open(vhdr, encoding='utf-8') as fh:
         h = fh.read()
     for k, v in FORMAT.items():
@@ -78,7 +75,7 @@ def read_vhdr(vhdr):
 
 
 def text_copy(vhdr, bids, out):
-    """Write the text file of one recording and read it back. -> (samples, bytes)"""
+    """Write the text file of one recording; return (samples, bytes)."""
     rel = os.path.relpath(vhdr, bids)
     names = read_vhdr(vhdr)
     if list(pd.read_csv(vhdr[:-len('_eeg.vhdr')] + '_channels.tsv', sep='\t')['name']) != names:

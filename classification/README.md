@@ -27,7 +27,3 @@ The MATLAB functions need EEGLAB with the CleanLine and clean_rawdata plugins. T
        bash classification/run_loso.sh
 
 Each fold writes the selected model, its training logs and the test predictions (`motortask_cbramod_foldNN.npz`).
-
-## Origin
-
-The training code is the six-movement part of `cbramod_finetune` in [EEG-Review-Paper-Repo](https://github.com/XushengZhu-ROOT/EEG-Review-Paper-Repo), adapted from [CBraMod](https://github.com/wjq-learning/CBraMod) (MIT licence, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).

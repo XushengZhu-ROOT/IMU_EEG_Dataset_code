@@ -1,7 +1,6 @@
 function u = imu_unusable(bids, sub, task, acq)
-% true if anomalies.tsv (BIDS root) gives imu_usable = no for this segment.
+% True if anomalies.tsv marks this segment's IMU unusable.
 %   u = imu_unusable(bids, sub, task, acq)    e.g. imu_unusable(bids, '19', 'headshake', 'slowmove')
-% Matched on the sub, cond and seg columns (bids_file is n/a where the segment has no IMU file).
 A = readtable(fullfile(bids, 'anomalies.tsv'), 'FileType', 'text', 'Delimiter', '\t', 'TextType', 'char');
 tasks = {'walkstraight', 'walkcurved', 'headshake', 'headnod', 'pickup', 'stairs'}; speeds = {'slow', 'fast'};
 u = false;

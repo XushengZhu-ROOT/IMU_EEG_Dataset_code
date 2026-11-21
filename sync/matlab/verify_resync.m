@@ -1,19 +1,11 @@
 function R = verify_resync(bids, varargin)
-%VERIFY_RESYNC  Rebuild every segment from the raw recordings with the cut tables and check it against the tables.
+%VERIFY_RESYNC  Rebuild every segment from the raw recordings and check it against the cut tables.
 %
 %   R = verify_resync(bids)                          bids = root folder of the dataset
 %   R = verify_resync(bids, 'Out', 'verify_out', 'Tables', '')
 %
-%   Needs load_xdf (EEGLAB plugin xdfimport). The raw files are read from sourcedata/sub-XX/eeg (xdf) and
-%   sourcedata/sub-XX/motion (txt). The checks:
-%     1 positions  EEG: number of samples, first and last xdf sample. IMU: number of slots and of empty slots, first
-%                  and last txt row with data (segments.csv)
-%     2 values     check_first and check_last of every EEG and IMU piece (pieces.csv); IMU: check_imu_sum
-%                  (segments.csv)
-%     3 alignment  segments of 40 s or more: whole-segment rho within 0.02 of `rho` (segments.csv) and best lag 0
-%                  (+/-1); shorter segments are reported only
-%   -> <Out>/verify_segments.csv, one row per segment (the columns of verify_resync.py). Out must not exist or be
-%      empty.
+%   Needs load_xdf (EEGLAB plugin xdfimport). Checks: 1 positions (start, end, length), 2 values at the piece ends,
+%   3 alignment (rho, best lag). Writes <Out>/verify_segments.csv, one row per segment; Out must be empty or new.
 
 ip = inputParser;
 ip.addParameter('Tables', '');

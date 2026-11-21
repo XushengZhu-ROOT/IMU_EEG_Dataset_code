@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 """Auditory oddball stimulus program used during the recordings.
 
-Plays 300-ms sine tones (standard 1000 Hz, target 3000 Hz, 5-ms Hanning ramps) through the default audio output and
-sends one LSL marker per tone (stream AudioMarkers) after the tone has played. Writes the tone waveforms to
-tone_waveforms.png and the trial log to oddball_experiment_log.csv in the working directory.
+Plays each tone, then sends its LSL marker (stream AudioMarkers). Writes tone_waveforms.png and
+oddball_experiment_log.csv to the working directory.
 """
 
 import numpy as np
@@ -92,11 +91,7 @@ def plot_tones():
 
 
 def generate_stimulus_sequence(total_trials, target_prob, min_standards_between_targets):
-    """Trial list and the wait after each tone.
-
-    After each target the next min_standards_between_targets tones are standards; any other tone is a target with a
-    probability equal to the share of targets among the trials still left in the list.
-    """
+    """Trial list and the wait after each tone; at least min_standards_between_targets standards follow each target."""
     n_targets = int(total_trials * target_prob)
     n_standards = total_trials - n_targets
 

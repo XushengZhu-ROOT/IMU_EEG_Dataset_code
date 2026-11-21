@@ -1,20 +1,10 @@
-"""IMU coordinate system, mounting, gyroscope scale and the axes of the headset accelerometer (CGX), from the data.
-
-Device (rabboni manual, section 4.2): X along the writing direction of the word "rabboni", Y towards the top of the
-letters, Z out of the front face. On top of the head with the word upright when seen from behind: X = right,
-Y = anterior, Z = superior.
-  gravity        mean acceleration of every Rest segment; tilt = angle between it and +Z
-  +Y = anterior  picking up (the head bends forward): accY goes down
-  gyro scale     head nodding: slope of the integral of gyroX against the tilt from gravity (atan2(accY, accZ)),
-                 positive for right-handed axes; straight walking: integral of the angular rate about gravity over a
-                 U-turn / 180 deg
-  clipping       samples with |gyro| >= 990
-  CGX axes       gravity in the CGX at Rest, and the rotation from the IMU axes to the CGX axes (imu_alignment.rotation)
-                 in every Move segment with rho >= 0.9
+"""IMU axes on the head (X right, Y anterior, Z superior) and tilt from gravity, gyroscope scale and clipping, and the
+axes of the EEG headset accelerometer (CGX), estimated from the data.
 
     python imu_analysis/imu_orientation_check.py --bids /path/to/dataset --out /path/to/output [--workers 3]
 
--> imu_orientation_segments.csv, imu_gyro_scale.csv, imu_orientation_summary.csv (printed)
+Writes imu_orientation_segments.csv (per segment), imu_gyro_scale.csv (from head nodding and U-turns) and
+imu_orientation_summary.csv (printed).
 """
 import argparse
 import pathlib

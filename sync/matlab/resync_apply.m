@@ -1,17 +1,13 @@
 function [eeg, imu] = resync_apply(C, eeg_src, imu_src)
-%RESYNC_APPLY  Cut one segment out of continuous EEG and raw IMU data at the positions from resync_cut.
+%RESYNC_APPLY  Cut a segment from continuous EEG and raw IMU data.
 %
-%   [eeg, imu] = resync_apply(C, eeg_src, imu_src)
+%   [eeg, imu] = resync_apply(C, eeg_src, imu_src)       C from resync_cut
 %
-%   eeg_src  continuous EEG of the segment's xdf, [rows x samples]: column s = sample s of the xdf's EEG stream
-%            (load_xdf_eeg returns this). Any rows, and any processing that keeps every sample in its column
-%            (filtering, re-referencing, ICA): not resampled, no samples removed. A segment over two xdf files
-%            (Sub05 and Sub07 movement4_speed1 Move) needs a containers.Map: xdf name -> matrix. [] skips the EEG.
-%   imu_src  raw IMU rows [rows x 6] from read_rabboni_txt, or a containers.Map: txt name -> matrix. [] skips it.
+%   eeg_src  EEG stream [rows x samples] from load_xdf_eeg (may be processed if every sample keeps its column)
+%   imu_src  IMU rows [N x 6] from read_rabboni_txt
+%   A segment over two files needs a containers.Map (file name -> matrix); [] skips the EEG or IMU.
 %
-%   eeg  [rows x n]: the pieces one after the other.
-%   imu  [m x 6] (accX accY accZ gyroX gyroY gyroZ), one row per IMU slot: raw slots = their txt row; interpolated
-%        slots = straight line between the raw slots on either side, per column; missing slots = NaN.
+%   eeg [rows x n], imu [m x 6] (NaN = missing slot)
 
 eeg = [];
 if ~isempty(eeg_src)

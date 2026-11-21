@@ -1,16 +1,11 @@
-"""Rate of head shaking, head nodding and picking up an object in every Move segment: the median of three estimates.
-  1  events of imu_movement_rate.py: cycles of the angular velocity (shaking, nodding) or dips of the head height (picking up)
-  2  the same event rule as imu_movement_rate.cycles on the head angle about the main rotation axis (shaking, nodding;
-     gyroscope / 4, integrated, band-passed at 0.05-3 Hz) or on the head tilt (picking up; first principal component of
-     the acceleration band-passed at 0.05-1.5 Hz)
-  3  the period of the head angle (shaking, nodding) or of the angle between the head orientation and its orientation
-     in the Rest segment before (picking up), from the autocorrelation as imu_movement_rate.cadence
-The same for the first and the last 60 s of each segment.
+"""Rate of head shaking, head nodding and picking up in every Move segment: the median of three estimates (events of the
+angular velocity or head height, events of the head angle or tilt, and the autocorrelation period), also for the first
+and last 60 s.
 
     python imu_analysis/cycle_rate.py --bids /path/to/dataset --out /path/to/output
 
--> cycle_rate_segments.csv   one row per segment: the three estimates, their median (rate), first and last 60 s
-   cycle_rate_summary.csv    per movement: slow vs fast; first vs last 60 s (slow_median, fast_median = first, last)
+Writes cycle_rate_segments.csv (per segment) and cycle_rate_summary.csv (per movement: slow vs fast, and first vs last
+60 s with first in slow_median and last in fast_median).
 """
 import argparse
 import pathlib
@@ -32,7 +27,7 @@ ACF_MIN_LAG = {2: 0.4, 3: 0.4, 4: 1.0}
 
 
 def armed_events(x, frac=0.35):
-    """Times (s) of the events of imu_movement_rate.cycles: past -th, then past +th (th = frac x 90th percentile of |x|)."""
+    """Times (s) at which x rises past +th after falling below -th (th = frac x 90th percentile of |x|)."""
     th = frac * np.percentile(np.abs(x), 90)
     t, armed = [], False
     for i, v in enumerate(x):
@@ -68,7 +63,7 @@ def tilt_from_upright(acc, rest_acc):
 
 
 def acf_rate(x, lo_s=0.4, hi_s=30.0):
-    """Events per minute from the autocorrelation period (as imu_movement_rate.cadence) and the height of that peak."""
+    """Events per minute from the autocorrelation period, and the height of that peak."""
     x = x - x.mean()
     n = len(x)
     ac = np.fft.irfft(np.abs(np.fft.rfft(x, 2 * n)) ** 2)[:n]
@@ -85,7 +80,7 @@ def acf_rate(x, lo_s=0.4, hi_s=30.0):
 
 
 def segment_rates(g, Y, rest):
-    """Row g of imu_segments.csv (a Move segment), its IMU Y and the IMU of the Rest segment before it (slots, 6)."""
+    """Rate estimates of one Move segment g from its IMU Y and the IMU of the Rest segment before it (slots, 6)."""
     mv = int(g.cond[8])
     e1 = mr.one_segment(g, Y)
     Y = mr.bridged(Y)

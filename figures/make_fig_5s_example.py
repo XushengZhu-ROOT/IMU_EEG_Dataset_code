@@ -1,19 +1,13 @@
-"""Figure of 5 s of EEG and head IMU from the sitting baseline and the six movements (fast condition) of one participant.
+"""5 s of EEG and head IMU from the sitting baseline and the six fast movements of one participant.
 
     python figures/make_fig_5s_example.py --bids /path/to/dataset --out /path/to/output
 
-Participant: the first in ID order (participants.tsv) with a sitting baseline, all six fast movement segments, IMUUsable
-= yes in the _motion.json of all seven segments, and a clean window in each of them.
-Window: the 5 s from 60 s after the first EEG sample of the segment; if it holds an n/a IMU value, a clipped gyroscope
-value (|value| >= 990 deg/s), a saturated accelerometer value (|value| >= 1.98 g) or a boundary event, the next 5 s
-(65 s, 70 s, ...) until a window is clean.
-EEG: Fz Cz Pz O1 T3 T4 in uV (reference A1, as recorded), for display the first filters of
-eeg_cleaning/clean_paper_versions.m: a 4th-order Butterworth high-pass at 0.5 Hz and Butterworth band-stops at 60, 120,
-180 and 240 Hz (butter with N = 2, f0 +/- 1 Hz), each run forward and backward over the continuous stretch between
-boundary events that holds the window; channel baselines 1000 uV apart. IMU: the values of the _motion.tsv; the axes
-span the sensor ranges (+/-2 g, +/-1000 deg/s).
+Participant: the first in ID order with a sitting baseline, all six fast movements and IMUUsable = yes in all seven
+segments. Window: the first 5 s from 60 s on, in 5-s steps, with no empty, clipped or saturated IMU value and no
+boundary event. EEG (Fz Cz Pz O1 T3 T4) is high-passed at 0.5 Hz and band-stopped at 60, 120, 180 and 240 Hz for
+display.
 
--> fig_5s_example.png (300 dpi), fig_5s_example.pdf, fig_5s_example_values.csv (the plotted values)
+Writes fig_5s_example.png, fig_5s_example.pdf and fig_5s_example_values.csv.
 """
 import argparse
 import json
@@ -21,30 +15,28 @@ import os
 import pathlib
 import sys
 
+import matplotlib
 import numpy as np
 import pandas as pd
 from scipy.signal import butter, sosfiltfilt
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-from figures import figstyle  # noqa: E402
-from imu_analysis import imu_data as dat  # noqa: E402
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt  # noqa: E402
-from matplotlib.lines import Line2D  # noqa: E402
-from matplotlib.transforms import blended_transform_factory  # noqa: E402
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+from imu_analysis import imu_data as dat  # noqa: E402
 
 MOVES = [('walkstraight', 'straight walking'), ('walkcurved', 'curved walking'), ('headshake', 'head shaking'),
          ('headnod', 'head nodding'), ('pickup', 'picking up'), ('stairs', 'stairs')]
 CHANNELS = ['Fz', 'Cz', 'Pz', 'O1', 'T3', 'T4']
 IMU_COLS = ['accX', 'accY', 'accZ', 'gyroX', 'gyroY', 'gyroZ']
 WIN, START, STEP = 5.0, 60.0, 5.0          # s
-GYRO_CLIP = 990.0                           # deg/s (device units); the gyroscope stops at about +992 / -1000
-ACC_CLIP = 1.98                             # g; the accelerometer stops at +1.984 to +1.992 and -2.000 to -2.008
+GYRO_CLIP = 990.0                           # deg/s
+ACC_CLIP = 1.98                             # g
 HP_HZ, HP_ORDER = 0.5, 4
 LINE_HZ, LINE_HALF_BW, LINE_ORDER = (60, 120, 180, 240), 1.0, 2
-SPACING = 1000.0                            # uV between EEG channel baselines = length of the scale bar
+SPACING = 1000.0                            # uV between EEG channel baselines
 ACC_LIM, GYRO_LIM = 2.0, 1000.0             # sensor ranges
-C_REF = (0.82, 0.82, 0.82)                  # zero lines
-STYLE = {'xtick.major.pad': 1.5, 'ytick.major.pad': 1.5, 'lines.solid_joinstyle': 'round'}
 
 
 def load_segment(bids, sub, task, acq):
@@ -65,7 +57,7 @@ def load_segment(bids, sub, task, acq):
 
 
 def find_window(seg, n_eeg, fs_eeg):
-    """First clean 5-s window from 60 s on, in 5-s steps: (t0, IMU row indices, rejected windows)."""
+    """First clean 5-s window from 60 s on: (t0, IMU row indices, rejected windows)."""
     imu, lat, bnd = seg['imu'], seg['imu'][:, 6], seg['boundaries']
     n_min = int(np.floor(WIN * float(seg['mjson']['SamplingFrequencyEffective'])))
     rejected, t0 = [], START
@@ -94,8 +86,7 @@ def find_window(seg, n_eeg, fs_eeg):
 
 
 def stretch_filter(x, k0, k1, boundaries, fs, sos_chain):
-    """The filters of sos_chain one after the other, each forward and backward, over the continuous stretch (between
-    boundary events) that holds samples k0..k1-1; returns the window."""
+    """Zero-phase filter the stretch between boundary events that holds samples k0..k1-1; return those samples."""
     edges = np.unique(np.r_[0, np.round(boundaries * fs).astype(int), len(x)])
     p = np.searchsorted(edges, k0, side='right') - 1
     a, b = int(edges[p]), int(edges[p + 1])
@@ -107,7 +98,7 @@ def stretch_filter(x, k0, k1, boundaries, fs, sos_chain):
 
 
 def display_filters(fs):
-    """0.5-Hz high-pass (butter with N = 4) and band-stops at 60/120/180/240 Hz (butter with N = 2, f0 +/- 1 Hz)."""
+    """0.5-Hz high-pass and band-stops at 60, 120, 180 and 240 Hz."""
     chain = [butter(HP_ORDER, HP_HZ, btype='highpass', fs=fs, output='sos')]
     for f0 in LINE_HZ:
         chain.append(butter(LINE_ORDER, [f0 - LINE_HALF_BW, f0 + LINE_HALF_BW], btype='bandstop', fs=fs, output='sos'))
@@ -147,56 +138,31 @@ def select(bids):
 
 
 def draw(panels, sub_paper, eeg_lim, png, pdf):
-    """18 cm wide; one column per task; rows EEG, accelerometer, gyroscope (sizes in cm)."""
-    W, LEFT, RIGHT, GAP_X = 18.0, 1.5, 0.2, 0.32
-    EEG_TOP, EEG_H, GAP_Y, IMU_H, BOTTOM = 1.55, 6.4, 0.3, 2.3, 0.72
-    H = EEG_TOP + EEG_H + GAP_Y + IMU_H + GAP_Y + IMU_H + BOTTOM
-    w = (W - LEFT - RIGHT - 6 * GAP_X) / 7
-    rows_b = [H - EEG_TOP - EEG_H, H - EEG_TOP - EEG_H - GAP_Y - IMU_H, BOTTOM]
-    rows_h = [EEG_H, IMU_H, IMU_H]
-    ylab_x = -1.08 / w                                          # right edge of the y labels, in axes units
-    fig = plt.figure(figsize=(W * figstyle.CM, H * figstyle.CM), facecolor='w')
-    for j, seg in enumerate(panels):
-        x0 = LEFT + j * (w + GAP_X)
-        ax_e, ax_a, ax_g = [fig.add_axes([x0 / W, b / H, w / W, h / H]) for b, h in zip(rows_b, rows_h)]
-        for ax in (ax_e, ax_a, ax_g):
-            ax.set_xlim(0, WIN)
-            ax.set_xticks(np.arange(0, WIN + 0.01, 1))
-            ax.tick_params(labelbottom=ax is ax_g, labelleft=j == 0)
+    """One column per task; rows EEG, accelerometer, gyroscope."""
+    fig, axs = plt.subplots(3, 7, figsize=(16, 9), sharex=True, sharey='row', height_ratios=[3, 1, 1],
+                            layout='constrained')
+    fig.suptitle(f'EEG and head IMU in each task ({sub_paper})')
+    for seg, (ax_e, ax_a, ax_g) in zip(panels, axs.T):
         for i in range(len(CHANNELS)):
-            ax_e.plot(seg['t_eeg'], seg['eeg'][:, i] - i * SPACING, color='k', lw=0.35)
-        ax_e.set_ylim(eeg_lim)
-        ax_e.set_yticks([-i * SPACING for i in range(len(CHANNELS))])
-        ax_e.set_yticklabels(CHANNELS)
-        ax_e.set_title(seg['title'], pad=4)
-        # zero line, then Z, Y, X so that the smaller X and Y stay visible
-        for ax, cols, lim, ticks in ((ax_a, (0, 1, 2), ACC_LIM, [-2, -1, 0, 1, 2]),
-                                     (ax_g, (3, 4, 5), GYRO_LIM, [-1000, -500, 0, 500, 1000])):
-            ax.axhline(0, color=C_REF, lw=0.5, zorder=0)
-            for c, col in zip(cols[::-1], (figstyle.GREEN, figstyle.ORANGE, figstyle.BLUE)):
-                ax.plot(seg['t_imu'], seg['imu_win'][:, c], color=col, lw=0.7)
-            ax.set_ylim(-lim, lim)
-            ax.set_yticks(ticks)
-        if j == 0:
-            ax_a.set_ylabel('acc (g)')
-            ax_g.set_ylabel('gyro (deg/s)')
-            for ax in (ax_a, ax_g):
-                ax.yaxis.set_label_coords(ylab_x, 0.5)
-            # EEG scale bar of SPACING uV between the baselines of the 3rd and 4th channel, left of the names
-            tr = blended_transform_factory(ax_e.transAxes, ax_e.transData)
-            y0 = -(len(CHANNELS) / 2) * SPACING
-            ax_e.plot([-0.86 / w] * 2, [y0, y0 + SPACING], color='k', lw=1.0, transform=tr, clip_on=False,
-                      solid_capstyle='butt')
-            ax_e.text(ylab_x, y0 + SPACING / 2, f'{SPACING:.0f} µV', rotation=90, ha='right', va='center',
-                      transform=tr)
-        figstyle.x_unit(ax_g, '(s)')
-    fig.text(0.5, 1 - 0.34 / H, f'EEG and head IMU in each task ({sub_paper})', ha='center', va='center',
-             fontsize=11, fontweight='bold')
-    handles = [Line2D([], [], color=c, lw=1.4) for c in (figstyle.BLUE, figstyle.ORANGE, figstyle.GREEN)]
-    fig.legend(handles, ['X', 'Y', 'Z'], loc='center left', bbox_to_anchor=(0.004, 1 - 0.88 / H), ncol=3,
-               frameon=False, handlelength=2.2, handletextpad=0.5, columnspacing=1.6, borderaxespad=0,
-               borderpad=0)
-    figstyle.save(fig, png, pdf)
+            ax_e.plot(seg['t_eeg'], seg['eeg'][:, i] - i * SPACING, color='k', lw=0.5)
+        ax_e.set_title(seg['title'])
+        for ax, cols in ((ax_a, (0, 1, 2)), (ax_g, (3, 4, 5))):
+            ax.axhline(0, color='0.8')
+            for c, col, name in zip(cols[::-1], ('C2', 'C1', 'C0'), 'ZYX'):    # Z first so that X and Y stay visible
+                ax.plot(seg['t_imu'], seg['imu_win'][:, c], color=col, lw=0.8, label=name)
+    axs[0, 0].set_xlim(0, WIN)
+    axs[0, 0].set_ylim(eeg_lim)
+    axs[0, 0].set_yticks([-i * SPACING for i in range(len(CHANNELS))], CHANNELS)
+    axs[0, 0].set_ylabel(f'EEG ({SPACING:.0f} µV between channels)')
+    axs[1, 0].set_ylim(-ACC_LIM, ACC_LIM)
+    axs[1, 0].set_ylabel('acc (g)')
+    axs[2, 0].set_ylim(-GYRO_LIM, GYRO_LIM)
+    axs[2, 0].set_ylabel('gyro (deg/s)')
+    fig.supxlabel('Time (s)')
+    handles, labels = axs[1, 0].get_legend_handles_labels()
+    fig.legend(handles[::-1], labels[::-1], loc='outside upper left', ncols=3)
+    fig.savefig(png)
+    fig.savefig(pdf)
 
 
 def main():
@@ -224,7 +190,7 @@ def main():
         for j, r in enumerate(seg['rows']):
             val_rows.append([seg['task'], 'IMU', int(r) + 1, imu[j, 6], seg['t_imu'][j]] + [np.nan] * 6 + list(imu[j, :6]))
 
-    # one EEG scale for all panels: the limits hold every plotted sample
+    # one EEG scale for all panels
     lo = min((seg['eeg'][:, i] - i * SPACING).min() for seg in panels for i in range(len(CHANNELS)))
     hi = max((seg['eeg'][:, i] - i * SPACING).max() for seg in panels for i in range(len(CHANNELS)))
     pad = 0.02 * (hi - lo)
@@ -232,8 +198,7 @@ def main():
     imu_all = np.vstack([seg['imu_win'][:, :6] for seg in panels])
     assert np.abs(imu_all[:, :3]).max() < ACC_LIM and np.abs(imu_all[:, 3:]).max() < GYRO_LIM
 
-    with figstyle.paper_style(**STYLE):
-        draw(panels, sub_paper, eeg_lim, out / 'fig_5s_example.png', out / 'fig_5s_example.pdf')
+    draw(panels, sub_paper, eeg_lim, out / 'fig_5s_example.png', out / 'fig_5s_example.pdf')
     cols = (['task', 'signal', 'source_index_1based', 'latency_s', 'time_in_figure_s'] + [f'{c}_uV' for c in CHANNELS]
             + [f'{c}_{"g" if c.startswith("acc") else "dps"}' for c in IMU_COLS])
     pd.DataFrame(val_rows, columns=cols).to_csv(out / 'fig_5s_example_values.csv', index=False, float_format='%.6g')

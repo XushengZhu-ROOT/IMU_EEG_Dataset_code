@@ -2,11 +2,8 @@
 
     python tone_onsets/timestamps.py <file.xdf> [--c onset_correction.csv] [--tables folder]
 
-Prints the file's rows of tone_onsets.csv. corrected_time = marker_time - c, with c of the audio set-up that played
-the tone; corrected_eeg_sample is the EEG sample c * 500 samples (lost samples counted) before the marker's place on
-the clock of eeg_clock.py, as the 1-based sample number of the EEG stream in the XDF file; it is empty for markers
-outside the EEG recording and for tones whose onset lies inside an EEG gap (more than one sample from every recorded
-sample).
+Prints the file's rows of tone_onsets.csv. corrected_eeg_sample (1-based, EEG stream of the XDF file) is empty for
+markers outside the recording or onsets inside an EEG gap.
 """
 import argparse
 import csv
@@ -33,12 +30,10 @@ def read_c(path=TABLES / 'onset_correction.csv'):
 
 
 def rows(meta, c_ms, numbering):
-    """Table rows for the markers in meta (extract.META), c in ms per audio set-up, and the sample numbering of
-    each file ({file: extract.numbering()})."""
+    """Rows of tone_onsets.csv for the markers in meta (extract.META); numbering: {file: extract.numbering()}."""
     for m in meta:
         c = c_ms[m['setup']] / 1e3
         num = numbering[m['file']]
-        # no sample for markers outside the EEG recording and for onsets inside an EEG gap
         have = not np.isnan(m['marker_sample']) and not extract.in_gap(m['marker_sample'], c * C.FS, num)
         onset = extract.onset_sample(m['marker_sample'], c * C.FS, num) if have else None
         yield [m['file'], m['trial'], m['tone'], m['setup'], f"{m['marker_time']:.6f}", c_ms[m['setup']],
