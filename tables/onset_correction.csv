@@ -1,0 +1,5 @@
+setup,subjects,n_subjects,n_standard_trials,n1_vs_marker_ms,n1_uV,c_ms,c_ci_low_ms,c_ci_high_ms
+KS96,Sub01 Sub03 Sub04 Sub05 Sub06 Sub07 Sub08 Sub09 Sub10 Sub12 Sub14 Sub15 Sub16 Sub17 Sub20,15,3831,-16.7,-9.32,116,113,119
+0D96,Sub07 Sub08 Sub10 Sub11 Sub13,5,881,27.4,-5.44,72,64,79
+Lenovo,Sub18 Sub19,2,601,7.9,-12.58,92,88,99
+KS96-Sub02,Sub02,1,87,-214.3,-4.19,314,303,319

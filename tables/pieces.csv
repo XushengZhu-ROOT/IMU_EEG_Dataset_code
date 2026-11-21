@@ -1,0 +1,1282 @@
+sub,cond,seg,stream,piece,file,first,last,n,seg_first,seg_last,imu_method,note,check_first,check_last
+Sub01,Stand,Rest,EEG,1,Sub01_Stand.xdf,514,95417,94904,1,94904,,,-53170.0781,-52278.4414
+Sub01,Stand,Rest,IMU,1,Sub01_Stand.txt,1867,11290,9424,1,9424,rows,,0.016 -0.526 0.836,-0.031 -0.629 0.776
+Sub01,movement0_speed0,Move,EEG,1,Sub01_movement0.xdf,16432,85730,69299,1,69299,,,-54536.5469,-51284.3594
+Sub01,movement0_speed0,Move,EEG,2,Sub01_movement0.xdf,265771,265771,1,69300,69300,,tail: leave this piece out,,
+Sub01,movement0_speed0,Move,IMU,1,Sub01_movement0.txt,1656,8536,6881,1,6881,rows,,-0.114 -0.23 1.012,0.318 -0.405 0.931
+Sub01,movement0_speed0,Move,IMU,2,Sub01_movement0.txt,26415,26415,1,6882,6882,rows,tail: leave this piece out,,
+Sub01,movement0_speed0,Rest,EEG,1,Sub01_movement0.xdf,1201,13512,12312,1,12312,,,-48343.8711,-53414.2031
+Sub01,movement0_speed0,Rest,IMU,1,Sub01_movement0.txt,144,1367,1224,1,1224,rows,,-0.022 -0.134 0.987,-0.017 -0.184 0.976
+Sub01,movement0_speed1,Move,EEG,1,Sub01_movement0.xdf,108368,175343,66976,1,66976,,,-57853.5781,-52688.8047
+Sub01,movement0_speed1,Move,EEG,2,Sub01_movement0.xdf,265771,265771,1,66977,66977,,tail: leave this piece out,,
+Sub01,movement0_speed1,Move,IMU,1,Sub01_movement0.txt,10785,17433,6649,1,6649,rows,,0.081 -0.309 0.835,0.04 0.146 0.985
+Sub01,movement0_speed1,Move,IMU,2,Sub01_movement0.txt,26414,26415,2,6650,6651,rows,tail: leave this piece out,,
+Sub01,movement0_speed1,Rest,EEG,1,Sub01_movement0.xdf,89026,105529,16504,1,16504,,,-51824.6367,-58123.4023
+Sub01,movement0_speed1,Rest,IMU,1,Sub01_movement0.txt,8865,10504,1640,1,1640,rows,,-0.083 -0.143 0.966,-0.101 -0.194 0.971
+Sub01,movement1_speed0,Move,EEG,1,Sub01_movement1.xdf,19371,77319,57949,1,57949,,,-54438.7969,-51984.5547
+Sub01,movement1_speed0,Move,EEG,2,Sub01_movement1.xdf,18262,18262,1,57950,57950,,tail: leave this piece out,,
+Sub01,movement1_speed0,Move,IMU,1,Sub01_movement1.txt,1979,7732,5754,1,5754,rows,,-0.019 -0.34 0.983,0.114 -0.458 0.871
+Sub01,movement1_speed0,Move,IMU,2,Sub01_movement1.txt,22555,22555,1,5755,5755,rows,tail: leave this piece out,,
+Sub01,movement1_speed0,Rest,EEG,1,Sub01_movement1.xdf,1609,17464,15856,1,15856,,,-52679.25,-52864.8477
+Sub01,movement1_speed0,Rest,IMU,1,Sub01_movement1.txt,216,1790,1575,1,1575,rows,,0.674 -0.221 0.697,-0.106 -0.182 0.952
+Sub01,movement1_speed1,Move,EEG,1,Sub01_movement1.xdf,86927,148312,61386,1,61386,,,-52564.8398,-54435.957
+Sub01,movement1_speed1,Move,EEG,2,Sub01_movement1.xdf,18262,18262,1,61387,61387,,tail: leave this piece out,,
+Sub01,movement1_speed1,Move,IMU,1,Sub01_movement1.txt,8688,14783,6096,1,6096,rows,,-0.115 -0.37 1.059,-0.034 -0.079 0.963
+Sub01,movement1_speed1,Move,IMU,2,Sub01_movement1.txt,22556,22556,1,6097,6097,rows,tail: leave this piece out,,
+Sub01,movement1_speed1,Rest,EEG,1,Sub01_movement1.xdf,77321,86927,9607,1,9607,,,-51983.3125,-52564.8398
+Sub01,movement1_speed1,Rest,IMU,1,Sub01_movement1.txt,7733,8686,954,1,954,rows,,0.123 -0.481 0.892,-0.086 -0.407 0.952
+Sub01,movement2_speed0,Move,EEG,1,Sub01_movement2.xdf,20968,88301,67334,1,67334,,,-55275.3672,-53457.8477
+Sub01,movement2_speed0,Move,EEG,2,Sub01_movement2.xdf,205125,205125,1,67335,67335,,tail: leave this piece out,,
+Sub01,movement2_speed0,Move,IMU,1,Sub01_movement2.txt,2116,8801,6686,1,6686,rows,,0.116 -0.187 0.951,0.135 -0.048 0.965
+Sub01,movement2_speed0,Move,IMU,2,Sub01_movement2.txt,21461,21461,1,6687,6687,rows,tail: leave this piece out,,
+Sub01,movement2_speed0,Rest,EEG,1,Sub01_movement2.xdf,539,17687,17149,1,17149,,,-54667.1914,-55396.8594
+Sub01,movement2_speed0,Rest,IMU,1,Sub01_movement2.txt,87,1790,1704,1,1704,rows,,0.007 -0.076 0.988,-0.223 0.005 0.946
+Sub01,movement2_speed1,Move,EEG,1,Sub01_movement2.xdf,110480,153304,42825,1,42825,,,-55930.8594,-57460.2852
+Sub01,movement2_speed1,Move,EEG,2,Sub01_movement2.xdf,205125,205125,1,42826,42826,,tail: leave this piece out,,
+Sub01,movement2_speed1,Move,IMU,1,Sub01_movement2.txt,11004,15253,4250,1,4250,rows,,-0.034 -0.09 0.986,-0.168 -0.17 0.948
+Sub01,movement2_speed1,Move,IMU,2,Sub01_movement2.txt,21459,21461,3,4251,4253,rows,tail: leave this piece out,,
+Sub01,movement2_speed1,Rest,EEG,1,Sub01_movement2.xdf,90506,107876,17371,1,17371,,,-52870.4297,-56231.9336
+Sub01,movement2_speed1,Rest,IMU,1,Sub01_movement2.txt,9021,10746,1726,1,1726,rows,,0.03 0.043 0.986,-0.008 -0.133 0.986
+Sub01,movement3_speed0,Move,EEG,1,Sub01_movement3.xdf,25046,53891,28846,1,28846,,,-61617.8984,-62508.7734
+Sub01,movement3_speed0,Move,EEG,2,Sub01_movement3.xdf,145632,145632,1,28847,28847,,tail: leave this piece out,,
+Sub01,movement3_speed0,Move,IMU,1,Sub01_movement3.txt,2570,5433,2864,1,2864,rows,,0.044 -0.46 0.909,0.166 0.124 0.951
+Sub01,movement3_speed0,Move,IMU,2,Sub01_movement3.txt,14544,14544,1,2865,2865,rows,tail: leave this piece out,,
+Sub01,movement3_speed0,Rest,EEG,1,Sub01_movement3.xdf,3793,21147,17355,1,17355,,,-63456.6016,-63674.918
+Sub01,movement3_speed0,Rest,IMU,1,Sub01_movement3.txt,459,2182,1724,1,1724,rows,,-0.092 0.065 0.985,-0.16 -0.109 0.958
+Sub01,movement3_speed1,Move,EEG,1,Sub01_movement3.xdf,76921,100719,23799,1,23799,,,-60971.0078,-62029.2891
+Sub01,movement3_speed1,Move,EEG,2,Sub01_movement3.xdf,145632,145632,1,23800,23800,,tail: leave this piece out,,
+Sub01,movement3_speed1,Move,IMU,1,Sub01_movement3.txt,7721,10083,2363,1,2363,rows,,0.079 -0.568 0.812,-0.049 -0.24 0.957
+Sub01,movement3_speed1,Move,IMU,2,Sub01_movement3.txt,14544,14544,1,2364,2364,rows,tail: leave this piece out,,
+Sub01,movement3_speed1,Rest,EEG,1,Sub01_movement3.xdf,56343,73065,16723,1,16723,,,-61190.1016,-60064.6484
+Sub01,movement3_speed1,Rest,IMU,1,Sub01_movement3.txt,5677,7337,1661,1,1661,rows,,0.115 -0.176 0.974,-0.138 -0.258 0.933
+Sub01,movement4_speed0,Move,EEG,1,Sub01_movement4.xdf,29642,39295,9654,1,9654,,,-30767.9395,-30172.5605
+Sub01,movement4_speed0,Move,EEG,2,Sub01_movement4.xdf,39415,55442,16028,9655,25682,,,-30277.2637,-24645.3887
+Sub01,movement4_speed0,Move,EEG,3,Sub01_movement4.xdf,55643,55715,73,25683,25755,,,-23914.6855,-23772.6484
+Sub01,movement4_speed0,Move,EEG,4,Sub01_movement4.xdf,57864,66875,9012,25756,34767,,,-22756.1016,-26064.3496
+Sub01,movement4_speed0,Move,EEG,5,Sub01_movement4.xdf,214133,214133,1,34768,34768,,tail: leave this piece out,,
+Sub01,movement4_speed0,Move,IMU,1,Sub01_movement4.txt,2999,5585,2555,1,2555,slot map,,0.093 -0.448 0.929,0.044 -0.363 0.866
+Sub01,movement4_speed0,Move,IMU,2,Sub01_movement4.txt,5799,6696,898,2556,3453,slot map,,-0.031 -0.323 0.929,0.025 -0.805 0.608
+Sub01,movement4_speed0,Move,IMU,3,Sub01_movement4.txt,21323,21323,1,3454,3454,slot map,tail: leave this piece out,,
+Sub01,movement4_speed0,Rest,EEG,1,Sub01_movement4.xdf,2468,3421,954,1,954,,,-33039.2461,-31781.4629
+Sub01,movement4_speed0,Rest,EEG,2,Sub01_movement4.xdf,7147,25399,18253,955,19207,,,-30894.7852,-31341.9375
+Sub01,movement4_speed0,Rest,IMU,1,Sub01_movement4.txt,301,395,95,1,95,rows,,-0.225 -0.081 0.928,-0.683 -0.085 0.696
+Sub01,movement4_speed0,Rest,IMU,2,Sub01_movement4.txt,766,2578,1813,96,1908,rows,,0.095 -0.102 0.987,0.269 -0.164 0.919
+Sub01,movement4_speed1,Move,EEG,1,Sub01_movement4.xdf,100705,134288,33584,1,33584,,,-25505.502,-22332.1836
+Sub01,movement4_speed1,Move,EEG,2,Sub01_movement4.xdf,214133,214133,1,33585,33585,,tail: leave this piece out,,
+Sub01,movement4_speed1,Move,IMU,1,Sub01_movement4.txt,10055,13388,3334,1,3334,rows,,0.052 -0.244 1.022,0.058 -0.043 0.941
+Sub01,movement4_speed1,Move,IMU,2,Sub01_movement4.txt,21320,21321,2,3335,3336,rows,tail: leave this piece out,,
+Sub01,movement4_speed1,Rest,EEG,1,Sub01_movement4.xdf,79867,95652,15786,1,15786,,,-23280.6465,-23750.2012
+Sub01,movement4_speed1,Rest,IMU,1,Sub01_movement4.txt,7986,9553,1568,1,1568,rows,,0.13 -0.312 0.94,-0.503 -0.14 0.841
+Sub01,movement5_speed0,Move,EEG,1,Sub01_movement5.xdf,18573,80313,61741,1,61741,,,-64233.1172,-65509.4023
+Sub01,movement5_speed0,Move,EEG,2,Sub01_movement5.xdf,317773,317773,1,61742,61742,,tail: leave this piece out,,
+Sub01,movement5_speed0,Move,IMU,1,Sub01_movement5.txt,1878,8007,6130,1,6130,rows,,0.077 -0.392 0.955,0.191 -0.271 0.912
+Sub01,movement5_speed0,Rest,EEG,1,Sub01_movement5.xdf,766,16252,15487,1,15487,,,-63515.5469,-65256.0898
+Sub01,movement5_speed0,Rest,IMU,1,Sub01_movement5.txt,110,1648,1539,1,1539,rows,,0.042 -0.162 0.869,0.096 -0.689 0.737
+Sub01,movement5_speed1,Move,EEG,1,Sub01_movement5.xdf,101623,167197,65575,1,65575,,,-66022.3125,-62111.9414
+Sub01,movement5_speed1,Move,EEG,2,Sub01_movement5.xdf,317773,317773,1,65576,65576,,tail: leave this piece out,,
+Sub01,movement5_speed1,Move,IMU,1,Sub01_movement5.txt,10125,16634,6510,1,6510,rows,,0.066 -0.278 0.74,-0.056 0.234 1.419
+Sub01,movement5_speed1,Rest,EEG,1,Sub01_movement5.xdf,81916,98515,16600,1,16600,,,-65394.3867,-66998.5703
+Sub01,movement5_speed1,Rest,IMU,1,Sub01_movement5.txt,8168,9817,1650,1,1650,rows,,-0.053 -0.151 0.966,-0.518 -0.031 0.825
+Sub02,Stand,Rest,EEG,1,Sub02_Stand.xdf,1203,150199,148997,1,148997,,,-21615.0586,-24825.041
+Sub02,Stand,Rest,IMU,1,Sub02_Stand.txt,3560,18355,14796,1,14796,rows,,0.026 0.099 0.968,0.065 0.261 0.942
+Sub02,movement0_speed0,Move,EEG,1,Sub02_movement0.xdf,10642,72623,61982,1,61982,,,-28472.2676,-29481.4395
+Sub02,movement0_speed0,Move,EEG,2,Sub02_movement0.xdf,252507,252507,1,61983,61983,,tail: leave this piece out,,
+Sub02,movement0_speed0,Move,IMU,1,Sub02_movement0.txt,1344,7497,6154,1,6154,rows,,-0.007 0.174 1.043,0.032 0.24 0.898
+Sub02,movement0_speed0,Move,IMU,2,Sub02_movement0.txt,25361,25361,1,6155,6155,rows,tail: leave this piece out,,
+Sub02,movement0_speed0,Rest,EEG,1,Sub02_movement0.xdf,1279,7356,6078,1,6078,,,-28010.1934,-28373.4141
+Sub02,movement0_speed0,Rest,IMU,1,Sub02_movement0.txt,414,1017,604,1,604,rows,,0.046 0.168 0.953,0.063 0.171 0.95
+Sub02,movement0_speed1,Move,EEG,1,Sub02_movement0.xdf,76923,138196,61274,1,61274,,,-29364.3398,-28942.3984
+Sub02,movement0_speed1,Move,EEG,2,Sub02_movement0.xdf,252507,252507,1,61275,61275,,tail: leave this piece out,,
+Sub02,movement0_speed1,Move,IMU,1,Sub02_movement0.txt,7926,14008,6083,1,6083,rows,,0.14 0.321 1.104,0.091 0.288 0.879
+Sub02,movement0_speed1,Move,IMU,2,Sub02_movement0.txt,25361,25362,2,6084,6085,rows,tail: leave this piece out,,
+Sub02,movement0_speed1,Rest,EEG,1,Sub02_movement0.xdf,72625,76923,4299,1,4299,,,-29488.2422,-29364.3398
+Sub02,movement0_speed1,Rest,IMU,1,Sub02_movement0.txt,7499,7926,428,1,428,rows,,0.099 0.255 0.92,0.14 0.321 1.104
+Sub02,movement1_speed0,Move,EEG,1,Sub02_movement1.xdf,11524,73111,61588,1,61588,,,-15113.7666,-21380.2363
+Sub02,movement1_speed0,Move,EEG,2,Sub02_movement1.xdf,211066,211066,1,61589,61589,,tail: leave this piece out,,
+Sub02,movement1_speed0,Move,IMU,1,Sub02_movement1.txt,1362,7477,6116,1,6116,rows,,0.09 0.242 0.93,0.17 0.388 0.909
+Sub02,movement1_speed0,Move,IMU,2,Sub02_movement1.txt,24077,24077,1,6117,6117,rows,tail: leave this piece out,,
+Sub02,movement1_speed0,Rest,EEG,1,Sub02_movement1.xdf,682,11524,10843,1,10843,,,-13118.9629,-15113.7666
+Sub02,movement1_speed0,Rest,IMU,1,Sub02_movement1.txt,286,1362,1077,1,1077,rows,,0.063 0.107 0.964,0.09 0.242 0.93
+Sub02,movement1_speed1,Move,EEG,1,Sub02_movement1.xdf,90508,165338,74831,1,74831,,,-24082.7969,-28063.0859
+Sub02,movement1_speed1,Move,IMU,1,Sub02_movement1.txt,9205,16633,7429,1,7429,rows,,0.095 0.272 1.023,0.033 0.326 0.782
+Sub02,movement1_speed1,Move,IMU,2,Sub02_movement1.txt,24076,24077,2,7430,7431,rows,tail: leave this piece out,,
+Sub02,movement1_speed1,Rest,EEG,1,Sub02_movement1.xdf,73356,90508,17153,1,17153,,,-21425.0625,-24082.7969
+Sub02,movement1_speed1,Rest,IMU,1,Sub02_movement1.txt,7502,9205,1704,1,1704,rows,,-0.024 0.352 1.041,0.095 0.272 1.023
+Sub02,movement2_speed0,Move,EEG,1,Sub02_movement2.xdf,9712,34808,25097,1,25097,,,-28317.1113,-28747.2266
+Sub02,movement2_speed0,Move,EEG,2,Sub02_movement2.xdf,83848,83848,1,25098,25098,,tail: leave this piece out,,
+Sub02,movement2_speed0,Move,IMU,1,Sub02_movement2.txt,10998,13489,2492,1,2492,rows,,0.077 0.279 0.94,0.048 0.26 0.93
+Sub02,movement2_speed0,Move,IMU,2,Sub02_movement2.txt,18362,18362,1,2493,2493,rows,tail: leave this piece out,,
+Sub02,movement2_speed0,Rest,EEG,1,Sub02_movement2.xdf,1352,9712,8361,1,8361,,,-28427.5273,-28317.1113
+Sub02,movement2_speed0,Rest,IMU,1,Sub02_movement2.txt,10168,10998,831,1,831,rows,,0.094 0.24 0.956,0.077 0.279 0.94
+Sub02,movement2_speed1,Move,EEG,1,Sub02_movement2.xdf,37819,62461,24643,1,24643,,,-28885.1797,-28812.7207
+Sub02,movement2_speed1,Move,IMU,1,Sub02_movement2.txt,13789,16234,2446,1,2446,rows,,0.078 0.272 0.944,0.069 0.291 0.902
+Sub02,movement2_speed1,Move,IMU,2,Sub02_movement2.txt,18361,18362,2,2447,2448,rows,tail: leave this piece out,,
+Sub02,movement2_speed1,Rest,EEG,1,Sub02_movement2.xdf,35385,37819,2435,1,2435,,,-28786.8164,-28885.1797
+Sub02,movement2_speed1,Rest,IMU,1,Sub02_movement2.txt,13547,13789,243,1,243,rows,,0.059 0.289 0.92,0.078 0.272 0.944
+Sub02,movement3_speed0,Move,EEG,1,Sub02_movement3.xdf,6715,34946,28232,1,28232,,,-28201.0879,-28346.9375
+Sub02,movement3_speed0,Move,EEG,2,Sub02_movement3.xdf,87501,87501,1,28233,28233,,tail: leave this piece out,,
+Sub02,movement3_speed0,Move,IMU,1,Sub02_movement3.txt,832,3634,2803,1,2803,rows,,0.133 0.273 0.943,0.122 0.35 0.901
+Sub02,movement3_speed0,Move,IMU,2,Sub02_movement3.txt,8854,8854,1,2804,2804,rows,tail: leave this piece out,,
+Sub02,movement3_speed0,Rest,EEG,1,Sub02_movement3.xdf,665,6715,6051,1,6051,,,-28287.6855,-28201.0879
+Sub02,movement3_speed0,Rest,IMU,1,Sub02_movement3.txt,231,832,602,1,602,rows,,0.086 0.211 0.946,0.133 0.273 0.943
+Sub02,movement3_speed1,Move,EEG,1,Sub02_movement3.xdf,37932,64274,26343,1,26343,,,-28048.4258,-28549.6055
+Sub02,movement3_speed1,Move,IMU,1,Sub02_movement3.txt,3932,6546,2615,1,2615,rows,,0.11 0.266 0.92,0.029 -0.117 0.937
+Sub02,movement3_speed1,Move,IMU,2,Sub02_movement3.txt,8854,8855,2,2616,2617,rows,tail: leave this piece out,,
+Sub02,movement3_speed1,Rest,EEG,1,Sub02_movement3.xdf,36342,37932,1591,1,1591,,,-28520.6543,-28048.4258
+Sub02,movement3_speed1,Rest,IMU,1,Sub02_movement3.txt,3774,3932,159,1,159,rows,,0.096 0.161 0.953,0.11 0.266 0.92
+Sub02,movement4_speed0,Move,EEG,1,Sub02_movement4.xdf,7593,45843,38251,1,38251,,,-29939.2344,-30870.5625
+Sub02,movement4_speed0,Move,EEG,2,Sub02_movement4.xdf,209284,209284,1,38252,38252,,tail: leave this piece out,,
+Sub02,movement4_speed0,Move,IMU,1,Sub02_movement4.txt,1001,4798,3798,1,3798,rows,,-0.067 0.032 0.976,-0.098 -0.296 0.943
+Sub02,movement4_speed0,Move,IMU,2,Sub02_movement4.txt,21031,21031,1,3799,3799,rows,tail: leave this piece out,,
+Sub02,movement4_speed0,Rest,EEG,1,Sub02_movement4.xdf,1212,7593,6382,1,6382,,,-29878.2793,-29939.2344
+Sub02,movement4_speed0,Rest,IMU,1,Sub02_movement4.txt,367,1001,635,1,635,rows,,0.048 0.219 0.96,-0.067 0.032 0.976
+Sub02,movement4_speed1,Move,EEG,1,Sub02_movement4.xdf,48756,93736,44981,1,44981,,,-30857.1816,-32061.3926
+Sub02,movement4_speed1,Move,IMU,1,Sub02_movement4.txt,5088,9553,4466,1,4466,rows,,-0.021 -0.132 0.891,-0.063 -0.25 0.903
+Sub02,movement4_speed1,Move,IMU,2,Sub02_movement4.txt,21030,21030,1,4467,4467,rows,tail: leave this piece out,,
+Sub02,movement4_speed1,Rest,EEG,1,Sub02_movement4.xdf,46050,48756,2707,1,2707,,,-30864.5879,-30857.1816
+Sub02,movement4_speed1,Rest,IMU,1,Sub02_movement4.txt,4819,5088,270,1,270,rows,,-0.113 -0.348 0.887,-0.021 -0.132 0.891
+Sub02,movement5_speed0,Move,EEG,1,Sub02_movement5.xdf,5863,69263,63401,1,63401,,,-27750.7422,-27922.0195
+Sub02,movement5_speed0,Move,EEG,2,Sub02_movement5.xdf,199373,199373,1,63402,63402,,tail: leave this piece out,,
+Sub02,movement5_speed0,Move,IMU,1,Sub02_movement5.txt,933,7265,6295,1,6295,slot map,,-0.013 -0.229 0.96,0.017 -0.088 1.495
+Sub02,movement5_speed0,Move,IMU,2,Sub02_movement5.txt,20187,20187,1,6296,6296,slot map,tail: leave this piece out,,
+Sub02,movement5_speed0,Rest,EEG,1,Sub02_movement5.xdf,1,5863,5863,1,5863,,,-27227.5488,-27750.7422
+Sub02,movement5_speed0,Rest,IMU,1,Sub02_movement5.txt,110,716,467,1,467,slot map,,-0.023 -0.169 0.974,-0.025 -0.21 0.952
+Sub02,movement5_speed0,Rest,IMU,2,Sub02_movement5.txt,742,933,116,468,583,slot map,,-0.022 -0.216 0.949,-0.013 -0.229 0.96
+Sub02,movement5_speed1,Move,EEG,1,Sub02_movement5.xdf,73784,134632,60849,1,60849,,,-27938.873,-27662.1191
+Sub02,movement5_speed1,Move,IMU,1,Sub02_movement5.txt,7715,13755,6041,1,6041,rows,,-0.162 -0.318 0.935,-0.15 -0.354 0.862
+Sub02,movement5_speed1,Move,IMU,2,Sub02_movement5.txt,20186,20187,2,6042,6043,rows,tail: leave this piece out,,
+Sub02,movement5_speed1,Rest,EEG,1,Sub02_movement5.xdf,70738,73784,3047,1,3047,,,-27842.6094,-27938.873
+Sub02,movement5_speed1,Rest,IMU,1,Sub02_movement5.txt,7413,7716,304,1,304,rows,,-0.067 -0.35 0.899,-0.143 -0.126 1.301
+Sub03,Sit,Rest,EEG,1,Sub03_Sit.xdf,2546,8300,5755,1,5755,,,-10627.9307,-10708.8682
+Sub03,Sit,Rest,EEG,2,Sub03_Sit.xdf,30293,160599,130307,5756,136062,,,-11092.4883,-12001.8105
+Sub03,Sit,Rest,EEG,3,Sub03_Sit.xdf,193865,215398,21534,136063,157596,,,-12274.6426,-12590.958
+Sub03,Sit,Rest,IMU,1,Sub03_Sit.txt,217,787,571,1,571,slot map,,-0.11 0.08 0.964,-0.119 -0.032 0.966
+Sub03,Sit,Rest,IMU,2,Sub03_Sit.txt,2972,15909,12938,572,13509,slot map,,-0.1 -0.221 0.97,-0.135 -0.22 0.96
+Sub03,Sit,Rest,IMU,3,Sub03_Sit.txt,19214,21353,2140,13510,15649,slot map,,-0.125 -0.353 0.925,-0.072 -0.395 0.901
+Sub03,movement0_speed0,Move,EEG,1,Sub03_movement0_speed0.xdf,55379,147239,91861,1,91861,,,-12927.4951,-13395.1045
+Sub03,movement0_speed0,Move,IMU,1,Sub03_movement0_speed0.txt,5464,14585,9122,1,9122,rows,,-0.192 -0.064 1.07,-0.148 -0.189 1.029
+Sub03,movement0_speed0,Rest,EEG,1,Sub03_movement0_speed0.xdf,2261,10017,7757,1,7757,,,-11952.8506,-12106.1924
+Sub03,movement0_speed0,Rest,EEG,2,Sub03_movement0_speed0.xdf,37279,54413,17135,7758,24892,,,-12724.6289,-12900.0674
+Sub03,movement0_speed0,Rest,IMU,1,Sub03_movement0_speed0.txt,189,959,771,1,771,rows,,-0.108 -0.026 0.965,-0.112 -0.055 0.985
+Sub03,movement0_speed0,Rest,IMU,2,Sub03_movement0_speed0.txt,3667,5368,1702,772,2473,rows,,-0.141 0.013 0.985,-0.133 -0.123 0.974
+Sub03,movement0_speed1,Move,EEG,1,Sub03_movement0_speed1.xdf,19612,32365,12754,1,12754,,,-25497.7695,-24022.4414
+Sub03,movement0_speed1,Move,EEG,2,Sub03_movement0_speed1.xdf,44542,128541,84000,12755,96754,,,-24317.1699,-24578.7188
+Sub03,movement0_speed1,Move,IMU,1,Sub03_movement0_speed1.txt,1927,3193,1267,1,1267,rows,,-0.062 -0.033 1.196,-0.035 -0.176 1.452
+Sub03,movement0_speed1,Move,IMU,2,Sub03_movement0_speed1.txt,4404,12744,8341,1268,9608,rows,,-0.115 0.146 1.284,0.064 -0.093 0.867
+Sub03,movement0_speed1,Rest,EEG,1,Sub03_movement0_speed1.xdf,1945,18344,16400,1,16400,,,-25270.1543,-25310.4766
+Sub03,movement0_speed1,Rest,IMU,1,Sub03_movement0_speed1.txt,173,1801,1629,1,1629,rows,,-0.016 -0.06 0.964,-0.027 -0.15 0.964
+Sub03,movement1_speed0,Move,EEG,1,Sub03_movement1_speed0.xdf,25924,117512,91589,1,91589,,,-27906.6055,-27544.457
+Sub03,movement1_speed0,Move,IMU,1,Sub03_movement1_speed0.txt,2501,11595,9095,1,9095,rows,,0.06 -0.228 0.904,-0.056 -0.085 1.042
+Sub03,movement1_speed0,Rest,EEG,1,Sub03_movement1_speed0.xdf,3068,19833,16766,1,16766,,,-27764.4922,-28044.582
+Sub03,movement1_speed0,Rest,IMU,1,Sub03_movement1_speed0.txt,231,1895,1665,1,1665,rows,,0.035 -0.107 0.986,0.006 -0.236 0.948
+Sub03,movement1_speed1,Move,EEG,1,Sub03_movement1_speed1.xdf,19722,112463,92742,1,92742,,,-33942.5547,-32359.207
+Sub03,movement1_speed1,Move,IMU,1,Sub03_movement1_speed1.txt,1923,11132,9210,1,9210,rows,,0.013 -0.13 1.184,0.158 -0.262 0.877
+Sub03,movement1_speed1,Rest,EEG,1,Sub03_movement1_speed1.xdf,2431,18752,16322,1,16322,,,-36623.6289,-34381.6016
+Sub03,movement1_speed1,Rest,IMU,1,Sub03_movement1_speed1.txt,206,1826,1621,1,1621,rows,,-0.023 -0.061 0.977,-0.047 -0.223 0.975
+Sub03,movement2_speed0,Move,EEG,1,Sub03_movement2_speed0.xdf,21755,112744,90990,1,90990,,,-46217.2617,-49028.1289
+Sub03,movement2_speed0,Move,IMU,1,Sub03_movement2_speed0.txt,2126,11161,9036,1,9036,rows,,-0.067 -0.076 0.991,0.027 -0.171 0.962
+Sub03,movement2_speed0,Rest,EEG,1,Sub03_movement2_speed0.xdf,2524,19976,17453,1,17453,,,-47243.3711,-46769.582
+Sub03,movement2_speed0,Rest,IMU,1,Sub03_movement2_speed0.txt,216,1949,1734,1,1734,rows,,-0.021 -0.051 0.989,-0.007 -0.107 0.987
+Sub03,movement2_speed1,Move,EEG,1,Sub03_movement2_speed1.xdf,38267,130336,92070,1,92070,,,-43398.7383,-39933.5664
+Sub03,movement2_speed1,Move,IMU,1,Sub03_movement2_speed1.txt,3685,12827,9143,1,9143,rows,,-0.179 -0.076 0.972,-0.08 -0.265 0.944
+Sub03,movement2_speed1,Rest,EEG,1,Sub03_movement2_speed1.xdf,2973,9081,6109,1,6109,,,-44751.8672,-43805.9766
+Sub03,movement2_speed1,Rest,EEG,2,Sub03_movement2_speed1.xdf,18658,30272,11615,6110,17724,,,-41760.4609,-40862.2617
+Sub03,movement2_speed1,Rest,IMU,1,Sub03_movement2_speed1.txt,180,785,606,1,606,rows,,-0.007 -0.045 0.981,-0.021 -0.061 0.978
+Sub03,movement2_speed1,Rest,IMU,2,Sub03_movement2_speed1.txt,1738,2892,1155,607,1761,rows,,-0.064 -0.268 0.96,-0.051 -0.258 0.959
+Sub03,movement3_speed0,Move,EEG,1,Sub03_movement3_speed0.xdf,21186,113227,92042,1,92042,,,-54861.7773,-52397.5234
+Sub03,movement3_speed0,Move,IMU,1,Sub03_movement3_speed0.txt,2028,11167,9140,1,9140,rows,,0.02 -0.426 0.889,0.025 0.076 0.97
+Sub03,movement3_speed0,Rest,EEG,1,Sub03_movement3_speed0.xdf,3979,19831,15853,1,15853,,,-52720.9883,-51812.9766
+Sub03,movement3_speed0,Rest,IMU,1,Sub03_movement3_speed0.txt,319,1893,1575,1,1575,rows,,0.009 0.04 1.002,-0.034 0.028 0.99
+Sub03,movement3_speed1,Move,EEG,1,Sub03_movement3_speed1.xdf,20409,23144,2736,1,2736,,,-49769.0938,-48273.3477
+Sub03,movement3_speed1,Move,EEG,2,Sub03_movement3_speed1.xdf,24166,31782,7617,2737,10353,,,-49069.1875,-49400.0195
+Sub03,movement3_speed1,Move,EEG,3,Sub03_movement3_speed1.xdf,33826,112887,79062,10354,89415,,,-52496.7344,-53871.0664
+Sub03,movement3_speed1,Move,IMU,1,Sub03_movement3_speed1.txt,1989,2259,271,1,271,rows,,0.061 0.195 0.89,0.046 0.608 0.732
+Sub03,movement3_speed1,Move,IMU,2,Sub03_movement3_speed1.txt,2363,3117,755,272,1026,rows,,0.069 -0.651 0.794,0.099 -0.624 0.832
+Sub03,movement3_speed1,Move,IMU,3,Sub03_movement3_speed1.txt,3322,11174,7853,1027,8879,rows,,0.05 -0.102 0.975,0.03 0.359 0.906
+Sub03,movement3_speed1,Rest,EEG,1,Sub03_movement3_speed1.xdf,2127,18057,15931,1,15931,,,-51816.457,-49969.1953
+Sub03,movement3_speed1,Rest,IMU,1,Sub03_movement3_speed1.txt,176,1758,1583,1,1583,rows,,-0.019 -0.1 0.99,-0.009 -0.145 0.985
+Sub03,movement4_speed0,Move,EEG,1,Sub03_movement4_speed0.xdf,19598,113032,93435,1,93435,,,-51125.5898,-59077.1523
+Sub03,movement4_speed0,Move,IMU,1,Sub03_movement4_speed0.txt,1940,11218,9279,1,9279,rows,,0.01 -0.819 0.568,0.045 -0.932 0.391
+Sub03,movement4_speed0,Rest,EEG,1,Sub03_movement4_speed0.xdf,1869,17821,15953,1,15953,,,-50186.3594,-51081.8125
+Sub03,movement4_speed0,Rest,IMU,1,Sub03_movement4_speed0.txt,179,1763,1585,1,1585,rows,,-0.03 -0.129 0.986,-0.032 -0.173 0.963
+Sub03,movement4_speed1,Move,EEG,1,Sub03_movement4_speed1.xdf,20116,30441,10326,1,10326,,,-57680.0586,-61222.7812
+Sub03,movement4_speed1,Move,EEG,2,Sub03_movement4_speed1.xdf,54656,105889,51234,10327,61560,,,-56336.8633,-59252.7773
+Sub03,movement4_speed1,Move,EEG,3,Sub03_movement4_speed1.xdf,122631,155445,32815,61561,94375,,,-58926.5195,-42337.1484
+Sub03,movement4_speed1,Move,IMU,1,Sub03_movement4_speed1.txt,1973,2997,1025,1,1025,rows,,0.154 -1.269 0.583,-0.098 -0.159 0.918
+Sub03,movement4_speed1,Move,IMU,2,Sub03_movement4_speed1.txt,5403,10489,5087,1026,6112,rows,,0.091 -0.756 0.335,-0.152 -0.348 0.91
+Sub03,movement4_speed1,Move,IMU,3,Sub03_movement4_speed1.txt,12153,15412,3260,6113,9372,rows,,0.004 -0.946 1.244,-0.084 -0.178 0.665
+Sub03,movement4_speed1,Rest,EEG,1,Sub03_movement4_speed1.xdf,1898,17901,16004,1,16004,,,-61434.6562,-56420.3203
+Sub03,movement4_speed1,Rest,IMU,1,Sub03_movement4_speed1.txt,165,1754,1590,1,1590,rows,,-0.005 -0.103 0.967,-0.001 -0.164 0.967
+Sub03,movement5_speed0,Move,EEG,1,Sub03_movement5_speed0.xdf,19598,115458,95861,1,95861,,,-37865.6758,-43952.4727
+Sub03,movement5_speed0,Move,IMU,1,Sub03_movement5_speed0.txt,1955,11463,9519,1,9519,slot map,,0.004 -0.258 0.975,0.184 -0.162 0.996
+Sub03,movement5_speed0,Rest,EEG,1,Sub03_movement5_speed0.xdf,2427,18389,15963,1,15963,,,-33962.7695,-37918.7539
+Sub03,movement5_speed0,Rest,IMU,1,Sub03_movement5_speed0.txt,250,1835,1586,1,1586,rows,,0.012 -0.135 0.962,0.018 -0.217 0.949
+Sub03,movement5_speed1,Move,EEG,1,Sub03_movement5_speed1.xdf,36803,45382,8580,1,8580,,,-53816.2734,-53778.0781
+Sub03,movement5_speed1,Move,EEG,2,Sub03_movement5_speed1.xdf,55169,155322,100154,8581,108734,,,-54116.8672,-45035.8203
+Sub03,movement5_speed1,Move,IMU,1,Sub03_movement5_speed1.txt,3621,4472,852,1,852,rows,,0.149 -0.074 0.706,-0.063 0.025 0.612
+Sub03,movement5_speed1,Move,IMU,2,Sub03_movement5_speed1.txt,5445,15389,9945,853,10797,rows,,-0.239 -0.169 0.881,-0.075 -0.152 0.623
+Sub03,movement5_speed1,Rest,EEG,1,Sub03_movement5_speed1.xdf,1711,8220,6510,1,6510,,,-55646.8242,-55895.2656
+Sub03,movement5_speed1,Rest,EEG,2,Sub03_movement5_speed1.xdf,19421,32758,13338,6511,19848,,,-54874.1406,-54176.875
+Sub03,movement5_speed1,Rest,IMU,1,Sub03_movement5_speed1.txt,137,783,647,1,647,rows,,-0.057 0.104 0.98,-0.049 -0.109 0.985
+Sub03,movement5_speed1,Rest,IMU,2,Sub03_movement5_speed1.txt,1897,3221,1325,648,1972,rows,,0.006 -0.201 0.949,-0.006 -0.18 0.974
+Sub04,Sit,Rest,EEG,1,Sub04_Sit.xdf,4040,164754,160715,1,160715,,,-46434.6289,-46226.0234
+Sub04,Sit,Rest,IMU,1,Sub04_Sit.txt,1716,17674,15959,1,15959,rows,,0.07 -0.213 0.953,0.051 -0.2 0.973
+Sub04,movement0_speed0,Move,EEG,1,Sub04_movement0.xdf,23546,85449,61904,1,61904,,,-45531.8711,-44663.6094
+Sub04,movement0_speed0,Move,EEG,2,Sub04_movement0.xdf,266285,266285,1,61905,61905,,tail: leave this piece out,,
+Sub04,movement0_speed0,Move,IMU,1,Sub04_movement0.txt,2190,8336,6147,1,6147,rows,,-0.053 -0.274 0.943,0.038 -0.15 0.974
+Sub04,movement0_speed0,Move,IMU,2,Sub04_movement0.txt,26296,26296,1,6148,6148,rows,tail: leave this piece out,,
+Sub04,movement0_speed0,Rest,EEG,1,Sub04_movement0.xdf,4741,20503,15763,1,15763,,,-45847.8828,-45615.082
+Sub04,movement0_speed0,Rest,IMU,1,Sub04_movement0.txt,324,1889,1566,1,1566,rows,,0.06 -0.217 0.97,0.066 -0.197 0.976
+Sub04,movement0_speed1,Move,EEG,1,Sub04_movement0.xdf,111556,179895,68340,1,68340,,,-44481.7695,-44093.0352
+Sub04,movement0_speed1,Move,EEG,2,Sub04_movement0.xdf,266285,266285,1,68341,68341,,tail: leave this piece out,,
+Sub04,movement0_speed1,Move,IMU,1,Sub04_movement0.txt,10929,17713,6785,1,6785,rows,,0.234 -0.111 0.89,0.206 -0.192 0.877
+Sub04,movement0_speed1,Move,IMU,2,Sub04_movement0.txt,26294,26295,2,6786,6787,rows,tail: leave this piece out,,
+Sub04,movement0_speed1,Rest,EEG,1,Sub04_movement0.xdf,88151,88674,524,1,524,,,-44718.0977,-44640.7578
+Sub04,movement0_speed1,Rest,EEG,2,Sub04_movement0.xdf,91592,106899,15308,525,15832,,,-44937.1953,-44712.0898
+Sub04,movement0_speed1,Rest,IMU,1,Sub04_movement0.txt,8605,8655,51,1,51,rows,,0.146 -0.229 0.872,-0.021 -0.138 0.921
+Sub04,movement0_speed1,Rest,IMU,2,Sub04_movement0.txt,8947,10468,1522,52,1573,rows,,0.06 -0.164 0.962,0.081 -0.177 0.961
+Sub04,movement1_speed0,Move,EEG,1,Sub04_movement1.xdf,24219,85706,61488,1,61488,,,-44600.1719,-43515.7852
+Sub04,movement1_speed0,Move,EEG,2,Sub04_movement1.xdf,250601,250601,1,61489,61489,,tail: leave this piece out,,
+Sub04,movement1_speed0,Move,IMU,1,Sub04_movement1.txt,2556,8661,6106,1,6106,rows,,0.049 -0.477 0.993,0.251 -0.212 0.883
+Sub04,movement1_speed0,Move,IMU,2,Sub04_movement1.txt,27446,27446,1,6107,6107,rows,tail: leave this piece out,,
+Sub04,movement1_speed0,Rest,EEG,1,Sub04_movement1.xdf,5437,21148,15712,1,15712,,,-44560.9258,-43944.207
+Sub04,movement1_speed0,Rest,IMU,1,Sub04_movement1.txt,692,2252,1561,1,1561,rows,,0.102 -0.285 0.953,0.09 -0.269 0.959
+Sub04,movement1_speed1,Move,EEG,1,Sub04_movement1.xdf,105728,166397,60670,1,60670,,,-43708.1328,-43513.3203
+Sub04,movement1_speed1,Move,EEG,2,Sub04_movement1.xdf,250601,250601,1,60671,60671,,tail: leave this piece out,,
+Sub04,movement1_speed1,Move,IMU,1,Sub04_movement1.txt,10649,16671,6023,1,6023,rows,,0.036 -0.294 0.888,0.097 -0.088 0.904
+Sub04,movement1_speed1,Move,IMU,2,Sub04_movement1.txt,27442,27443,2,6024,6025,rows,tail: leave this piece out,,
+Sub04,movement1_speed1,Rest,EEG,1,Sub04_movement1.xdf,87895,92430,4536,1,4536,,,-43168.6875,-42987.3984
+Sub04,movement1_speed1,Rest,EEG,2,Sub04_movement1.xdf,92646,102732,10087,4537,14623,,,-43134.4648,-43913.1211
+Sub04,movement1_speed1,Rest,IMU,1,Sub04_movement1.txt,8877,9325,449,1,449,rows,,0.088 -0.207 0.948,0.104 -0.256 0.96
+Sub04,movement1_speed1,Rest,IMU,2,Sub04_movement1.txt,9349,10352,1004,450,1453,rows,,0.087 -0.227 0.948,0.096 -0.244 0.961
+Sub04,movement2_speed0,Move,EEG,1,Sub04_movement2_speed0.xdf,23122,121281,98160,1,98160,,,-21139.6582,-21790.4609
+Sub04,movement2_speed0,Move,IMU,1,Sub04_movement2_speed0.txt,2141,11888,9748,1,9748,rows,,-0.048 -0.098 0.986,-0.034 -0.143 0.965
+Sub04,movement2_speed0,Rest,EEG,1,Sub04_movement2_speed0.xdf,5233,22006,16774,1,16774,,,-21063.2891,-21072.5039
+Sub04,movement2_speed0,Rest,IMU,1,Sub04_movement2_speed0.txt,364,2030,1667,1,1667,rows,,0.003 -0.123 0.966,-0.009 -0.115 0.987
+Sub04,movement2_speed1,Move,EEG,1,Sub04_movement2_speed1.xdf,22892,117811,94920,1,94920,,,-22000.6406,-22996.3613
+Sub04,movement2_speed1,Move,IMU,1,Sub04_movement2_speed1.txt,2176,11601,9426,1,9426,rows,,-0.063 -0.127 0.988,-0.073 -0.151 0.987
+Sub04,movement2_speed1,Rest,EEG,1,Sub04_movement2_speed1.xdf,3970,20855,16886,1,16886,,,-21951.2031,-21937.9961
+Sub04,movement2_speed1,Rest,IMU,1,Sub04_movement2_speed1.txt,297,1973,1677,1,1677,rows,,0.002 -0.089 0.987,-0.008 -0.167 0.963
+Sub04,movement3_speed0,Move,EEG,1,Sub04_movement3.xdf,195969,258338,62370,1,62370,,,-34452.2969,-33957.3398
+Sub04,movement3_speed0,Move,IMU,1,Sub04_movement3.txt,19352,25545,6194,1,6194,rows,,0.095 0.063 0.968,0.064 -0.533 0.839
+Sub04,movement3_speed0,Rest,EEG,1,Sub04_movement3.xdf,177218,193672,16455,1,16455,,,-34880.8008,-34530.5117
+Sub04,movement3_speed0,Rest,IMU,1,Sub04_movement3.txt,17491,19125,1635,1,1635,rows,,0.144 -0.204 0.954,0.075 -0.134 0.967
+Sub04,movement3_speed1,Move,EEG,1,Sub04_movement3.xdf,112146,175337,63192,1,63192,,,-37424.3945,-35713.0078
+Sub04,movement3_speed1,Move,EEG,2,Sub04_movement3.xdf,112110,112110,1,63193,63193,,tail: leave this piece out,,
+Sub04,movement3_speed1,Move,IMU,1,Sub04_movement3.txt,11029,17301,6273,1,6273,rows,,0.064 -0.602 0.845,0.133 0.267 0.935
+Sub04,movement3_speed1,Move,IMU,2,Sub04_movement3.txt,25545,25547,3,6274,6276,rows,tail: leave this piece out,,
+Sub04,movement3_speed1,Rest,EEG,1,Sub04_movement3.xdf,91050,109206,18157,1,18157,,,-36796.1211,-37454.8906
+Sub04,movement3_speed1,Rest,IMU,1,Sub04_movement3.txt,8935,10738,1804,1,1804,rows,,0.107 -0.156 0.952,0.083 -0.302 0.957
+Sub04,movement4_speed0,Move,EEG,1,Sub04_movement4.xdf,132658,165937,33280,1,33280,,,-12568.6006,-13285.2529
+Sub04,movement4_speed0,Move,IMU,1,Sub04_movement4.txt,13056,16360,3305,1,3305,rows,,0.043 -0.298 0.799,-0.066 -0.225 0.985
+Sub04,movement4_speed0,Rest,EEG,1,Sub04_movement4.xdf,112838,131063,18226,1,18226,,,-12480.1299,-12836.9707
+Sub04,movement4_speed0,Rest,IMU,1,Sub04_movement4.txt,11088,12898,1811,1,1811,rows,,0.152 -0.077 0.99,0.025 -0.208 0.973
+Sub04,movement4_speed1,Move,EEG,1,Sub04_movement4.xdf,78117,110808,32692,1,32692,,,-10673.8623,-12393.1943
+Sub04,movement4_speed1,Move,IMU,1,Sub04_movement4.txt,7640,10885,3246,1,3246,rows,,0.091 -0.375 1.07,-0.026 0.018 0.961
+Sub04,movement4_speed1,Move,IMU,2,Sub04_movement4.txt,16361,16362,2,3247,3248,rows,tail: leave this piece out,,
+Sub04,movement4_speed1,Rest,EEG,1,Sub04_movement4.xdf,57336,76131,18796,1,18796,,,-10293.0059,-10190.8262
+Sub04,movement4_speed1,Rest,IMU,1,Sub04_movement4.txt,5578,7444,1867,1,1867,rows,,-0.036 -0.091 0.987,0.018 -0.165 0.966
+Sub04,movement5_speed0,Move,EEG,1,Sub04_movement5.xdf,239865,271574,31710,1,31710,,,25521.8047,31674.416
+Sub04,movement5_speed0,Move,EEG,2,Sub04_movement5.xdf,287872,320537,32666,31711,64376,,,38003.8984,33466.3242
+Sub04,movement5_speed0,Move,IMU,1,Sub04_movement5.txt,23707,26852,3146,1,3146,rows,,-0.104 -0.16 1.048,-0.129 -0.226 0.947
+Sub04,movement5_speed0,Move,IMU,2,Sub04_movement5.txt,28472,31718,3247,3147,6393,rows,,-0.055 -0.158 1.042,-0.096 -0.204 0.952
+Sub04,movement5_speed0,Rest,EEG,1,Sub04_movement5.xdf,222534,238026,15493,1,15493,,,25322.2773,27918.2207
+Sub04,movement5_speed0,Rest,IMU,1,Sub04_movement5.txt,21988,23527,1540,1,1540,rows,,-0.06 -0.151 0.997,0.023 -0.125 0.966
+Sub04,movement5_speed1,Move,EEG,1,Sub04_movement5.xdf,133745,166739,32995,1,32995,,,1987.33887,8719.50195
+Sub04,movement5_speed1,Move,EEG,2,Sub04_movement5.xdf,187126,218024,30899,32996,63894,,,17176.1797,24930.6328
+Sub04,movement5_speed1,Move,EEG,3,Sub04_movement5.xdf,59675,59675,1,63895,63895,,tail: leave this piece out,,
+Sub04,movement5_speed1,Move,IMU,1,Sub04_movement5.txt,13170,16443,3274,1,3274,rows,,0.109 -0.096 0.923,-0.034 -0.24 0.953
+Sub04,movement5_speed1,Move,IMU,2,Sub04_movement5.txt,18469,21537,3069,3275,6343,rows,,-0.093 -0.078 0.999,-0.092 -0.222 0.926
+Sub04,movement5_speed1,Move,IMU,3,Sub04_movement5.txt,31719,31720,2,6344,6345,rows,tail: leave this piece out,,
+Sub04,movement5_speed1,Rest,EEG,1,Sub04_movement5.xdf,112719,131663,18945,1,18945,,,-3925.73706,4571.05322
+Sub04,movement5_speed1,Rest,IMU,1,Sub04_movement5.txt,11083,12964,1882,1,1882,rows,,0.05 -0.16 0.966,0.052 -0.108 0.986
+Sub05,Sit,Rest,EEG,1,Sub05_Sit.xdf,5137,80922,75786,1,75786,,,-2723.97998,-9029.25391
+Sub05,Sit,Rest,EEG,2,Sub05_Sit.xdf,149340,255535,106196,75787,181982,,,7269.76074,-93.2912903
+Sub05,Sit,Rest,IMU,1,Sub05_Sit.txt,346,7870,7525,1,7525,slot map,,0.021 -0.089 0.986,0.004 -0.037 0.966
+Sub05,Sit,Rest,IMU,2,Sub05_Sit.txt,14665,25210,10546,7526,18071,slot map,,-0.037 -0.068 0.991,0.006 0.018 0.988
+Sub05,movement0_speed0,Move,EEG,1,Sub05_movement0.xdf,23030,117092,94063,1,94063,,,-10514.291,-15997.7354
+Sub05,movement0_speed0,Move,EEG,2,Sub05_movement0.xdf,321867,321867,1,94064,94064,,tail: leave this piece out,,
+Sub05,movement0_speed0,Move,IMU,1,Sub05_movement0.txt,2182,11521,9340,1,9340,rows,,-0.116 -0.225 0.948,0.062 -0.191 0.937
+Sub05,movement0_speed0,Move,IMU,2,Sub05_movement0.txt,31858,31858,1,9341,9341,rows,tail: leave this piece out,,
+Sub05,movement0_speed0,Rest,EEG,1,Sub05_movement0.xdf,4097,20594,16498,1,16498,,,-4232.21484,-8750.64258
+Sub05,movement0_speed0,Rest,IMU,1,Sub05_movement0.txt,302,1940,1639,1,1639,rows,,0.005 -0.201 0.966,-0.016 -0.146 0.967
+Sub05,movement0_speed1,Move,EEG,1,Sub05_movement0.xdf,154783,181022,26240,1,26240,,,-15463.1045,-12585.8623
+Sub05,movement0_speed1,Move,EEG,2,Sub05_movement0.xdf,236024,241045,5022,26241,31262,,,-19421.6777,-16230.8916
+Sub05,movement0_speed1,Move,EEG,3,Sub05_movement0.xdf,243547,273045,29499,31263,60761,,,-17809.0801,-17195.9043
+Sub05,movement0_speed1,Move,EEG,4,Sub05_movement0.xdf,289480,321867,32388,60762,93149,,,-22910,-21629.5176
+Sub05,movement0_speed1,Move,IMU,1,Sub05_movement0.txt,15264,17868,2605,1,2605,slot map,,-0.015 -0.161 0.99,-0.322 -0.659 0.868
+Sub05,movement0_speed1,Move,IMU,2,Sub05_movement0.txt,23330,23827,498,2606,3103,slot map,,0.074 -0.191 0.994,0.026 -0.258 0.908
+Sub05,movement0_speed1,Move,IMU,3,Sub05_movement0.txt,24077,27004,2928,3104,6031,slot map,,0.034 -0.154 0.962,-0.015 -0.04 0.943
+Sub05,movement0_speed1,Move,IMU,4,Sub05_movement0.txt,28637,31855,3219,6032,9250,slot map,,0.005 -0.099 0.811,-0.155 -0.595 0.754
+Sub05,movement0_speed1,Rest,EEG,1,Sub05_movement0.xdf,131323,151019,19697,1,19697,,,-16388.9668,-16912.6094
+Sub05,movement0_speed1,Rest,IMU,1,Sub05_movement0.txt,12935,14890,1956,1,1956,rows,,-0.023 -0.136 0.974,-0.012 -0.189 0.965
+Sub05,movement1_speed0,Move,EEG,1,Sub05_movement1.xdf,22819,117859,95041,1,95041,,,-13666.6689,-18117.3555
+Sub05,movement1_speed0,Move,EEG,2,Sub05_movement1.xdf,289346,289346,1,95042,95042,,tail: leave this piece out,,
+Sub05,movement1_speed0,Move,IMU,1,Sub05_movement1.txt,2172,11608,9437,1,9437,rows,,0.123 -0.293 0.955,0.033 -0.442 0.79
+Sub05,movement1_speed0,Move,IMU,2,Sub05_movement1.txt,28641,28641,1,9438,9438,rows,tail: leave this piece out,,
+Sub05,movement1_speed0,Rest,EEG,1,Sub05_movement1.xdf,4744,20996,16253,1,16253,,,-13508.5596,-14406.9629
+Sub05,movement1_speed0,Rest,IMU,1,Sub05_movement1.txt,377,1990,1614,1,1614,rows,,-0.033 -0.118 0.985,-0.004 -0.134 0.986
+Sub05,movement1_speed1,Move,EEG,1,Sub05_movement1.xdf,176660,209398,32739,1,32739,,,-13666.5049,-13887.9141
+Sub05,movement1_speed1,Move,EEG,2,Sub05_movement1.xdf,218522,249875,31354,32740,64093,,,-18007.7656,-14987.7559
+Sub05,movement1_speed1,Move,EEG,3,Sub05_movement1.xdf,257982,289345,31364,64094,95457,,,-16090.5332,-12469.6309
+Sub05,movement1_speed1,Move,IMU,1,Sub05_movement1.txt,17448,20697,3250,1,3250,slot map,,-0.125 -0.333 0.868,-0.153 -0.403 0.881
+Sub05,movement1_speed1,Move,IMU,2,Sub05_movement1.txt,21604,24715,3112,3251,6362,slot map,,-0.07 -0.163 0.975,0.217 -0.607 0.749
+Sub05,movement1_speed1,Move,IMU,3,Sub05_movement1.txt,25521,28637,3117,6363,9479,slot map,,0.015 -0.188 0.988,-0.086 -0.111 0.97
+Sub05,movement1_speed1,Rest,EEG,1,Sub05_movement1.xdf,119638,121030,1393,1,1393,,,-17265.168,-17747.0312
+Sub05,movement1_speed1,Rest,EEG,2,Sub05_movement1.xdf,155171,175064,19894,1394,21287,,,-13861.0166,-14933.5469
+Sub05,movement1_speed1,Rest,IMU,1,Sub05_movement1.txt,11785,11921,137,1,137,rows,,-0.184 -0.206 0.989,-0.347 -0.249 0.867
+Sub05,movement1_speed1,Rest,IMU,2,Sub05_movement1.txt,15313,17289,1977,138,2114,rows,,-0.028 -0.173 0.989,0.002 -0.186 0.962
+Sub05,movement3_speed0,Move,EEG,1,Sub05_movement3.xdf,26926,61400,34475,1,34475,,,-40873.0469,-43357.6406
+Sub05,movement3_speed0,Move,EEG,2,Sub05_movement3.xdf,66832,98038,31207,34476,65682,,,-44179.4844,-46341.5508
+Sub05,movement3_speed0,Move,EEG,3,Sub05_movement3.xdf,107315,140465,33151,65683,98833,,,-46381.7812,-38476.8789
+Sub05,movement3_speed0,Move,EEG,4,Sub05_movement3.xdf,170125,170125,1,98834,98834,,tail: leave this piece out,,
+Sub05,movement3_speed0,Move,IMU,1,Sub05_movement3.txt,2543,5965,3423,1,3423,rows,,0.001 0.368 0.884,-0.029 0.035 0.963
+Sub05,movement3_speed0,Move,IMU,2,Sub05_movement3.txt,6506,9603,3098,3424,6521,rows,,-0.06 -0.066 0.986,-0.012 0.128 0.961
+Sub05,movement3_speed0,Move,IMU,3,Sub05_movement3.txt,10526,13817,3292,6522,9813,rows,,-0.068 -0.406 0.908,-0.102 -0.34 0.918
+Sub05,movement3_speed0,Rest,EEG,1,Sub05_movement3.xdf,5336,23369,18034,1,18034,,,-38907.2969,-40847.2617
+Sub05,movement3_speed0,Rest,IMU,1,Sub05_movement3.txt,400,2191,1792,1,1792,rows,,-0.039 0.013 0.988,-0.056 0.041 0.986
+Sub05,movement3_speed1,Move,EEG,1,Sub05_movement3.xdf,173926,205573,31648,1,31648,,,-40485.625,-40811.3242
+Sub05,movement3_speed1,Move,EEG,2,Sub05_movement3.xdf,218325,250704,32380,31649,64028,,,-37340.2266,-36106.8984
+Sub05,movement3_speed1,Move,EEG,3,Sub05_movement3.xdf,269976,310525,40550,64029,104578,,,-35075.7891,-31642.3027
+Sub05,movement3_speed1,Move,IMU,1,Sub05_movement3.txt,17140,20281,3142,1,3142,rows,,0.018 0.596 0.846,-0.012 -0.519 0.857
+Sub05,movement3_speed1,Move,IMU,2,Sub05_movement3.txt,21549,24763,3215,3143,6357,rows,,0.057 0.443 0.925,-0.024 -0.093 0.859
+Sub05,movement3_speed1,Move,IMU,3,Sub05_movement3.txt,26678,30705,4028,6358,10385,rows,,0.007 -0.003 0.84,-0.059 -0.268 0.917
+Sub05,movement3_speed1,Rest,EEG,1,Sub05_movement3.xdf,142501,160388,17888,1,17888,,,-41802.3594,-41397.9023
+Sub05,movement3_speed1,Rest,IMU,1,Sub05_movement3.txt,14020,15796,1777,1,1777,rows,,-0.021 -0.124 0.968,-0.065 -0.039 0.988
+Sub05,movement4_speed0,Move,EEG,1,Sub05_movement4_speed0.xdf,25252,41823,16572,1,16572,,,-31250.1973,-31577.3809
+Sub05,movement4_speed0,Move,EEG,2,Sub05_movement4_speed0.xdf,55149,74284,19136,16573,35708,,,-29747.5488,-26797.3066
+Sub05,movement4_speed0,Move,EEG,3,Sub05_movement4_speed0.xdf,91141,108859,17719,35709,53427,,,-21974.166,-22883.2578
+Sub05,movement4_speed0,Move,EEG,4,Sub05_movement4_speed0.xdf,146119,179404,33286,53428,86713,,,-16149.2236,-12098.7793
+Sub05,movement4_speed0,Move,EEG,5,Sub05_movement4_speed0.xdf,210554,229187,18634,86714,105347,,,-6143.43311,-5548.24854
+Sub05,movement4_speed0,Move,IMU,1,Sub05_movement4_speed0.txt,2471,4115,1645,1,1645,slot map,,0.045 -0.07 0.878,0.032 0.009 0.942
+Sub05,movement4_speed0,Move,IMU,2,Sub05_movement4_speed0.txt,5439,7337,1899,1646,3544,slot map,,0.092 -0.129 0.867,0 -0.081 0.919
+Sub05,movement4_speed0,Move,IMU,3,Sub05_movement4_speed0.txt,9012,10769,1758,3545,5302,slot map,,-0.075 -0.167 0.848,-0.068 0.013 0.991
+Sub05,movement4_speed0,Move,IMU,4,Sub05_movement4_speed0.txt,14470,17773,3304,5303,8606,slot map,,0.086 0.053 0.877,-0.05 0.054 0.958
+Sub05,movement4_speed0,Move,IMU,5,Sub05_movement4_speed0.txt,20867,22721,1855,8607,10461,slot map,,0.025 -0.023 0.977,-0.011 -0.092 0.989
+Sub05,movement4_speed0,Rest,EEG,1,Sub05_movement4_speed0.xdf,3787,22927,19141,1,19141,,,-31426.6953,-32363.4785
+Sub05,movement4_speed0,Rest,IMU,1,Sub05_movement4_speed0.txt,339,2240,1902,1,1902,rows,,0.006 -0.079 0.989,-0.003 -0.094 0.989
+Sub05,movement4_speed1,Move,EEG,1,Sub05_movement4_speed1_part1.xdf,25556,87931,62376,1,62376,,,6228.96777,17462.2676
+Sub05,movement4_speed1,Move,EEG,2,Sub05_movement4_speed1_part2.xdf,5003,34892,29890,62377,92266,,,3951.20093,-3098.31519
+Sub05,movement4_speed1,Move,IMU,1,Sub05_movement4_speed1_part1.txt,2380,8573,6194,1,6194,slot map,,0.057 -0.067 0.745,0.099 0.129 0.967
+Sub05,movement4_speed1,Move,IMU,2,Sub05_movement4_speed1_part2.txt,392,3360,2969,6195,9163,slot map,,-0.031 -0.187 1.23,-0.074 0.166 0.659
+Sub05,movement4_speed1,Rest,EEG,1,Sub05_movement4_speed1_part1.xdf,7217,22639,15423,1,15423,,,7712.85059,5605.22607
+Sub05,movement4_speed1,Rest,IMU,1,Sub05_movement4_speed1_part1.txt,559,2090,1532,1,1532,rows,,0.016 -0.047 0.986,-0.02 -0.059 0.986
+Sub05,movement5_speed0,Move,EEG,1,Sub05_movement5_speed0.xdf,24208,115629,91422,1,91422,,,-26064.5723,-27048.6152
+Sub05,movement5_speed0,Move,IMU,1,Sub05_movement5_speed0.txt,2316,11210,9079,1,9079,slot map,,-0.166 -0.273 0.972,0.131 -0.423 0.77
+Sub05,movement5_speed0,Rest,EEG,1,Sub05_movement5_speed0.xdf,4322,19779,15458,1,15458,,,-24727.4023,-25848.25
+Sub05,movement5_speed0,Rest,IMU,1,Sub05_movement5_speed0.txt,347,1881,1535,1,1535,rows,,-0.01 -0.172 0.971,0.033 -0.098 0.99
+Sub05,movement5_speed1,Move,EEG,1,Sub05_movement5_speed1.xdf,23314,38394,15081,1,15081,,,-33427.6953,-36790.6406
+Sub05,movement5_speed1,Move,EEG,2,Sub05_movement5_speed1.xdf,52630,68065,15436,15082,30517,,,-32490.8438,-36981.0039
+Sub05,movement5_speed1,Move,EEG,3,Sub05_movement5_speed1.xdf,87648,117133,29486,30518,60003,,,-34644.293,-40073.457
+Sub05,movement5_speed1,Move,EEG,4,Sub05_movement5_speed1.xdf,137883,168006,30124,60004,90127,,,-9718.3291,-4068.44702
+Sub05,movement5_speed1,Move,IMU,1,Sub05_movement5_speed1.txt,2209,3701,1497,1,1497,slot map,,0.016 -0.17 1.29,-0.241 -0.957 1.317
+Sub05,movement5_speed1,Move,IMU,2,Sub05_movement5_speed1.txt,5116,6644,1531,1498,3028,slot map,,-0.215 -0.297 1.115,0.171 -0.434 0.795
+Sub05,movement5_speed1,Move,IMU,3,Sub05_movement5_speed1.txt,8554,11342,2927,3029,5955,slot map,,-0.153 -0.168 0.893,-0.224 -0.345 0.797
+Sub05,movement5_speed1,Move,IMU,4,Sub05_movement5_speed1.txt,13211,16202,2995,5956,8950,slot map,,-0.163 -0.225 0.861,-0.37 -0.491 0.865
+Sub05,movement5_speed1,Rest,EEG,1,Sub05_movement5_speed1.xdf,3792,21011,17220,1,17220,,,-32863.9414,-33003.2344
+Sub05,movement5_speed1,Rest,IMU,1,Sub05_movement5_speed1.txt,271,1981,1711,1,1711,rows,,-0.004 0.024 0.989,-0.005 -0.133 0.976
+Sub06,Sit,Rest,EEG,1,Sub06_Sit.xdf,7170,165198,158029,1,158029,,,-67823.2266,-68469.7109
+Sub06,Sit,Rest,IMU,1,Sub06_Sit.txt,456,16147,15692,1,15692,rows,,0.03 -0.08 0.986,-0.047 -0.197 0.973
+Sub06,movement0_speed0,Move,EEG,1,Sub06_movement0_speed0.xdf,36144,136283,100140,1,100140,,,-74565.2188,-74977.875
+Sub06,movement0_speed0,Move,IMU,1,Sub06_movement0_speed0.txt,3442,13385,9944,1,9944,rows,,0.04 -0.207 1.012,0.001 -0.198 1.052
+Sub06,movement0_speed0,Rest,EEG,1,Sub06_movement0_speed0.xdf,6169,24663,18495,1,18495,,,-73552.0547,-74318.0781
+Sub06,movement0_speed0,Rest,IMU,1,Sub06_movement0_speed0.txt,465,2302,1838,1,1838,rows,,0.158 -0.13 0.975,0.148 -0.111 0.961
+Sub06,movement0_speed1,Move,EEG,1,Sub06_movement0_speed1.xdf,40959,70741,29783,1,29783,,,-74303.0859,-73289.0781
+Sub06,movement0_speed1,Move,EEG,2,Sub06_movement0_speed1.xdf,136354,199531,63178,29784,92961,,,-74297.8828,-77310.6406
+Sub06,movement0_speed1,Move,IMU,1,Sub06_movement0_speed1.txt,3976,6933,2958,1,2958,rows,,-0.066 -0.097 0.403,0.495 0.046 1.333
+Sub06,movement0_speed1,Move,IMU,2,Sub06_movement0_speed1.txt,13448,19721,6274,2959,9232,rows,,0.022 -0.253 0.715,-0.271 -0.078 0.865
+Sub06,movement0_speed1,Rest,EEG,1,Sub06_movement0_speed1.xdf,4065,25309,21245,1,21245,,,-73420.4766,-73482.1406
+Sub06,movement0_speed1,Rest,IMU,1,Sub06_movement0_speed1.txt,311,2420,2110,1,2110,rows,,0.115 -0.146 0.971,0.134 -0.143 0.974
+Sub06,movement1_speed0,Move,EEG,1,Sub06_movement1_speed0.xdf,29195,125702,96508,1,96508,,,-74064.8359,-76685.4609
+Sub06,movement1_speed0,Move,IMU,1,Sub06_movement1_speed0.txt,2824,12407,9584,1,9584,rows,,0.385 -0.428 0.811,0.253 -0.331 0.821
+Sub06,movement1_speed0,Rest,EEG,1,Sub06_movement1_speed0.xdf,4870,23133,18264,1,18264,,,-78738.8281,-73936.4688
+Sub06,movement1_speed0,Rest,IMU,1,Sub06_movement1_speed0.txt,408,2221,1814,1,1814,rows,,0.11 -0.13 0.967,0.065 -0.217 0.95
+Sub06,movement1_speed1,Move,EEG,1,Sub06_movement1_speed1.xdf,27567,44992,17426,1,17426,,,-78453.0156,-77578.5938
+Sub06,movement1_speed1,Move,EEG,2,Sub06_movement1_speed1.xdf,65787,83137,17351,17427,34777,,,-77474.4375,-75686.7422
+Sub06,movement1_speed1,Move,EEG,3,Sub06_movement1_speed1.xdf,137225,155650,18426,34778,53203,,,-69659.3672,-68521.9922
+Sub06,movement1_speed1,Move,EEG,4,Sub06_movement1_speed1.xdf,176419,193239,16821,53204,70024,,,-72351.1641,-70518
+Sub06,movement1_speed1,Move,EEG,5,Sub06_movement1_speed1.xdf,206432,238189,31758,70025,101782,,,-66735.3203,-59831.3555
+Sub06,movement1_speed1,Move,IMU,1,Sub06_movement1_speed1.txt,2660,4391,1732,1,1732,slot map,,0.304 -0.123 1.018,-0.049 -0.299 1.469
+Sub06,movement1_speed1,Move,IMU,2,Sub06_movement1_speed1.txt,6457,8180,1724,1733,3456,slot map,,-0.358 -0.54 1.066,0.685 0.089 0.869
+Sub06,movement1_speed1,Move,IMU,3,Sub06_movement1_speed1.txt,13552,15381,1830,3457,5286,slot map,,0.26 -0.539 0.669,-0.082 -0.181 1.09
+Sub06,movement1_speed1,Move,IMU,4,Sub06_movement1_speed1.txt,17444,19114,1671,5287,6957,slot map,,0.222 0.219 1.45,0.165 -0.094 0.75
+Sub06,movement1_speed1,Move,IMU,5,Sub06_movement1_speed1.txt,20425,23578,3154,6958,10111,slot map,,0.016 -0.069 0.434,-0.048 -0.236 0.969
+Sub06,movement1_speed1,Rest,EEG,1,Sub06_movement1_speed1.xdf,4442,22461,18020,1,18020,,,-80391.5703,-79003.2344
+Sub06,movement1_speed1,Rest,IMU,1,Sub06_movement1_speed1.txt,364,2153,1790,1,1790,rows,,0.125 -0.171 0.969,0.079 -0.14 0.962
+Sub06,movement2_speed0,Move,EEG,1,Sub06_movement2_speed0.xdf,24781,120026,95246,1,95246,,,-67511.8359,-67877.2266
+Sub06,movement2_speed0,Move,IMU,1,Sub06_movement2_speed0.txt,2378,11836,9459,1,9459,rows,,0.093 0.002 0.967,0.028 -0.151 0.966
+Sub06,movement2_speed0,Rest,EEG,1,Sub06_movement2_speed0.xdf,4112,21562,17451,1,17451,,,-67340.875,-67537.4766
+Sub06,movement2_speed0,Rest,IMU,1,Sub06_movement2_speed0.txt,326,2059,1734,1,1734,rows,,0.102 -0.042 0.968,0.092 -0.068 0.968
+Sub06,movement2_speed1,Move,EEG,1,Sub06_movement2_speed1.xdf,23354,40853,17500,1,17500,,,-67617.6094,-67649.75
+Sub06,movement2_speed1,Move,EEG,2,Sub06_movement2_speed1.xdf,61328,93579,32252,17501,49752,,,-67652.9297,-67511.2578
+Sub06,movement2_speed1,Move,EEG,3,Sub06_movement2_speed1.xdf,118254,167811,49558,49753,99310,,,-67639.7969,-67437.2266
+Sub06,movement2_speed1,Move,IMU,1,Sub06_movement2_speed1.txt,2193,3930,1738,1,1738,slot map,,0.075 -0.015 0.978,-0.137 -0.128 0.983
+Sub06,movement2_speed1,Move,IMU,2,Sub06_movement2_speed1.txt,5964,9167,3204,1739,4942,slot map,,-0.125 -0.083 0.984,-0.099 -0.187 0.986
+Sub06,movement2_speed1,Move,IMU,3,Sub06_movement2_speed1.txt,11618,16539,4922,4943,9864,slot map,,-0.037 -0.177 0.968,0.032 -0.19 0.971
+Sub06,movement2_speed1,Rest,EEG,1,Sub06_movement2_speed1.xdf,5722,18078,12357,1,12357,,,-67243.5625,-67546.7734
+Sub06,movement2_speed1,Rest,IMU,1,Sub06_movement2_speed1.txt,442,1669,1228,1,1228,rows,,0.093 0.001 0.968,0.127 -0.013 0.985
+Sub06,movement3_speed0,Move,EEG,1,Sub06_movement3_speed0.xdf,37405,133390,95986,1,95986,,,-66696.4922,-66287.8672
+Sub06,movement3_speed0,Move,IMU,1,Sub06_movement3_speed0.txt,3627,13158,9532,1,9532,rows,,0.046 0.028 0.988,0.024 -0.599 0.835
+Sub06,movement3_speed0,Rest,EEG,1,Sub06_movement3_speed0.xdf,14164,32499,18336,1,18336,,,-65101.5469,-65886.8828
+Sub06,movement3_speed0,Rest,IMU,1,Sub06_movement3_speed0.txt,1319,3140,1822,1,1822,rows,,0.082 -0.088 0.968,0.035 -0.073 0.992
+Sub06,movement3_speed1,Move,EEG,1,Sub06_movement3_speed1.xdf,28973,32417,3445,1,3445,,,-57078.9102,-56760.6211
+Sub06,movement3_speed1,Move,EEG,2,Sub06_movement3_speed1.xdf,116600,163226,46627,3446,50072,,,-57834.457,-57975.668
+Sub06,movement3_speed1,Move,EEG,3,Sub06_movement3_speed1.xdf,192239,239403,47165,50073,97237,,,-57642.5352,-59401.7773
+Sub06,movement3_speed1,Move,IMU,1,Sub06_movement3_speed1.txt,2770,3112,343,1,343,slot map,,0.091 -0.426 0.902,0.035 -0.306 0.927
+Sub06,movement3_speed1,Move,IMU,2,Sub06_movement3_speed1.txt,11469,16099,4631,344,4974,slot map,,0.069 0.256 0.974,0.062 0.43 0.921
+Sub06,movement3_speed1,Move,IMU,3,Sub06_movement3_speed1.txt,18981,23665,4685,4975,9659,slot map,,0.091 0.379 0.945,0.103 -0.976 0.593
+Sub06,movement3_speed1,Rest,EEG,1,Sub06_movement3_speed1.xdf,5036,25386,20351,1,20351,,,-56540.7461,-56926.3906
+Sub06,movement3_speed1,Rest,IMU,1,Sub06_movement3_speed1.txt,390,2411,2022,1,2022,rows,,0.115 -0.008 0.977,0.072 -0.095 0.986
+Sub06,movement4_speed0,Move,EEG,1,Sub06_movement4_speed0.xdf,29263,55988,26726,1,26726,,,-62669.9453,-62655.4766
+Sub06,movement4_speed0,Move,EEG,2,Sub06_movement4_speed0.xdf,106464,156184,49721,26727,76447,,,-62571.6953,-63180.3477
+Sub06,movement4_speed0,Move,EEG,3,Sub06_movement4_speed0.xdf,190184,218666,28483,76448,104930,,,-61999.707,-62456.1406
+Sub06,movement4_speed0,Move,IMU,1,Sub06_movement4_speed0.txt,2829,5483,2655,1,2655,slot map,,0.134 -0.703 0.66,0.148 -0.189 0.967
+Sub06,movement4_speed0,Move,IMU,2,Sub06_movement4_speed0.txt,10496,15433,4938,2656,7593,slot map,,0.215 -0.889 0.476,0.171 -0.56 0.798
+Sub06,movement4_speed0,Move,IMU,3,Sub06_movement4_speed0.txt,18810,21638,2829,7594,10422,slot map,,0.111 -0.895 0.391,0.14 -0.38 0.89
+Sub06,movement4_speed0,Rest,EEG,1,Sub06_movement4_speed0.xdf,5325,25132,19808,1,19808,,,-63294.8125,-62688.543
+Sub06,movement4_speed0,Rest,IMU,1,Sub06_movement4_speed0.txt,452,2419,1968,1,1968,rows,,0.107 -0.076 0.964,0.111 -0.167 0.972
+Sub06,movement4_speed1,Move,EEG,1,Sub06_movement4_speed1.xdf,70827,101928,31102,1,31102,,,-68876.4453,-71395.9219
+Sub06,movement4_speed1,Move,EEG,2,Sub06_movement4_speed1.xdf,135504,195886,60383,31103,91485,,,-72947.5781,-77866.5781
+Sub06,movement4_speed1,Move,IMU,1,Sub06_movement4_speed1.txt,6949,10037,3089,1,3089,rows,,0.182 -1.004 0.438,0.169 0.004 0.89
+Sub06,movement4_speed1,Move,IMU,2,Sub06_movement4_speed1.txt,13371,19367,5997,3090,9086,rows,,0.429 -1.548 1.295,0.402 -0.642 0.616
+Sub06,movement4_speed1,Rest,EEG,1,Sub06_movement4_speed1.xdf,7077,26658,19582,1,19582,,,-65644.8359,-66159.6797
+Sub06,movement4_speed1,Rest,IMU,1,Sub06_movement4_speed1.txt,618,2562,1945,1,1945,rows,,0.118 -0.024 0.966,0.119 -0.042 0.966
+Sub06,movement5_speed0,Move,EEG,1,Sub06_movement5_speed0.xdf,23882,118628,94747,1,94747,,,-72046.0781,-70717.8672
+Sub06,movement5_speed0,Move,IMU,1,Sub06_movement5_speed0.txt,2225,11397,9409,1,9409,slot map,,0.071 -0.199 0.76,0.292 -0.337 0.631
+Sub06,movement5_speed0,Rest,EEG,1,Sub06_movement5_speed0.xdf,4845,20940,16096,1,16096,,,-71674.7969,-72214.7422
+Sub06,movement5_speed0,Rest,IMU,1,Sub06_movement5_speed0.txt,354,1933,1599,1,1599,slot map,,0.069 -0.054 0.986,0.02 -0.136 0.976
+Sub06,movement5_speed1,Move,EEG,1,Sub06_movement5_speed1.xdf,24004,55336,31333,1,31333,,,-77911.7422,-79561.9609
+Sub06,movement5_speed1,Move,EEG,2,Sub06_movement5_speed1.xdf,90265,121494,31230,31334,62563,,,-70518.4141,-62019.5586
+Sub06,movement5_speed1,Move,EEG,3,Sub06_movement5_speed1.xdf,161120,191657,30538,62564,93101,,,-57329.9883,-48051.0117
+Sub06,movement5_speed1,Move,IMU,1,Sub06_movement5_speed1.txt,2287,5398,3112,1,3112,rows,,-0.018 -0.236 0.879,0.09 -0.697 0.658
+Sub06,movement5_speed1,Move,IMU,2,Sub06_movement5_speed1.txt,8866,11967,3102,3113,6214,rows,,0.084 -0.432 1.37,0.406 -0.59 0.715
+Sub06,movement5_speed1,Move,IMU,3,Sub06_movement5_speed1.txt,15902,18934,3033,6215,9247,rows,,0.607 -0.201 1.446,-0.177 -0.612 0.685
+Sub06,movement5_speed1,Rest,EEG,1,Sub06_movement5_speed1.xdf,5798,21864,16067,1,16067,,,-78243.2812,-77823.2812
+Sub06,movement5_speed1,Rest,IMU,1,Sub06_movement5_speed1.txt,478,2073,1596,1,1596,rows,,0.044 -0.064 0.985,0.064 -0.044 0.985
+Sub07,Sit,Rest,EEG,1,Sub07_Sit.xdf,9344,180491,171148,1,171148,,,-46070.9023,-48164.707
+Sub07,Sit,Rest,IMU,1,Sub07_Sit.txt,679,17673,16995,1,16995,rows,,0.002 -0.216 0.969,-0.025 -0.097 0.987
+Sub07,movement0_speed0,Move,EEG,1,Sub07_movement0_speed0.xdf,29784,125042,95259,1,95259,,,-49322.1875,-49893.625
+Sub07,movement0_speed0,Move,IMU,1,Sub07_movement0_speed0.txt,2760,12219,9460,1,9460,rows,,0 -0.011 0.948,0.045 -0.06 0.956
+Sub07,movement0_speed0,Rest,EEG,1,Sub07_movement0_speed0.xdf,6621,26034,19414,1,19414,,,-49286.6328,-49199.2148
+Sub07,movement0_speed0,Rest,IMU,1,Sub07_movement0_speed0.txt,459,2387,1929,1,1929,rows,,0.021 0.004 0.99,0.018 -0.044 0.988
+Sub07,movement0_speed1,Move,EEG,1,Sub07_movement0_speed1.xdf,33676,130915,97240,1,97240,,,-51915.418,-50483.5469
+Sub07,movement0_speed1,Move,IMU,1,Sub07_movement0_speed1.txt,3276,12932,9657,1,9657,rows,,0.174 -0.219 0.81,-0.121 -0.042 1.003
+Sub07,movement0_speed1,Rest,EEG,1,Sub07_movement0_speed1.xdf,3626,21963,18338,1,18338,,,-50241.4297,-50034.7891
+Sub07,movement0_speed1,Rest,IMU,1,Sub07_movement0_speed1.txt,292,2113,1822,1,1822,rows,,0.021 -0.038 0.977,0.017 -0.069 0.986
+Sub07,movement1_speed0,Move,EEG,1,Sub07_movement1_speed0.xdf,36954,142439,105486,1,105486,,,-53164.5195,-62577.3711
+Sub07,movement1_speed0,Move,IMU,1,Sub07_movement1_speed0.txt,2897,13371,10475,1,10475,rows,,0.038 -0.082 0.949,0.111 -0.13 0.937
+Sub07,movement1_speed0,Rest,EEG,1,Sub07_movement1_speed0.xdf,16610,35104,18495,1,18495,,,-50290.0156,-52615.293
+Sub07,movement1_speed0,Rest,IMU,1,Sub07_movement1_speed0.txt,876,2712,1837,1,1837,rows,,0.013 -0.089 0.968,0.015 -0.116 0.968
+Sub07,movement1_speed1,Move,EEG,1,Sub07_movement1_speed1.xdf,26119,114130,88012,1,88012,,,-57543.1602,-44113.8359
+Sub07,movement1_speed1,Move,IMU,1,Sub07_movement1_speed1.txt,2464,11203,8740,1,8740,rows,,-0.038 -0.209 0.818,-0.017 -0.19 0.923
+Sub07,movement1_speed1,Rest,EEG,1,Sub07_movement1_speed1.xdf,5930,22066,16137,1,16137,,,-59987.9102,-60467.3281
+Sub07,movement1_speed1,Rest,IMU,1,Sub07_movement1_speed1.txt,460,2062,1603,1,1603,rows,,0.031 -0.106 0.965,0.012 -0.124 0.969
+Sub07,movement2_speed0,Move,EEG,1,Sub07_movement2_speed0.xdf,24574,71682,47109,1,47109,,,-39934.5469,-43827.1055
+Sub07,movement2_speed0,Move,EEG,2,Sub07_movement2_speed0.xdf,75789,75866,78,47110,47187,,,-44492.6953,-44489.6797
+Sub07,movement2_speed0,Move,EEG,3,Sub07_movement2_speed0.xdf,77828,171462,93635,47188,140822,,,-44723.0898,-50662.293
+Sub07,movement2_speed0,Move,IMU,1,Sub07_movement2_speed0.txt,2309,6986,4678,1,4678,slot map,,0.018 -0.014 0.989,0.031 -0.049 0.986
+Sub07,movement2_speed0,Move,IMU,2,Sub07_movement2_speed0.txt,7394,7400,7,4679,4685,slot map,,0.001 -0.071 0.986,-0.016 -0.084 0.98
+Sub07,movement2_speed0,Move,IMU,3,Sub07_movement2_speed0.txt,7597,16895,9299,4686,13984,slot map,,0.026 -0.001 0.986,-0.007 0.086 0.965
+Sub07,movement2_speed0,Rest,EEG,1,Sub07_movement2_speed0.xdf,6521,22129,15609,1,15609,,,-39634.8789,-39773.8945
+Sub07,movement2_speed0,Rest,IMU,1,Sub07_movement2_speed0.txt,517,2067,1551,1,1551,rows,,0.007 -0.082 0.988,-0.017 -0.102 0.968
+Sub07,movement2_speed1,Move,EEG,1,Sub07_movement2_speed1.xdf,22191,112642,90452,1,90452,,,-54948.5625,-54096.4258
+Sub07,movement2_speed1,Move,IMU,1,Sub07_movement2_speed1.txt,2118,11099,8982,1,8982,rows,,0.032 0.048 0.987,0.025 0.15 0.976
+Sub07,movement2_speed1,Rest,EEG,1,Sub07_movement2_speed1.xdf,3642,18613,14972,1,14972,,,-54674.207,-54247.082
+Sub07,movement2_speed1,Rest,IMU,1,Sub07_movement2_speed1.txt,276,1763,1488,1,1488,rows,,0.016 0.084 0.984,-0.001 -0.003 0.987
+Sub07,movement3_speed0,Move,EEG,1,Sub07_movement3_speed0.xdf,22572,113253,90682,1,90682,,,-11857.3525,-23850.9297
+Sub07,movement3_speed0,Move,IMU,1,Sub07_movement3_speed0.txt,2144,11148,9005,1,9005,rows,,-0.025 -0.623 0.781,-0.001 -0.046 0.968
+Sub07,movement3_speed0,Rest,EEG,1,Sub07_movement3_speed0.xdf,4724,19946,15223,1,15223,,,-10553.6826,-11844.7471
+Sub07,movement3_speed0,Rest,IMU,1,Sub07_movement3_speed0.txt,372,1883,1512,1,1512,rows,,-0.01 -0.026 0.988,-0.033 -0.027 0.988
+Sub07,movement3_speed1,Move,EEG,1,Sub07_movement3_speed1.xdf,24810,114046,89237,1,89237,,,-34441.4961,-29820.8711
+Sub07,movement3_speed1,Move,IMU,1,Sub07_movement3_speed1.txt,2383,11244,8862,1,8862,rows,,-0.019 -0.553 0.701,-0.003 -0.008 0.82
+Sub07,movement3_speed1,Rest,EEG,1,Sub07_movement3_speed1.xdf,4180,20553,16374,1,16374,,,-32401.2812,-32866.6719
+Sub07,movement3_speed1,Rest,IMU,1,Sub07_movement3_speed1.txt,335,1960,1626,1,1626,rows,,-0.018 0.006 0.986,0 -0.057 0.987
+Sub07,movement4_speed0,Move,EEG,1,Sub07_movement4_speed0.xdf,21937,115735,93799,1,93799,,,-15210.1826,-9105.46875
+Sub07,movement4_speed0,Move,IMU,1,Sub07_movement4_speed0.txt,12572,21886,9315,1,9315,rows,,0.005 0.12 0.971,-0.128 -0.721 0.703
+Sub07,movement4_speed0,Rest,EEG,1,Sub07_movement4_speed0.xdf,3384,19485,16102,1,16102,,,-12554.8457,-13767.249
+Sub07,movement4_speed0,Rest,IMU,1,Sub07_movement4_speed0.txt,10730,12329,1600,1,1600,rows,,0.009 -0.007 0.988,-0.001 0.015 0.987
+Sub07,movement4_speed1,Move,EEG,1,Sub07_movement4_speed1_part1.xdf,21878,66492,44615,1,44615,,,-14451.0908,-11884.1309
+Sub07,movement4_speed1,Move,EEG,2,Sub07_movement4_speed1_part2.xdf,3863,14317,10455,44616,55070,,,-14546.4346,-14504.9395
+Sub07,movement4_speed1,Move,EEG,3,Sub07_movement4_speed1_part2.xdf,26839,62611,35773,55071,90843,,,-15017.7354,-13019.3789
+Sub07,movement4_speed1,Move,IMU,1,Sub07_movement4_speed1_part1.txt,2109,6539,4431,1,4431,rows,,-0.056 0.363 1.01,0.011 0.267 0.52
+Sub07,movement4_speed1,Move,IMU,2,Sub07_movement4_speed1_part2.txt,348,1385,1038,4432,5469,rows,,0.067 0.429 0.843,-0.021 0.193 0.548
+Sub07,movement4_speed1,Move,IMU,3,Sub07_movement4_speed1_part2.txt,2630,6182,3553,5470,9022,rows,,0.031 0.199 0.986,0.003 0.138 0.95
+Sub07,movement4_speed1,Rest,EEG,1,Sub07_movement4_speed1_part1.xdf,3009,18856,15848,1,15848,,,-10229.6631,-12484.0088
+Sub07,movement4_speed1,Rest,IMU,1,Sub07_movement4_speed1_part1.txt,236,1809,1574,1,1574,rows,,0.023 0.052 0.986,-0.004 -0.002 0.986
+Sub07,movement5_speed0,Move,EEG,1,Sub07_movement5_speed0.xdf,23315,115217,91903,1,91903,,,-39097.7773,-28428.209
+Sub07,movement5_speed0,Move,IMU,1,Sub07_movement5_speed0.txt,4413,13182,9126,1,9126,slot map,,0.032 0.005 0.966,0.224 0.402 1.033
+Sub07,movement5_speed0,Rest,EEG,1,Sub07_movement5_speed0.xdf,3286,20345,17060,1,17060,,,-36503.6836,-39134.0391
+Sub07,movement5_speed0,Rest,IMU,1,Sub07_movement5_speed0.txt,2424,4118,1695,1,1695,rows,,0.008 0.108 0.974,0.023 -0.071 0.967
+Sub07,movement5_speed1,Move,EEG,1,Sub07_movement5_speed1.xdf,24518,70068,45551,1,45551,,,-31915.5,-27505.0098
+Sub07,movement5_speed1,Move,EEG,2,Sub07_movement5_speed1.xdf,134787,180393,45607,45552,91158,,,-26974.7344,-28525.5371
+Sub07,movement5_speed1,Move,IMU,1,Sub07_movement5_speed1.txt,2394,6916,4523,1,4523,rows,,-0.042 -0.428 1.113,-0.088 -0.451 0.823
+Sub07,movement5_speed1,Move,IMU,2,Sub07_movement5_speed1.txt,13344,17873,4530,4524,9053,rows,,-0.008 -0.049 0.963,0.107 0.067 0.857
+Sub07,movement5_speed1,Rest,EEG,1,Sub07_movement5_speed1.xdf,5522,22763,17242,1,17242,,,-27999.668,-30037.7363
+Sub07,movement5_speed1,Rest,IMU,1,Sub07_movement5_speed1.txt,508,2220,1713,1,1713,rows,,0.011 -0.117 0.964,0 -0.108 0.966
+Sub08,Sit,Rest,EEG,1,Sub08_Sit.xdf,7348,165157,157810,1,157810,,,8066.80176,3295.38867
+Sub08,Sit,Rest,IMU,1,Sub08_Sit.txt,620,16290,15671,1,15671,rows,,-0.037 -0.303 0.935,-0.053 -0.336 0.94
+Sub08,movement0_speed0,Move,EEG,1,Sub08_movement0_speed0.xdf,25915,120885,94971,1,94971,,,-843.319031,-549.268555
+Sub08,movement0_speed0,Move,IMU,1,Sub08_movement0_speed0.txt,2497,11927,9431,1,9431,rows,,-0.085 -0.651 0.739,0 -0.66 0.773
+Sub08,movement0_speed0,Rest,EEG,1,Sub08_movement0_speed0.xdf,5446,22421,16976,1,16976,,,1282.76001,1306.93958
+Sub08,movement0_speed0,Rest,IMU,1,Sub08_movement0_speed0.txt,464,2150,1687,1,1687,rows,,-0.047 -0.483 0.856,-0.054 -0.569 0.829
+Sub08,movement0_speed1,Move,EEG,1,Sub08_movement0_speed1.xdf,34486,47922,13437,1,13437,,,97.8168411,-10956.7783
+Sub08,movement0_speed1,Move,EEG,2,Sub08_movement0_speed1.xdf,70263,167282,97020,13438,110457,,,-8370.39746,3326.59546
+Sub08,movement0_speed1,Move,IMU,1,Sub08_movement0_speed1.txt,3278,4612,1335,1,1335,rows,,-0.071 -0.484 0.5,0.191 -0.958 0.656
+Sub08,movement0_speed1,Move,IMU,2,Sub08_movement0_speed1.txt,6832,16465,9634,1336,10969,rows,,0.013 -0.443 0.582,-0.003 -0.674 1.311
+Sub08,movement0_speed1,Rest,EEG,1,Sub08_movement0_speed1.xdf,9004,27148,18145,1,18145,,,424.035583,-790.75415
+Sub08,movement0_speed1,Rest,IMU,1,Sub08_movement0_speed1.txt,748,2550,1803,1,1803,rows,,-0.032 -0.513 0.868,-0.014 -0.6 0.805
+Sub08,movement1_speed0,Move,EEG,1,Sub08_movement1_speed0.xdf,26067,122011,95945,1,95945,,,455.051086,-1184.65137
+Sub08,movement1_speed0,Move,IMU,1,Sub08_movement1_speed0.txt,2464,11991,9528,1,9528,rows,,-0.048 -0.784 0.651,-0.001 -0.601 0.815
+Sub08,movement1_speed0,Rest,EEG,1,Sub08_movement1_speed0.xdf,4678,21904,17227,1,17227,,,900.24823,643.974304
+Sub08,movement1_speed0,Rest,IMU,1,Sub08_movement1_speed0.txt,340,2051,1712,1,1712,rows,,-0.008 -0.63 0.783,0.004 -0.589 0.802
+Sub08,movement1_speed1,Move,EEG,1,Sub08_movement1_speed1.xdf,32122,124723,92602,1,92602,,,-8520.54102,-7513.77246
+Sub08,movement1_speed1,Move,IMU,1,Sub08_movement1_speed1.txt,3006,12201,9196,1,9196,rows,,0.023 -0.461 1.09,-0.052 -0.628 0.941
+Sub08,movement1_speed1,Rest,EEG,1,Sub08_movement1_speed1.xdf,5546,26547,21002,1,21002,,,-2769.2644,-6859.00684
+Sub08,movement1_speed1,Rest,IMU,1,Sub08_movement1_speed1.txt,367,2452,2086,1,2086,rows,,-0.033 -0.625 0.749,-0.024 -0.624 0.764
+Sub08,movement2_speed0,Move,EEG,1,Sub08_movement2_speed0.xdf,29686,122062,92377,1,92377,,,-5047.67041,-5855.77783
+Sub08,movement2_speed0,Move,IMU,1,Sub08_movement2_speed0.txt,2575,11747,9173,1,9173,rows,,-0.056 -0.232 0.959,-0.029 0.053 0.969
+Sub08,movement2_speed0,Rest,EEG,1,Sub08_movement2_speed0.xdf,7760,27192,19433,1,19433,,,-4456.81055,-5019.53369
+Sub08,movement2_speed0,Rest,IMU,1,Sub08_movement2_speed0.txt,397,2326,1930,1,1930,rows,,-0.039 -0.348 0.918,-0.053 -0.354 0.926
+Sub08,movement2_speed1,Move,EEG,1,Sub08_movement2_speed1.xdf,29750,125414,95665,1,95665,,,-11472.3564,-12281.9727
+Sub08,movement2_speed1,Move,IMU,1,Sub08_movement2_speed1.txt,3198,12697,9500,1,9500,rows,,-0.109 -0.293 0.922,-0.15 -0.389 0.897
+Sub08,movement2_speed1,Rest,EEG,1,Sub08_movement2_speed1.xdf,3561,20998,17438,1,17438,,,-11160.5117,-11593.0801
+Sub08,movement2_speed1,Rest,IMU,1,Sub08_movement2_speed1.txt,597,2328,1732,1,1732,rows,,-0.073 -0.48 0.867,-0.115 -0.49 0.865
+Sub08,movement3_speed0,Move,EEG,1,Sub08_movement3_speed0.xdf,31825,110267,78443,1,78443,,,-18852.8379,-18831.7344
+Sub08,movement3_speed0,Move,EEG,2,Sub08_movement3_speed0.xdf,117835,135544,17710,78444,96153,,,-18942.5605,-19275.4551
+Sub08,movement3_speed0,Move,IMU,1,Sub08_movement3_speed0.txt,3110,10898,7789,1,7789,rows,,-0.046 0.129 0.987,-0.098 -0.803 0.638
+Sub08,movement3_speed0,Move,IMU,2,Sub08_movement3_speed0.txt,11651,13409,1759,7790,9548,rows,,-0.009 0.042 0.961,-0.053 -0.179 0.93
+Sub08,movement3_speed0,Rest,EEG,1,Sub08_movement3_speed0.xdf,2827,17974,15148,1,15148,,,-17229.5449,-18753.4824
+Sub08,movement3_speed0,Rest,IMU,1,Sub08_movement3_speed0.txt,231,1735,1505,1,1505,rows,,-0.084 -0.577 0.795,-0.102 -0.577 0.796
+Sub08,movement3_speed1,Move,EEG,1,Sub08_movement3_speed1.xdf,42033,44260,2228,1,2228,,,-14385.5762,-14632.584
+Sub08,movement3_speed1,Move,EEG,2,Sub08_movement3_speed1.xdf,51344,151009,99666,2229,101894,,,-12244.0293,-14627.0605
+Sub08,movement3_speed1,Move,IMU,1,Sub08_movement3_speed1.txt,4141,4361,221,1,221,rows,,-0.104 -0.677 0.717,-0.086 -0.419 0.897
+Sub08,movement3_speed1,Move,IMU,2,Sub08_movement3_speed1.txt,5066,14962,9897,222,10118,rows,,-0.024 0.12 0.986,-0.098 -0.257 0.95
+Sub08,movement3_speed1,Rest,EEG,1,Sub08_movement3_speed1.xdf,3648,21149,17502,1,17502,,,-14384.5078,-14427.5664
+Sub08,movement3_speed1,Rest,IMU,1,Sub08_movement3_speed1.txt,330,2068,1739,1,1739,rows,,-0.062 -0.402 0.909,-0.086 -0.473 0.878
+Sub08,movement4_speed0,Move,EEG,1,Sub08_movement4_speed0.xdf,18269,43998,25730,1,25730,,,-29788.584,-40625.1914
+Sub08,movement4_speed0,Move,EEG,2,Sub08_movement4_speed0.xdf,50044,116314,66271,25731,92001,,,-39099.6016,-19273.2207
+Sub08,movement4_speed0,Move,IMU,1,Sub08_movement4_speed0.txt,1786,4340,2555,1,2555,rows,,-0.109 -0.754 0.77,-0.099 -0.71 0.414
+Sub08,movement4_speed0,Move,IMU,2,Sub08_movement4_speed0.txt,4942,11518,6578,2556,9133,rows,rows past the end of the IMU file: the last 1 slots are empty (n/a),-0.122 -0.794 0.642,-0.086 -0.904 -0.049
+Sub08,movement4_speed0,Rest,EEG,1,Sub08_movement4_speed0.xdf,2238,17049,14812,1,14812,,,-27405.1211,-30655.377
+Sub08,movement4_speed0,Rest,IMU,1,Sub08_movement4_speed0.txt,194,1665,1472,1,1472,rows,,-0.06 -0.551 0.835,-0.126 -0.558 0.816
+Sub08,movement4_speed1,Move,EEG,1,Sub08_movement4_speed1.xdf,21354,115271,93918,1,93918,,,-19627.0469,-22204.4277
+Sub08,movement4_speed1,Move,IMU,1,Sub08_movement4_speed1.txt,2026,11352,9327,1,9327,rows,,-0.009 -0.422 0.689,-0.078 -0.648 0.27
+Sub08,movement4_speed1,Rest,EEG,1,Sub08_movement4_speed1.xdf,2704,20007,17304,1,17304,,,-18852.0742,-19616.3223
+Sub08,movement4_speed1,Rest,IMU,1,Sub08_movement4_speed1.txt,174,1892,1719,1,1719,rows,,-0.046 -0.733 0.608,-0.112 -0.433 0.892
+Sub08,movement5_speed0,Move,EEG,1,Sub08_movement5_speed0.xdf,25793,122308,96516,1,96516,,,-32995.3555,-37621.7734
+Sub08,movement5_speed0,Move,IMU,1,Sub08_movement5_speed0.txt,2552,12124,9585,1,9585,slot map,,-0.028 -0.716 0.714,-0.127 -0.589 0.793
+Sub08,movement5_speed0,Rest,EEG,1,Sub08_movement5_speed0.xdf,1966,23555,21590,1,21590,,,-40252.9219,-33437.2383
+Sub08,movement5_speed0,Rest,IMU,1,Sub08_movement5_speed0.txt,186,2330,2145,1,2145,rows,,-0.056 -0.25 0.97,-0.003 -0.539 0.825
+Sub08,movement5_speed1,Move,EEG,1,Sub08_movement5_speed1.xdf,21611,118122,96512,1,96512,,,-41511.4531,-38853.457
+Sub08,movement5_speed1,Move,IMU,1,Sub08_movement5_speed1.txt,2166,11749,9584,1,9584,rows,,0.079 -0.312 0.221,-0.136 -0.199 1.247
+Sub08,movement5_speed1,Rest,EEG,1,Sub08_movement5_speed1.xdf,1953,20154,18202,1,18202,,,-40429.6289,-41766.9375
+Sub08,movement5_speed1,Rest,IMU,1,Sub08_movement5_speed1.txt,214,2021,1808,1,1808,rows,,-0.058 -0.517 0.848,-0.125 -0.61 0.789
+Sub09,Sit,Rest,EEG,1,Sub09_Sit.xdf,5727,160179,154453,1,154453,,,-22245.0449,-28780.8828
+Sub09,Sit,Rest,IMU,1,Sub09_Sit.txt,412,15749,15338,1,15338,rows,,-0.016 -0.064 0.977,0.02 -0.022 0.989
+Sub09,movement0_speed0,Move,EEG,1,Sub09_movement0_speed0.xdf,43934,136592,92659,1,92659,,,-32185.5918,-33884.8828
+Sub09,movement0_speed0,Move,IMU,1,Sub09_movement0_speed0.txt,4099,13300,9202,1,9202,rows,,0.089 0.049 0.963,-0.045 0.066 0.938
+Sub09,movement0_speed0,Rest,EEG,1,Sub09_movement0_speed0.xdf,7293,25123,17831,1,17831,,,-31366.1191,-31774.2402
+Sub09,movement0_speed0,Rest,IMU,1,Sub09_movement0_speed0.txt,461,2231,1771,1,1771,rows,,0.009 -0.03 0.99,-0.023 -0.021 0.989
+Sub09,movement0_speed1,Move,EEG,1,Sub09_movement0_speed1.xdf,30177,122159,91983,1,91983,,,-36532.9727,-38130.2266
+Sub09,movement0_speed1,Move,IMU,1,Sub09_movement0_speed1.txt,2906,12040,9135,1,9135,rows,,-0.062 0.101 0.748,-0.338 0.004 0.809
+Sub09,movement0_speed1,Rest,EEG,1,Sub09_movement0_speed1.xdf,4221,21874,17654,1,17654,,,-35770.2773,-36180.1133
+Sub09,movement0_speed1,Rest,IMU,1,Sub09_movement0_speed1.txt,329,2082,1754,1,1754,rows,,-0.021 0.017 0.99,-0.009 -0.035 0.977
+Sub09,movement1_speed0,Move,EEG,1,Sub09_movement1_speed0.xdf,21851,113795,91945,1,91945,,,-43073.0781,-44115.3984
+Sub09,movement1_speed0,Move,IMU,1,Sub09_movement1_speed0.txt,2078,11207,9130,1,9130,rows,,0.1 0.159 0.967,-0.052 -0.005 0.94
+Sub09,movement1_speed0,Rest,EEG,1,Sub09_movement1_speed0.xdf,3515,19713,16199,1,16199,,,-42424.2852,-43001.082
+Sub09,movement1_speed0,Rest,IMU,1,Sub09_movement1_speed0.txt,257,1865,1609,1,1609,rows,,0.023 0.011 0.985,0.031 -0.007 0.987
+Sub09,movement1_speed1,Move,EEG,1,Sub09_movement1_speed1.xdf,24139,116929,92791,1,92791,,,-41358.0664,-42180.7266
+Sub09,movement1_speed1,Move,IMU,1,Sub09_movement1_speed1.txt,2270,11483,9214,1,9214,rows,,-0.253 0.013 1.016,-0.072 0.075 1.02
+Sub09,movement1_speed1,Rest,EEG,1,Sub09_movement1_speed1.xdf,4564,22021,17458,1,17458,,,-40629.0469,-41368.0234
+Sub09,movement1_speed1,Rest,IMU,1,Sub09_movement1_speed1.txt,326,2060,1735,1,1735,rows,,0.053 0.006 0.99,0.037 0.015 0.987
+Sub09,movement2_speed0,Move,EEG,1,Sub09_movement2_speed0.xdf,23130,84436,61307,1,61307,,,-47318.4414,-47851.4258
+Sub09,movement2_speed0,Move,EEG,2,Sub09_movement2_speed0.xdf,113283,144482,31200,61308,92507,,,-47911.9922,-47975.707
+Sub09,movement2_speed0,Move,IMU,1,Sub09_movement2_speed0.txt,2040,8127,6088,1,6088,rows,,0.009 0.072 0.978,0.033 0.055 0.968
+Sub09,movement2_speed0,Move,IMU,2,Sub09_movement2_speed0.txt,10993,14091,3099,6089,9187,rows,,0.005 0.012 0.988,0.039 0.023 0.987
+Sub09,movement2_speed0,Rest,EEG,1,Sub09_movement2_speed0.xdf,5586,21424,15839,1,15839,,,-47048.3477,-47328.2812
+Sub09,movement2_speed0,Rest,IMU,1,Sub09_movement2_speed0.txt,298,1871,1574,1,1574,rows,,-0.04 0.03 0.989,-0.046 0.064 0.986
+Sub09,movement2_speed1,Move,EEG,1,Sub09_movement2_speed1.xdf,28118,120525,92408,1,92408,,,-45041.2969,-45837.2695
+Sub09,movement2_speed1,Move,IMU,1,Sub09_movement2_speed1.txt,2384,11559,9176,1,9176,rows,,0.017 0.102 0.963,-0.042 -0.04 0.974
+Sub09,movement2_speed1,Rest,EEG,1,Sub09_movement2_speed1.xdf,8247,24093,15847,1,15847,,,-44914.4531,-45068.0586
+Sub09,movement2_speed1,Rest,IMU,1,Sub09_movement2_speed1.txt,411,1984,1574,1,1574,rows,,0.036 0.009 0.968,0.035 0.051 0.986
+Sub09,movement3_speed0,Move,EEG,1,Sub09_movement3_speed0.xdf,21384,120504,99121,1,99121,,,-50501.4922,-51041.0117
+Sub09,movement3_speed0,Move,IMU,1,Sub09_movement3_speed0.txt,2043,11885,9843,1,9843,rows,,-0.016 0.44 0.888,0.018 -0.107 0.985
+Sub09,movement3_speed0,Rest,EEG,1,Sub09_movement3_speed0.xdf,3414,19877,16464,1,16464,,,-50350.2891,-50619.1953
+Sub09,movement3_speed0,Rest,IMU,1,Sub09_movement3_speed0.txt,259,1893,1635,1,1635,rows,,-0.013 0.043 0.987,-0.031 0.096 0.974
+Sub09,movement3_speed1,Move,EEG,1,Sub09_movement3_speed1.xdf,22424,113832,91409,1,91409,,,-46570.1523,-49877.3711
+Sub09,movement3_speed1,Move,IMU,1,Sub09_movement3_speed1.txt,2147,11223,9077,1,9077,rows,,0.001 -0.6 0.857,0.018 0.274 0.944
+Sub09,movement3_speed1,Rest,EEG,1,Sub09_movement3_speed1.xdf,3640,20501,16862,1,16862,,,-48628.668,-48801.0508
+Sub09,movement3_speed1,Rest,IMU,1,Sub09_movement3_speed1.txt,282,1956,1675,1,1675,rows,,-0.009 0.006 0.982,-0.002 0.009 0.987
+Sub09,movement4_speed0,Move,EEG,1,Sub09_movement4_speed0.xdf,22982,114677,91696,1,91696,,,-52925.6719,-58778.9023
+Sub09,movement4_speed0,Move,IMU,1,Sub09_movement4_speed0.txt,2227,11331,9105,1,9105,rows,,0.003 0.052 0.977,-0.821 0.019 0.677
+Sub09,movement4_speed0,Rest,EEG,1,Sub09_movement4_speed0.xdf,2794,19188,16395,1,16395,,,-52932.8086,-52959.2773
+Sub09,movement4_speed0,Rest,IMU,1,Sub09_movement4_speed0.txt,222,1850,1629,1,1629,rows,,-0.021 -0.07 0.99,-0.023 -0.071 0.989
+Sub09,movement4_speed1,Move,EEG,1,Sub09_movement4_speed1.xdf,21419,85563,64145,1,64145,,,-51426.668,-51831.2578
+Sub09,movement4_speed1,Move,EEG,2,Sub09_movement4_speed1.xdf,123796,155783,31988,64146,96133,,,-51917.0469,-52334.6406
+Sub09,movement4_speed1,Move,IMU,1,Sub09_movement4_speed1.txt,2063,8431,6369,1,6369,rows,,-0.409 -0.241 1.409,-0.398 0.019 1.044
+Sub09,movement4_speed1,Move,IMU,2,Sub09_movement4_speed1.txt,12229,15405,3177,6370,9546,rows,,-0.255 -0.542 0.987,0.032 -0.004 0.55
+Sub09,movement4_speed1,Rest,EEG,1,Sub09_movement4_speed1.xdf,3006,19494,16489,1,16489,,,-51306.043,-51518.2812
+Sub09,movement4_speed1,Rest,IMU,1,Sub09_movement4_speed1.txt,235,1872,1638,1,1638,rows,,-0.028 0.061 0.969,-0.02 0.001 0.987
+Sub09,movement5_speed0,Move,EEG,1,Sub09_movement5_speed0.xdf,22404,117721,95318,1,95318,,,-53419.3359,-52189.7656
+Sub09,movement5_speed0,Move,IMU,1,Sub09_movement5_speed0.txt,2122,11586,9465,1,9465,rows,,-0.188 0.032 0.963,-0.101 -0.014 0.992
+Sub09,movement5_speed0,Rest,EEG,1,Sub09_movement5_speed0.xdf,3364,19412,16049,1,16049,,,-53687.3828,-53339.5664
+Sub09,movement5_speed0,Rest,IMU,1,Sub09_movement5_speed0.txt,231,1825,1595,1,1595,rows,,-0.026 -0.013 0.989,-0.043 -0.176 0.963
+Sub09,movement5_speed1,Move,EEG,1,Sub09_movement5_speed1.xdf,22018,113180,91163,1,91163,,,-52044.1367,-51386.5703
+Sub09,movement5_speed1,Move,IMU,1,Sub09_movement5_speed1.txt,2118,11170,9053,1,9053,rows,,0.081 -0.105 0.975,-0.157 -0.594 0.73
+Sub09,movement5_speed1,Rest,EEG,1,Sub09_movement5_speed1.xdf,4141,20851,16711,1,16711,,,-52049.8633,-51946.2969
+Sub09,movement5_speed1,Rest,IMU,1,Sub09_movement5_speed1.txt,343,2002,1660,1,1660,rows,,-0.054 -0.013 0.968,-0.021 -0.13 0.967
+Sub10,Sit,Rest,EEG,1,Sub10_Sit.xdf,4572,157392,152821,1,152821,,,-53386.2695,-62820.0156
+Sub10,Sit,Rest,IMU,1,Sub10_Sit.txt,215,15389,15175,1,15175,rows,,-0.027 -0.14 0.967,-0.023 -0.199 0.972
+Sub10,movement0_speed0,Move,EEG,1,Sub10_movement0_speed0.xdf,23505,114047,90543,1,90543,,,-66775.5859,-58827.6641
+Sub10,movement0_speed0,Move,IMU,1,Sub10_movement0_speed0.txt,2262,11253,8992,1,8992,rows,,-0.079 -0.331 0.919,0.093 -0.195 0.943
+Sub10,movement0_speed0,Rest,EEG,1,Sub10_movement0_speed0.xdf,4658,20915,16258,1,16258,,,-59615.3516,-66131.0156
+Sub10,movement0_speed0,Rest,EEG,2,Sub10_movement0_speed0.xdf,23505,23505,1,16259,16259,,tail: leave this piece out,,
+Sub10,movement0_speed0,Rest,IMU,1,Sub10_movement0_speed0.txt,390,2003,1614,1,1614,rows,,0.016 -0.154 0.965,-0.017 -0.172 0.974
+Sub10,movement0_speed0,Rest,IMU,2,Sub10_movement0_speed0.txt,2262,2262,1,1615,1615,rows,tail: leave this piece out,,
+Sub10,movement0_speed1,Move,EEG,1,Sub10_movement0_speed1.xdf,21925,112321,90397,1,90397,,,-59526.168,-59425.793
+Sub10,movement0_speed1,Move,IMU,1,Sub10_movement0_speed1.txt,2184,11160,8977,1,8977,rows,,-0.016 -0.186 0.802,0.218 -0.35 1.01
+Sub10,movement0_speed1,Rest,EEG,1,Sub10_movement0_speed1.xdf,2699,19225,16527,1,16527,,,-59105.4102,-59471.7383
+Sub10,movement0_speed1,Rest,EEG,2,Sub10_movement0_speed1.xdf,21925,21925,1,16528,16528,,tail: leave this piece out,,
+Sub10,movement0_speed1,Rest,IMU,1,Sub10_movement0_speed1.txt,275,1915,1641,1,1641,rows,,-0.022 -0.122 0.988,-0.017 -0.092 0.988
+Sub10,movement0_speed1,Rest,IMU,2,Sub10_movement0_speed1.txt,2185,2185,1,1642,1642,rows,tail: leave this piece out,,
+Sub10,movement1_speed0,Move,EEG,1,Sub10_movement1_speed0.xdf,21331,72936,51606,1,51606,,,-61389.7188,-60591.9883
+Sub10,movement1_speed0,Move,EEG,2,Sub10_movement1_speed0.xdf,143957,168374,24418,51607,76024,,,-40776.4102,-40412.8008
+Sub10,movement1_speed0,Move,EEG,3,Sub10_movement1_speed0.xdf,208243,223743,15501,76025,91525,,,-48267.4805,-50571.332
+Sub10,movement1_speed0,Move,IMU,1,Sub10_movement1_speed0.txt,2037,7160,5124,1,5124,slot map,,0.055 -0.123 0.97,0.102 -0.522 0.909
+Sub10,movement1_speed0,Move,IMU,2,Sub10_movement1_speed0.txt,14213,16635,2423,5125,7547,slot map,,-0.091 -0.282 0.901,0.111 -0.193 1.041
+Sub10,movement1_speed0,Move,IMU,3,Sub10_movement1_speed0.txt,20595,22136,1542,7548,9089,slot map,,-0.176 -0.287 0.966,0.148 0.113 0.947
+Sub10,movement1_speed0,Rest,EEG,1,Sub10_movement1_speed0.xdf,4071,4153,83,1,83,,,-58565.8008,-58569.8906
+Sub10,movement1_speed0,Rest,EEG,2,Sub10_movement1_speed0.xdf,4416,19325,14910,84,14993,,,-58504.5547,-59611.1641
+Sub10,movement1_speed0,Rest,IMU,1,Sub10_movement1_speed0.txt,322,329,8,1,8,rows,,-0.04 -0.188 0.968,-0.001 -0.189 0.961
+Sub10,movement1_speed0,Rest,IMU,2,Sub10_movement1_speed0.txt,357,1838,1482,9,1490,rows,,0.011 -0.168 0.963,0.01 0.038 0.987
+Sub10,movement1_speed1,Move,EEG,1,Sub10_movement1_speed1.xdf,18451,80219,61769,1,61769,,,-63320.5273,-56221.2695
+Sub10,movement1_speed1,Move,EEG,2,Sub10_movement1_speed1.xdf,86309,118282,31974,61770,93743,,,-38761.25,-59155.9766
+Sub10,movement1_speed1,Move,IMU,1,Sub10_movement1_speed1.txt,1839,7971,6133,1,6133,slot map,,-0.102 -0.369 0.924,0.289 -0.24 0.984
+Sub10,movement1_speed1,Move,IMU,2,Sub10_movement1_speed1.txt,8576,11751,3176,6134,9309,slot map,,-0.064 -0.178 0.843,0.119 -0.432 0.885
+Sub10,movement1_speed1,Rest,EEG,1,Sub10_movement1_speed1.xdf,2057,17551,15495,1,15495,,,-63840.6094,-65045.3789
+Sub10,movement1_speed1,Rest,EEG,2,Sub10_movement1_speed1.xdf,18451,18451,1,15496,15496,,tail: leave this piece out,,
+Sub10,movement1_speed1,Rest,IMU,1,Sub10_movement1_speed1.txt,211,1749,1539,1,1539,rows,,0.007 -0.127 0.987,0.001 -0.189 0.963
+Sub10,movement1_speed1,Rest,IMU,2,Sub10_movement1_speed1.txt,1840,1840,1,1540,1540,rows,tail: leave this piece out,,
+Sub10,movement2_speed0,Move,EEG,1,Sub10_movement2_speed0.xdf,26028,46646,20619,1,20619,,,-28084.1133,-32771.3281
+Sub10,movement2_speed0,Move,EEG,2,Sub10_movement2_speed0.xdf,69352,158151,88800,20620,109419,,,-39294.5664,-49256.8438
+Sub10,movement2_speed0,Move,IMU,1,Sub10_movement2_speed0.txt,2579,4624,2046,1,2046,rows,,-0.039 0.013 0.985,-0.105 0.041 0.962
+Sub10,movement2_speed0,Move,IMU,2,Sub10_movement2_speed0.txt,6881,15700,8820,2047,10866,rows,,0.004 -0.034 0.991,-0.096 -0.053 0.968
+Sub10,movement2_speed0,Rest,EEG,1,Sub10_movement2_speed0.xdf,2991,18588,15598,1,15598,,,-28777.4531,-26705.3496
+Sub10,movement2_speed0,Rest,EEG,2,Sub10_movement2_speed0.xdf,1423,1423,1,15599,15599,,tail: leave this piece out,,
+Sub10,movement2_speed0,Rest,IMU,1,Sub10_movement2_speed0.txt,293,1840,1548,1,1548,rows,,-0.01 -0.053 0.964,-0.013 -0.071 0.986
+Sub10,movement2_speed0,Rest,IMU,2,Sub10_movement2_speed0.txt,2581,2581,1,1549,1549,rows,tail: leave this piece out,,
+Sub10,movement2_speed1,Move,EEG,1,Sub10_movement2_speed1.xdf,20406,111719,91314,1,91314,,,-55336.0938,-58086.7383
+Sub10,movement2_speed1,Move,IMU,1,Sub10_movement2_speed1.txt,1956,11023,9068,1,9068,rows,,-0.113 -0.041 0.983,-0.008 0.037 0.985
+Sub10,movement2_speed1,Rest,EEG,1,Sub10_movement2_speed1.xdf,3128,18704,15577,1,15577,,,-54212.8984,-54832.7891
+Sub10,movement2_speed1,Rest,EEG,2,Sub10_movement2_speed1.xdf,20406,20406,1,15578,15578,,tail: leave this piece out,,
+Sub10,movement2_speed1,Rest,IMU,1,Sub10_movement2_speed1.txt,240,1785,1546,1,1546,rows,,-0.037 0.016 0.977,-0.021 -0.026 0.991
+Sub10,movement2_speed1,Rest,IMU,2,Sub10_movement2_speed1.txt,1956,1956,1,1547,1547,rows,tail: leave this piece out,,
+Sub10,movement3_speed0,Move,EEG,1,Sub10_movement3_speed0.xdf,21998,113748,91751,1,91751,,,-59765.9648,-66607.3516
+Sub10,movement3_speed0,Move,IMU,1,Sub10_movement3_speed0.txt,2078,11188,9111,1,9111,rows,,-0.028 0.097 0.964,-0.052 0.065 0.985
+Sub10,movement3_speed0,Rest,EEG,1,Sub10_movement3_speed0.xdf,2999,20268,17270,1,17270,,,-58033.2383,-59873.9805
+Sub10,movement3_speed0,Rest,EEG,2,Sub10_movement3_speed0.xdf,21998,21998,1,17271,17271,,tail: leave this piece out,,
+Sub10,movement3_speed0,Rest,IMU,1,Sub10_movement3_speed0.txt,191,1905,1715,1,1715,rows,,-0.007 -0.14 0.969,-0.029 -0.022 0.989
+Sub10,movement3_speed0,Rest,IMU,2,Sub10_movement3_speed0.txt,2078,2078,1,1716,1716,rows,tail: leave this piece out,,
+Sub10,movement3_speed1,Move,EEG,1,Sub10_movement3_speed1.xdf,21625,113743,92119,1,92119,,,-52066.7852,-53878.3789
+Sub10,movement3_speed1,Move,IMU,1,Sub10_movement3_speed1.txt,2050,11197,9148,1,9148,rows,,0.017 -0.158 0.934,-0.06 0.219 0.935
+Sub10,movement3_speed1,Rest,EEG,1,Sub10_movement3_speed1.xdf,3436,3630,195,1,195,,,-51535.3203,-51405.8008
+Sub10,movement3_speed1,Rest,EEG,2,Sub10_movement3_speed1.xdf,3676,20200,16525,196,16720,,,-51375.625,-51884.6016
+Sub10,movement3_speed1,Rest,EEG,3,Sub10_movement3_speed1.xdf,21625,21625,1,16721,16721,,tail: leave this piece out,,
+Sub10,movement3_speed1,Rest,IMU,1,Sub10_movement3_speed1.txt,243,262,20,1,20,rows,,-0.035 0.023 0.99,-0.035 0.065 0.968
+Sub10,movement3_speed1,Rest,IMU,2,Sub10_movement3_speed1.txt,268,1907,1640,21,1660,rows,,-0.028 0.044 0.985,-0.045 0.044 0.987
+Sub10,movement3_speed1,Rest,IMU,3,Sub10_movement3_speed1.txt,2051,2051,1,1661,1661,rows,tail: leave this piece out,,
+Sub10,movement4_speed0,Move,EEG,1,Sub10_movement4_speed0.xdf,21369,113067,91699,1,91699,,,-66755.4844,-34013.6641
+Sub10,movement4_speed0,Move,IMU,1,Sub10_movement4_speed0.txt,1987,11093,9107,1,9107,rows,,0.197 -0.226 0.834,0.143 0.392 0.895
+Sub10,movement4_speed0,Rest,EEG,1,Sub10_movement4_speed0.xdf,3600,20421,16822,1,16822,,,-67145.1406,-66764.2344
+Sub10,movement4_speed0,Rest,EEG,2,Sub10_movement4_speed0.xdf,21369,21369,1,16823,16823,,tail: leave this piece out,,
+Sub10,movement4_speed0,Rest,IMU,1,Sub10_movement4_speed0.txt,223,1892,1670,1,1670,rows,,0.017 0.061 0.986,-0.004 -0.039 0.992
+Sub10,movement4_speed0,Rest,IMU,2,Sub10_movement4_speed0.txt,1988,1988,1,1671,1671,rows,tail: leave this piece out,,
+Sub10,movement4_speed1,Move,EEG,1,Sub10_movement4_speed1.xdf,21499,63110,41612,1,41612,,,-11642.7275,-14705.001
+Sub10,movement4_speed1,Move,EEG,2,Sub10_movement4_speed1.xdf,72206,120714,48509,41613,90121,,,-18525.3008,-1654.88684
+Sub10,movement4_speed1,Move,EEG,3,Sub10_movement4_speed1.xdf,122129,128903,6775,90122,96896,,,-4164.80957,-1520.18103
+Sub10,movement4_speed1,Move,IMU,1,Sub10_movement4_speed1.txt,4727,8857,4131,1,4131,rows,,0.175 -0.332 0.652,-0.098 -0.142 1.028
+Sub10,movement4_speed1,Move,IMU,2,Sub10_movement4_speed1.txt,9762,14576,4815,4132,8946,rows,,0.211 -0.309 0.942,0.159 -0.172 0.932
+Sub10,movement4_speed1,Move,IMU,3,Sub10_movement4_speed1.txt,14719,15394,676,8947,9622,rows,,0.013 -0.819 0.462,-0.045 -0.95 0.543
+Sub10,movement4_speed1,Rest,EEG,1,Sub10_movement4_speed1.xdf,2976,19903,16928,1,16928,,,-7713.16357,-11594.2314
+Sub10,movement4_speed1,Rest,EEG,2,Sub10_movement4_speed1.xdf,21499,21499,1,16929,16929,,tail: leave this piece out,,
+Sub10,movement4_speed1,Rest,IMU,1,Sub10_movement4_speed1.txt,2888,4568,1681,1,1681,rows,,0.045 -0.005 0.966,0.035 -0.039 0.99
+Sub10,movement4_speed1,Rest,IMU,2,Sub10_movement4_speed1.txt,4729,4729,1,1682,1682,rows,tail: leave this piece out,,
+Sub10,movement5_speed0,Move,EEG,1,Sub10_movement5_speed0.xdf,21283,112773,91491,1,91491,,,-15565.5488,-12726.2061
+Sub10,movement5_speed0,Move,IMU,1,Sub10_movement5_speed0.txt,2036,11121,9086,1,9086,rows,,-0.03 -0.476 0.797,0.005 -0.34 0.933
+Sub10,movement5_speed0,Rest,EEG,1,Sub10_movement5_speed0.xdf,3398,19829,16432,1,16432,,,-22918.0371,-17474
+Sub10,movement5_speed0,Rest,EEG,2,Sub10_movement5_speed0.xdf,21280,21280,1,16433,16433,,tail: leave this piece out,,
+Sub10,movement5_speed0,Rest,IMU,1,Sub10_movement5_speed0.txt,260,1891,1632,1,1632,rows,,-0.035 -0.296 0.921,0.015 -0.302 0.955
+Sub10,movement5_speed0,Rest,IMU,2,Sub10_movement5_speed0.txt,2037,2037,1,1633,1633,rows,tail: leave this piece out,,
+Sub10,movement5_speed1,Move,EEG,1,Sub10_movement5_speed1.xdf,23091,113905,90815,1,90815,,,-13020.6572,3565.13184
+Sub10,movement5_speed1,Move,IMU,1,Sub10_movement5_speed1.txt,2156,11173,9018,1,9018,rows,,-0.193 -0.526 0.83,0.058 -0.515 0.734
+Sub10,movement5_speed1,Rest,EEG,1,Sub10_movement5_speed1.xdf,4806,21921,17116,1,17116,,,-12465.6348,-13444.1787
+Sub10,movement5_speed1,Rest,EEG,2,Sub10_movement5_speed1.xdf,23091,23091,1,17117,17117,,tail: leave this piece out,,
+Sub10,movement5_speed1,Rest,IMU,1,Sub10_movement5_speed1.txt,340,2039,1700,1,1700,rows,,0.028 -0.165 0.961,-0.054 -0.605 0.779
+Sub10,movement5_speed1,Rest,IMU,2,Sub10_movement5_speed1.txt,2157,2157,1,1701,1701,rows,tail: leave this piece out,,
+Sub11,Sit,Rest,EEG,1,Sub11_Sit.xdf,5014,90407,85394,1,85394,,,-35897.9453,-37824.8008
+Sub11,Sit,Rest,EEG,2,Sub11_Sit.xdf,144616,185371,40756,85395,126150,,,-22688.5781,-29124.6094
+Sub11,Sit,Rest,EEG,3,Sub11_Sit.xdf,215671,246454,30784,126151,156934,,,-21351.957,-11738.9365
+Sub11,Sit,Rest,IMU,1,Sub11_Sit.txt,386,8864,8479,1,8479,rows,,0.012 -0.177 0.975,0.017 -0.287 0.957
+Sub11,Sit,Rest,IMU,2,Sub11_Sit.txt,14249,18294,4046,8480,12525,rows,,-0.035 -0.281 0.953,-0.027 -0.365 0.921
+Sub11,Sit,Rest,IMU,3,Sub11_Sit.txt,21304,24362,3059,12526,15584,rows,,0.034 -0.155 0.963,0.034 -0.176 0.962
+Sub11,movement0_speed0,Move,EEG,1,Sub11_movement0_speed0.xdf,23460,117758,94299,1,94299,,,-52931.3633,-52473.9297
+Sub11,movement0_speed0,Move,IMU,1,Sub11_movement0_speed0.txt,2275,11638,9364,1,9364,rows,,-0.131 -0.084 0.943,-0.021 -0.207 0.945
+Sub11,movement0_speed0,Rest,EEG,1,Sub11_movement0_speed0.xdf,3697,20297,16601,1,16601,,,-53090.9062,-52998.9297
+Sub11,movement0_speed0,Rest,IMU,1,Sub11_movement0_speed0.txt,313,1961,1649,1,1649,rows,,0.065 -0.097 0.986,-0.13 -0.071 0.965
+Sub11,movement0_speed1,Move,EEG,1,Sub11_movement0_speed1.xdf,37325,126158,88834,1,88834,,,-51389.3555,-51550.5508
+Sub11,movement0_speed1,Move,IMU,1,Sub11_movement0_speed1.txt,3669,12489,8821,1,8821,rows,,-0.107 -0.309 0.748,-0.055 -0.236 1.341
+Sub11,movement0_speed1,Rest,EEG,1,Sub11_movement0_speed1.xdf,2498,14867,12370,1,12370,,,-51305.6289,-51629.1641
+Sub11,movement0_speed1,Rest,EEG,2,Sub11_movement0_speed1.xdf,23578,34520,10943,12371,23313,,,-51327.5039,-51434.4219
+Sub11,movement0_speed1,Rest,IMU,1,Sub11_movement0_speed1.txt,210,1437,1228,1,1228,rows,,0.211 -0.165 0.949,0.032 -0.047 0.992
+Sub11,movement0_speed1,Rest,IMU,2,Sub11_movement0_speed1.txt,2304,3391,1088,1229,2316,rows,,-0.115 -0.246 0.957,-0.052 -0.149 0.964
+Sub11,movement1_speed0,Move,EEG,1,Sub11_movement1_speed0.xdf,21128,112419,91292,1,91292,,,-51374.2031,-51466.0898
+Sub11,movement1_speed0,Move,IMU,1,Sub11_movement1_speed0.txt,2088,11153,9066,1,9066,rows,,0.087 -0.186 0.952,0.094 -0.013 0.945
+Sub11,movement1_speed0,Rest,EEG,1,Sub11_movement1_speed0.xdf,3177,19030,15854,1,15854,,,-51133.3438,-51299.9492
+Sub11,movement1_speed0,Rest,IMU,1,Sub11_movement1_speed0.txt,305,1879,1575,1,1575,rows,,0.004 -0.076 0.988,-0.046 -0.085 0.991
+Sub11,movement1_speed1,Move,EEG,1,Sub11_movement1_speed1.xdf,40546,135629,95084,1,95084,,,-2561.05054,-9627.79688
+Sub11,movement1_speed1,Move,IMU,1,Sub11_movement1_speed1.txt,4023,13465,9443,1,9443,rows,,0.443 -0.269 0.884,0.117 -0.112 0.901
+Sub11,movement1_speed1,Rest,EEG,1,Sub11_movement1_speed1.xdf,3724,20429,16706,1,16706,,,-50857.9062,-51127.3398
+Sub11,movement1_speed1,Rest,EEG,2,Sub11_movement1_speed1.xdf,40544,40544,1,16707,16707,,tail: leave this piece out,,
+Sub11,movement1_speed1,Rest,IMU,1,Sub11_movement1_speed1.txt,367,2024,1658,1,1658,rows,,-0.15 -0.209 0.949,-0.154 -0.17 0.948
+Sub11,movement1_speed1,Rest,IMU,2,Sub11_movement1_speed1.txt,4024,4024,1,1659,1659,rows,tail: leave this piece out,,
+Sub11,movement2_speed0,Move,EEG,1,Sub11_movement2_speed0.xdf,26001,120929,94929,1,94929,,,-51277.082,-52950.9336
+Sub11,movement2_speed0,Move,IMU,1,Sub11_movement2_speed0.txt,2513,11939,9427,1,9427,rows,,-0.035 -0.012 0.991,-0.052 -0.068 0.989
+Sub11,movement2_speed0,Rest,EEG,1,Sub11_movement2_speed0.xdf,5770,20836,15067,1,15067,,,-50016.5195,-50991.4258
+Sub11,movement2_speed0,Rest,IMU,1,Sub11_movement2_speed0.txt,504,2000,1497,1,1497,rows,,-0.035 -0.001 0.988,-0.029 -0.017 0.992
+Sub11,movement2_speed1,Move,EEG,1,Sub11_movement2_speed1.xdf,23601,120469,96869,1,96869,,,-53107.9648,-53023.6719
+Sub11,movement2_speed1,Move,IMU,1,Sub11_movement2_speed1.txt,2162,11780,9619,1,9619,rows,,-0.06 0.006 0.984,-0.076 -0.089 0.987
+Sub11,movement2_speed1,Rest,EEG,1,Sub11_movement2_speed1.xdf,5097,20337,15241,1,15241,,,-52235.1328,-52909.0664
+Sub11,movement2_speed1,Rest,IMU,1,Sub11_movement2_speed1.txt,325,1838,1514,1,1514,rows,,0.039 0.035 0.988,-0.025 -0.083 0.991
+Sub11,movement3_speed0,Move,EEG,1,Sub11_movement3_speed0.xdf,59783,61550,1768,1,1768,,,-52452.668,-52624.7891
+Sub11,movement3_speed0,Move,EEG,2,Sub11_movement3_speed0.xdf,67967,74231,6265,1769,8033,,,-52709.5586,-52433.0977
+Sub11,movement3_speed0,Move,EEG,3,Sub11_movement3_speed0.xdf,106737,147434,40698,8034,48731,,,-49535.2305,-50186.1641
+Sub11,movement3_speed0,Move,EEG,4,Sub11_movement3_speed0.xdf,154243,214440,60198,48732,108929,,,-50069.1211,-51027.4844
+Sub11,movement3_speed0,Rest,EEG,1,Sub11_movement3_speed0.xdf,39087,54956,15870,1,15870,,,-52756.5938,-52575.9102
+Sub11,movement3_speed1,Move,EEG,1,Sub11_movement3_speed1.xdf,21915,116403,94489,1,94489,,,-51344.207,-52318.2422
+Sub11,movement3_speed1,Move,IMU,1,Sub11_movement3_speed1.txt,2289,10741,9383,1,9383,slot map,,0.014 -0.982 0.712,0.124 -0.743 0.846
+Sub11,movement3_speed1,Rest,EEG,1,Sub11_movement3_speed1.xdf,2748,18925,16178,1,16178,,,-50844.457,-51238.6094
+Sub11,movement3_speed1,Rest,IMU,1,Sub11_movement3_speed1.txt,282,1976,1607,1,1607,slot map,,0.069 -0.065 0.988,0.038 -0.133 0.968
+Sub11,movement4_speed0,Move,EEG,1,Sub11_movement4_speed0.xdf,25532,30934,5403,1,5403,,,-53834.5234,-53843.3164
+Sub11,movement4_speed0,Move,EEG,2,Sub11_movement4_speed0.xdf,38603,45238,6636,5404,12039,,,-53286.6172,-53547.1016
+Sub11,movement4_speed0,Move,EEG,3,Sub11_movement4_speed0.xdf,72025,84411,12387,12040,24426,,,-52059.4453,-53336.0625
+Sub11,movement4_speed0,Move,EEG,4,Sub11_movement4_speed0.xdf,92085,174964,82880,24427,107306,,,-53216.2109,-53625.9883
+Sub11,movement4_speed0,Move,IMU,1,Sub11_movement4_speed0.txt,2493,3029,537,1,537,rows,,0.206 -0.791 0.621,0.062 -0.369 0.923
+Sub11,movement4_speed0,Move,IMU,2,Sub11_movement4_speed0.txt,3792,4449,658,538,1195,rows,,-0.336 -0.693 0.697,-0.122 -0.613 0.772
+Sub11,movement4_speed0,Move,IMU,3,Sub11_movement4_speed0.txt,7111,8339,1229,1196,2424,rows,,-0.051 -0.81 0.691,-0.134 -0.694 0.663
+Sub11,movement4_speed0,Move,IMU,4,Sub11_movement4_speed0.txt,9102,17333,8232,2425,10656,rows,,-0.414 -0.391 0.874,0.058 -0.304 0.934
+Sub11,movement4_speed0,Rest,EEG,1,Sub11_movement4_speed0.xdf,3476,19583,16108,1,16108,,,-53725.4102,-53939.3945
+Sub11,movement4_speed0,Rest,IMU,1,Sub11_movement4_speed0.txt,305,1904,1600,1,1600,rows,,-0.024 -0.269 0.946,-0.105 -0.248 0.954
+Sub11,movement4_speed1,Move,EEG,1,Sub11_movement4_speed1.xdf,23622,115386,91765,1,91765,,,-53475.1523,-54123.6211
+Sub11,movement4_speed1,Move,IMU,1,Sub11_movement4_speed1.txt,2318,11430,9113,1,9113,rows,,0.155 -0.245 0.936,0.115 -0.151 0.849
+Sub11,movement4_speed1,Rest,EEG,1,Sub11_movement4_speed1.xdf,2402,19755,17354,1,17354,,,-53399.0859,-53420.7305
+Sub11,movement4_speed1,Rest,IMU,1,Sub11_movement4_speed1.txt,211,1934,1724,1,1724,rows,,0 -0.221 0.974,-0.099 -0.236 0.948
+Sub11,movement5_speed0,Move,EEG,1,Sub11_movement5_speed0.xdf,23542,113106,89565,1,89565,,,-2122.86108,-1125.04785
+Sub11,movement5_speed0,Move,IMU,1,Sub11_movement5_speed0.txt,2282,11175,8894,1,8894,rows,,-0.039 -0.514 0.82,0.122 -0.392 0.901
+Sub11,movement5_speed0,Rest,EEG,1,Sub11_movement5_speed0.xdf,3008,20511,17504,1,17504,,,-2446.72144,-2166.87085
+Sub11,movement5_speed0,Rest,IMU,1,Sub11_movement5_speed0.txt,243,1981,1739,1,1739,rows,,-0.04 -0.19 0.962,-0.122 -0.285 0.933
+Sub11,movement5_speed1,Move,EEG,1,Sub11_movement5_speed1.xdf,28100,120443,92344,1,92344,,,-3411.02539,-8764.86914
+Sub11,movement5_speed1,Move,IMU,1,Sub11_movement5_speed1.txt,2730,11900,9171,1,9171,rows,,0.133 -0.285 1.63,-0.015 -0.307 0.851
+Sub11,movement5_speed1,Rest,EEG,1,Sub11_movement5_speed1.xdf,9787,26283,16497,1,16497,,,-2773.07422,-3528.20166
+Sub11,movement5_speed1,Rest,IMU,1,Sub11_movement5_speed1.txt,911,2549,1639,1,1639,rows,,0.099 0.161 0.949,-0.101 -0.059 0.985
+Sub12,Sit,Rest,EEG,1,Sub12_all.xdf,13306,165173,151868,1,151868,,,-43461.6875,-42374.0547
+Sub12,Sit,Rest,IMU,1,Sub12_all.txt,1245,16325,15081,1,15081,rows,,0.0257568359 0.068359375 0.9674682617,0.0322875977 0.111328125 0.9681396484
+Sub12,movement0_speed0,Move,EEG,1,Sub12_all.xdf,260424,342860,82437,1,82437,,,-41465.4258,-41235.0234
+Sub12,movement0_speed0,Move,EEG,2,Sub12_all.xdf,344906,360725,15820,82438,98257,,,-41422.043,-41022.2578
+Sub12,movement0_speed0,Move,IMU,1,Sub12_all.txt,25784,33970,8187,1,8187,rows,,0.0797119141 0.2095336914 1.022888184,0.1507568359 0.1217041016 1.008117676
+Sub12,movement0_speed0,Move,IMU,2,Sub12_all.txt,34173,35743,1571,8188,9758,rows,,-0.0244140625 0.0430297852 0.9436645508,0.0528564453 -0.2909545898 1.001220703
+Sub12,movement0_speed0,Rest,EEG,1,Sub12_all.xdf,225088,255138,30051,1,30051,,,-41816.8555,-41336.3242
+Sub12,movement0_speed0,Rest,IMU,1,Sub12_all.txt,22275,25259,2985,1,2985,rows,,0.0250854492 0.1163330078 0.9669799805,0.0401611328 0.0500488281 0.9888916016
+Sub12,movement0_speed1,Move,EEG,1,Sub12_all.xdf,458673,551128,92456,1,92456,,,-41325.6992,-40762.2188
+Sub12,movement0_speed1,Move,IMU,1,Sub12_all.txt,45469,54649,9181,1,9181,rows,,-0.0184936523 0.0231323242 0.9108276367,0.0842285156 -0.0112915039 0.8274536133
+Sub12,movement0_speed1,Rest,EEG,1,Sub12_all.xdf,436720,455438,18719,1,18719,,,-41517.3633,-41436.3047
+Sub12,movement0_speed1,Rest,IMU,1,Sub12_all.txt,43289,45148,1860,1,1860,rows,,0.0420532227 0.1605224609 0.9722290039,0.0628051758 0.1208496094 0.9741210938
+Sub12,movement1_speed0,Move,EEG,1,Sub12_all.xdf,1134446,1227699,93254,1,93254,,,-39866.25,-39985.375
+Sub12,movement1_speed0,Move,IMU,1,Sub12_all.txt,112572,121832,9261,1,9261,rows,,0.0889892578 0.037109375 0.9321289063,0.0797729492 -0.0704956055 1.006652832
+Sub12,movement1_speed0,Rest,EEG,1,Sub12_all.xdf,1111072,1132125,21054,1,21054,,,-39227.4766,-39652.1953
+Sub12,movement1_speed0,Rest,IMU,1,Sub12_all.txt,110251,112342,2092,1,2092,rows,,0.0122070313 0.1388549805 0.9716796875,0.0317993164 0.1326293945 0.9854125977
+Sub12,movement1_speed1,Move,EEG,1,Sub12_all.xdf,903005,995409,92405,1,92405,,,-39298.4023,-39922.3477
+Sub12,movement1_speed1,Move,IMU,1,Sub12_all.txt,89591,98766,9176,1,9176,rows,,0.0257568359 0.1268920898 0.998840332,0.0686645508 0.1774902344 1.160705566
+Sub12,movement1_speed1,Rest,EEG,1,Sub12_all.xdf,801193,819193,18001,1,18001,,,-39126.6641,-39538.1797
+Sub12,movement1_speed1,Rest,IMU,1,Sub12_all.txt,79481,81268,1788,1,1788,rows,,-0.0006103516 0.2132568359 0.9462280273,0.0399169922 0.1459350586 0.9732666016
+Sub12,movement2_speed0,Move,EEG,1,Sub12_all.xdf,2582043,2675502,93460,1,93460,,,-43435.2031,-44174.8633
+Sub12,movement2_speed0,Move,IMU,1,Sub12_all.txt,256281,265561,9281,1,9281,rows,,0.0181274414 0.2424926758 0.9354858398,0.1013183594 0.1029663086 0.9655761719
+Sub12,movement2_speed0,Rest,EEG,1,Sub12_all.xdf,2560707,2580128,19422,1,19422,,,-42666.9453,-43340.5273
+Sub12,movement2_speed0,Rest,IMU,1,Sub12_all.txt,254162,256090,1929,1,1929,rows,,0.0886230469 0.2545776367 0.9360961914,-0.001953125 0.2346191406 0.9572143555
+Sub12,movement2_speed1,Move,EEG,1,Sub12_all.xdf,2396138,2488184,92047,1,92047,,,-41641.7539,-41311.0742
+Sub12,movement2_speed1,Move,IMU,1,Sub12_all.txt,237821,246961,9141,1,9141,rows,,-0.0502929688 0.2487792969 0.9703369141,0.0631713867 0.1351318359 0.9749755859
+Sub12,movement2_speed1,Rest,EEG,1,Sub12_all.xdf,2365794,2392669,26876,1,26876,,,-41194.7227,-41508.0508
+Sub12,movement2_speed1,Rest,IMU,1,Sub12_all.txt,234807,237475,2669,1,2669,rows,,0.1104125977 0.1845703125 0.9592895508,0.0513916016 0.1787109375 0.9489135742
+Sub12,movement3_speed0,Move,EEG,1,Sub12_all.xdf,3500372,3592715,92344,1,92344,,,-48802.0117,-48248.1602
+Sub12,movement3_speed0,Move,IMU,1,Sub12_all.txt,347469,356638,9170,1,9170,rows,,0.0797119141 -0.0208740234 0.9883422852,0.0415039063 -0.0556030273 0.987121582
+Sub12,movement3_speed0,Rest,EEG,1,Sub12_all.xdf,3482826,3499129,16304,1,16304,,,-47798.5508,-48772.8359
+Sub12,movement3_speed0,Rest,IMU,1,Sub12_all.txt,345726,347344,1619,1,1619,rows,,0.0746459961 0.2077026367 0.9508056641,0.0425415039 0.1298828125 0.9685668945
+Sub12,movement3_speed1,Move,EEG,1,Sub12_all.xdf,3256509,3348459,91951,1,91951,,,-49217.0469,-48090.2383
+Sub12,movement3_speed1,Move,IMU,1,Sub12_all.txt,323254,332384,9131,1,9131,rows,,0.051940918 0.4309692383 0.9040527344,0.0991821289 0.0541992188 0.953125
+Sub12,movement3_speed1,Rest,EEG,1,Sub12_all.xdf,3237348,3253199,15852,1,15852,,,-49657.3477,-49104.1133
+Sub12,movement3_speed1,Rest,IMU,1,Sub12_all.txt,321351,322925,1575,1,1575,rows,,0.0947875977 0.2803344727 0.9423217773,0.0536499023 0.1701660156 0.9509277344
+Sub12,movement4_speed0,Move,EEG,1,Sub12_all.xdf,3102642,3195925,93284,1,93284,,,-49774.5078,-49238.9727
+Sub12,movement4_speed0,Move,IMU,1,Sub12_all.txt,307975,317238,9264,1,9264,rows,,0.0364990234 -0.171081543 0.9758911133,0.0893554688 0.0751342773 0.8900756836
+Sub12,movement4_speed0,Rest,EEG,1,Sub12_all.xdf,3083415,3101083,17669,1,17669,,,-49898.5625,-49789.582
+Sub12,movement4_speed0,Rest,IMU,1,Sub12_all.txt,306066,307820,1755,1,1755,rows,,0.1039428711 0.1170654297 0.9703979492,0.0728149414 0.1021728516 0.9622192383
+Sub12,movement4_speed1,Move,EEG,1,Sub12_all.xdf,2777245,2809921,32677,1,32677,,,-49533.9219,-49184.8242
+Sub12,movement4_speed1,Move,EEG,2,Sub12_all.xdf,2853403,2885914,32512,32678,65189,,,-50205.7969,-49805.2969
+Sub12,movement4_speed1,Move,EEG,3,Sub12_all.xdf,2922170,2953078,30909,65190,96098,,,-49555.2383,-49616.3789
+Sub12,movement4_speed1,Move,IMU,1,Sub12_all.txt,275664,278909,3246,1,3246,slot map,,0.0982666016 -0.0025634766 0.9173583984,0.1741943359 -0.7183227539 1.008544922
+Sub12,movement4_speed1,Move,IMU,2,Sub12_all.txt,283227,286455,3229,3247,6475,slot map,,0.0444946289 0.1773681641 0.797668457,0.0426025391 0.1448974609 0.9763183594
+Sub12,movement4_speed1,Move,IMU,3,Sub12_all.txt,290056,293125,3070,6476,9545,slot map,,0.0676879883 -0.7854614258 0.7143554688,0.0491333008 0.2312011719 0.8414916992
+Sub12,movement4_speed1,Rest,EEG,1,Sub12_all.xdf,2753389,2770673,17285,1,17285,,,-49448.6172,-49602.3477
+Sub12,movement4_speed1,Rest,IMU,1,Sub12_all.txt,273295,275011,1717,1,1717,rows,,0.0712280273 -0.063293457 0.9909667969,0.0249633789 -0.1107788086 0.9906616211
+Sub12,movement5_speed0,Move,EEG,1,Sub12_all.xdf,1807571,1904217,96647,1,96647,,,-40304.6562,-40790.0742
+Sub12,movement5_speed0,Move,IMU,1,Sub12_all.txt,179377,188974,9598,1,9598,rows,,0.0313720703 0.0192871094 1.230285645,0.0532226563 0.0133666992 0.8637084961
+Sub12,movement5_speed0,Rest,EEG,1,Sub12_all.xdf,1789731,1805733,16003,1,16003,,,-39749.4648,-40288.7812
+Sub12,movement5_speed0,Rest,IMU,1,Sub12_all.txt,177606,179195,1590,1,1590,rows,,0.0927734375 0.1680908203 0.971496582,0.0716552734 0.1196899414 0.9664916992
+Sub12,movement5_speed1,Move,EEG,1,Sub12_all.xdf,1484783,1535965,51183,1,51183,,,-39854.7734,-41840.3477
+Sub12,movement5_speed1,Move,EEG,2,Sub12_all.xdf,1578899,1620599,41701,51184,92884,,,-40966.0859,-40319.582
+Sub12,movement5_speed1,Move,IMU,1,Sub12_all.txt,147359,152441,5083,1,5083,rows,,0.0076904297 -0.4378051758 0.2630615234,0.1385498047 -0.5371704102 0.7948608398
+Sub12,movement5_speed1,Move,IMU,2,Sub12_all.txt,156704,160845,4142,5084,9225,rows,,-0.0135498047 -0.7504272461 0.86328125,-0.1489868164 -0.2678833008 0.8718261719
+Sub12,movement5_speed1,Rest,EEG,1,Sub12_all.xdf,1464063,1482889,18827,1,18827,,,-39729.0977,-39797.3008
+Sub12,movement5_speed1,Rest,IMU,1,Sub12_all.txt,145301,147171,1871,1,1871,rows,,0.0624389648 0.1741333008 0.9911499023,0.063659668 0.0487060547 0.9912719727
+Sub13,Sit,Rest,EEG,1,Sub13_Sit.xdf,27513,177513,150001,1,150001,,,-17234.8242,-22909.4395
+Sub13,Sit,Rest,IMU,1,Sub13_Sit.txt,2698,17593,14896,1,14896,rows,,-0.305 -0.132 0.916,-0.034 -0.253 0.948
+Sub13,movement0_speed0,Move,EEG,1,Sub13_movement0_speed0.xdf,24183,113173,88991,1,88991,,,-5159.95459,-9714.31836
+Sub13,movement0_speed0,Move,IMU,1,Sub13_movement0_speed0.txt,2412,11248,8837,1,8837,rows,,0.102 -0.279 1.054,0.159 -0.366 0.813
+Sub13,movement0_speed0,Rest,EEG,1,Sub13_movement0_speed0.xdf,3090,19244,16155,1,16155,,,-5431.19141,-5122.53613
+Sub13,movement0_speed0,Rest,IMU,1,Sub13_movement0_speed0.txt,317,1921,1605,1,1605,rows,,-0.087 -0.132 0.986,-0.053 -0.219 0.97
+Sub13,movement0_speed1,Move,EEG,1,Sub13_movement0_speed1.xdf,29505,112355,82851,1,82851,,,-15034.5957,-33394.6172
+Sub13,movement0_speed1,Move,IMU,1,Sub13_movement0_speed1.txt,2943,11169,8227,1,8227,rows,,0.046 -0.035 0.915,-0.025 -0.285 0.872
+Sub13,movement0_speed1,Rest,EEG,1,Sub13_movement0_speed1.xdf,2175,20146,17972,1,17972,,,-13937.0488,-14113.9971
+Sub13,movement0_speed1,Rest,IMU,1,Sub13_movement0_speed1.txt,229,2013,1785,1,1785,rows,,-0.25 0.336 0.997,-0.177 -0.231 0.931
+Sub13,movement1_speed0,Move,EEG,1,Sub13_movement1_speed0.xdf,21365,114942,93578,1,93578,,,-33851.0352,-34893.0938
+Sub13,movement1_speed0,Move,IMU,1,Sub13_movement1_speed0.txt,2125,11417,9293,1,9293,rows,,-0.042 -0.349 1.027,-0.121 -0.154 0.91
+Sub13,movement1_speed0,Rest,EEG,1,Sub13_movement1_speed0.xdf,2126,20023,17898,1,17898,,,-35437.8516,-33918.9961
+Sub13,movement1_speed0,Rest,IMU,1,Sub13_movement1_speed0.txt,214,1991,1778,1,1778,rows,,-0.47 0.236 0.906,0.07 -0.114 0.985
+Sub13,movement1_speed1,Move,EEG,1,Sub13_movement1_speed1.xdf,28241,120169,91929,1,91929,,,-34656.4766,-37500.0312
+Sub13,movement1_speed1,Move,IMU,1,Sub13_movement1_speed1.txt,2810,11938,9129,1,9129,rows,,-0.342 -0.358 0.998,-0.315 -0.419 0.658
+Sub13,movement1_speed1,Rest,EEG,1,Sub13_movement1_speed1.xdf,2957,24464,21508,1,21508,,,-35787.1523,-34737.4297
+Sub13,movement1_speed1,Rest,IMU,1,Sub13_movement1_speed1.txt,299,2435,2137,1,2137,rows,,-0.043 0.027 0.986,-0.215 -0.177 0.941
+Sub13,movement2_speed0,Move,EEG,1,Sub13_movement2_speed0.xdf,30760,120489,89730,1,89730,,,3064.2876,-2671.74268
+Sub13,movement2_speed0,Move,IMU,1,Sub13_movement2_speed0.txt,3058,11967,8910,1,8910,rows,,-0.046 -0.263 0.957,0.156 -0.241 0.959
+Sub13,movement2_speed0,Rest,EEG,1,Sub13_movement2_speed0.xdf,6404,26160,19757,1,19757,,,5426.24609,3961.67261
+Sub13,movement2_speed0,Rest,IMU,1,Sub13_movement2_speed0.txt,639,2601,1963,1,1963,rows,,-0.056 -0.23 0.95,-0.031 -0.271 0.946
+Sub13,movement2_speed1,Move,EEG,1,Sub13_movement2_speed1.xdf,23148,112904,89757,1,89757,,,13516.7842,9961.21484
+Sub13,movement2_speed1,Move,IMU,1,Sub13_movement2_speed1.txt,2310,11222,8913,1,8913,rows,,-0.035 -0.111 0.992,0.105 -0.194 0.971
+Sub13,movement2_speed1,Rest,EEG,1,Sub13_movement2_speed1.xdf,3138,18784,15647,1,15647,,,13158.541,14096.2832
+Sub13,movement2_speed1,Rest,IMU,1,Sub13_movement2_speed1.txt,323,1876,1554,1,1554,rows,,-0.029 -0.017 0.985,-0.113 -0.263 0.955
+Sub13,movement3_speed0,Move,EEG,1,Sub13_movement3_speed0.xdf,21707,115338,93632,1,93632,,,-63162.4492,-63516.4883
+Sub13,movement3_speed0,Move,IMU,1,Sub13_movement3_speed0.txt,2145,11442,9298,1,9298,rows,,-0.105 0.687 0.665,0.072 0.931 0.369
+Sub13,movement3_speed0,Rest,EEG,1,Sub13_movement3_speed0.xdf,2743,18899,16157,1,16157,,,-61142.1055,-60945.6953
+Sub13,movement3_speed0,Rest,IMU,1,Sub13_movement3_speed0.txt,262,1866,1605,1,1605,rows,,0.089 -0.094 0.966,0.088 -0.371 0.905
+Sub13,movement3_speed1,Move,EEG,1,Sub13_movement3_speed1.xdf,38497,125370,86874,1,86874,,,-51708.6562,-60891.4141
+Sub13,movement3_speed1,Move,IMU,1,Sub13_movement3_speed1.txt,21580,30206,8627,1,8627,rows,,-0.023 0.978 0.49,-0.056 0.87 0.587
+Sub13,movement3_speed1,Rest,EEG,1,Sub13_movement3_speed1.xdf,3543,7952,4410,1,4410,,,-47120.125,-47447.7773
+Sub13,movement3_speed1,Rest,EEG,2,Sub13_movement3_speed1.xdf,11554,35164,23611,4411,28021,,,-47444.3828,-48636.9648
+Sub13,movement3_speed1,Rest,IMU,1,Sub13_movement3_speed1.txt,18109,18546,438,1,438,rows,,0.005 -0.127 0.986,0.05 -0.141 0.967
+Sub13,movement3_speed1,Rest,IMU,2,Sub13_movement3_speed1.txt,18905,21249,2345,439,2783,rows,,-0.04 -0.151 0.964,0.042 -0.248 0.945
+Sub13,movement4_speed0,Move,EEG,1,Sub13_movement4_speed0.xdf,24497,69125,44629,1,44629,,,-15039.5166,-6763.80127
+Sub13,movement4_speed0,Move,EEG,2,Sub13_movement4_speed0.xdf,73324,105009,31686,44630,76315,,,-3112.54517,1714.03418
+Sub13,movement4_speed0,Move,EEG,3,Sub13_movement4_speed0.xdf,110975,132705,21731,76316,98046,,,2887.61914,4379.00732
+Sub13,movement4_speed0,Move,IMU,1,Sub13_movement4_speed0.txt,2418,6848,4431,1,4431,rows,,-0.1 -0.421 1.098,-0.031 -1.166 0.489
+Sub13,movement4_speed0,Move,IMU,2,Sub13_movement4_speed0.txt,7267,10411,3145,4432,7576,rows,,-0.077 -0.414 0.822,0.384 0.058 0.842
+Sub13,movement4_speed0,Move,IMU,3,Sub13_movement4_speed0.txt,11005,13164,2160,7577,9736,rows,,-0.218 -0.279 0.944,0.002 -0.587 0.583
+Sub13,movement4_speed0,Rest,EEG,1,Sub13_movement4_speed0.xdf,4456,21447,16992,1,16992,,,-13202.3486,-16131.1396
+Sub13,movement4_speed0,Rest,IMU,1,Sub13_movement4_speed0.txt,429,2116,1688,1,1688,rows,,-0.071 -0.507 0.822,-0.077 -0.13 0.966
+Sub13,movement4_speed1,Move,EEG,1,Sub13_movement4_speed1.xdf,34343,121809,87467,1,87467,,,-66402.5625,-19291.0469
+Sub13,movement4_speed1,Move,IMU,1,Sub13_movement4_speed1.txt,3415,12100,8686,1,8686,rows,,-0.067 -0.12 0.69,-0.079 -1.018 0.724
+Sub13,movement4_speed1,Rest,EEG,1,Sub13_movement4_speed1.xdf,3737,30152,26416,1,26416,,,-59284.2539,-64953.2617
+Sub13,movement4_speed1,Rest,IMU,1,Sub13_movement4_speed1.txt,376,2998,2623,1,2623,rows,,-0.109 -0.097 0.937,0.005 -0.42 0.888
+Sub13,movement5_speed0,Move,EEG,1,Sub13_movement5_speed0.xdf,21369,112756,91388,1,91388,,,-34918.5391,-30928.1758
+Sub13,movement5_speed0,Move,IMU,1,Sub13_movement5_speed0.txt,2032,11100,9075,1,9075,slot map,,0.035 -0.431 0.894,0.226 -0.718 0.68
+Sub13,movement5_speed0,Rest,EEG,1,Sub13_movement5_speed0.xdf,3971,20351,16381,1,16381,,,-34998.2227,-34595.2188
+Sub13,movement5_speed0,Rest,IMU,1,Sub13_movement5_speed0.txt,304,1931,1628,1,1628,rows,,-0.253 -0.095 0.923,-0.052 -0.297 0.931
+Sub13,movement5_speed1,Move,EEG,1,Sub13_movement5_speed1.xdf,24498,59772,35275,1,35275,,,-26105.1465,-23652.541
+Sub13,movement5_speed1,Move,EEG,2,Sub13_movement5_speed1.xdf,63744,110835,47092,35276,82367,,,-22872.3203,-23542.0723
+Sub13,movement5_speed1,Move,EEG,3,Sub13_movement5_speed1.xdf,113929,130132,16204,82368,98571,,,-19436.498,-17781.5879
+Sub13,movement5_speed1,Move,IMU,1,Sub13_movement5_speed1.txt,2432,5934,3503,1,3503,slot map,,0.153 -0.653 0.821,0.252 -0.611 0.365
+Sub13,movement5_speed1,Move,IMU,2,Sub13_movement5_speed1.txt,6329,11003,4675,3504,8178,slot map,,0.308 -0.238 0.973,-0.014 -0.54 0.811
+Sub13,movement5_speed1,Move,IMU,3,Sub13_movement5_speed1.txt,11311,12921,1611,8179,9789,slot map,,-0.175 -0.6 0.597,0.408 -0.695 0.448
+Sub13,movement5_speed1,Rest,EEG,1,Sub13_movement5_speed1.xdf,5870,22738,16869,1,16869,,,-29435.8926,-26524.2422
+Sub13,movement5_speed1,Rest,IMU,1,Sub13_movement5_speed1.txt,582,2257,1676,1,1676,rows,,-0.23 0.257 0.956,0.232 -0.119 0.961
+Sub14,Sit,Rest,EEG,1,Sub14_Sit.xdf,10721,165387,154667,1,154667,,,-47118.2695,-51096.3164
+Sub14,Sit,Rest,IMU,1,Sub14_Sit.txt,947,16305,15359,1,15359,rows,,-0.063 -0.203 0.953,0.044 -0.186 0.973
+Sub14,movement0_speed0,Move,EEG,1,Sub14_movement0_speed0.xdf,25711,118286,92576,1,92576,,,-54237.582,-53652.7461
+Sub14,movement0_speed0,Move,IMU,1,Sub14_movement0_speed0.txt,2460,11652,9193,1,9193,rows,,0.051 -0.192 0.937,0.141 -0.111 0.984
+Sub14,movement0_speed0,Rest,EEG,1,Sub14_movement0_speed0.xdf,5385,23749,18365,1,18365,,,-53942.3047,-54225.1367
+Sub14,movement0_speed0,Rest,IMU,1,Sub14_movement0_speed0.txt,442,2265,1824,1,1824,rows,,0.039 -0.112 0.988,0.024 -0.136 0.985
+Sub14,movement0_speed1,Move,EEG,1,Sub14_movement0_speed1.xdf,24111,118348,94238,1,94238,,,-55251.1953,-54004.3281
+Sub14,movement0_speed1,Move,IMU,1,Sub14_movement0_speed1.txt,2288,11645,9358,1,9358,rows,,0.018 -0.2 0.819,-0.186 -0.07 1.003
+Sub14,movement0_speed1,Rest,EEG,1,Sub14_movement0_speed1.xdf,4253,22025,17773,1,17773,,,-53469.4727,-55261.5469
+Sub14,movement0_speed1,Rest,IMU,1,Sub14_movement0_speed1.txt,317,2082,1766,1,1766,rows,,0.049 -0.143 0.969,0.042 -0.141 0.962
+Sub14,movement1_speed0,Move,EEG,1,Sub14_movement1_speed0.xdf,28404,121353,92950,1,92950,,,-54298.8828,-55225.7617
+Sub14,movement1_speed0,Move,IMU,1,Sub14_movement1_speed0.txt,2733,11962,9230,1,9230,rows,,-0.052 -0.313 0.927,-0.028 -0.36 0.903
+Sub14,movement1_speed0,Rest,EEG,1,Sub14_movement1_speed0.xdf,7918,25735,17818,1,17818,,,-52598.1914,-54256.457
+Sub14,movement1_speed0,Rest,IMU,1,Sub14_movement1_speed0.txt,699,2469,1771,1,1771,rows,,0.016 -0.28 0.936,-0.005 -0.173 0.966
+Sub14,movement1_speed1,Move,EEG,1,Sub14_movement1_speed1.xdf,24947,116136,91190,1,91190,,,-59873.3203,-55195.5391
+Sub14,movement1_speed1,Move,IMU,1,Sub14_movement1_speed1.txt,2148,11203,9056,1,9056,rows,,0.113 -0.493 0.866,0.255 -0.355 0.955
+Sub14,movement1_speed1,Rest,EEG,1,Sub14_movement1_speed1.xdf,6323,23618,17296,1,17296,,,-61188.7852,-60007.5898
+Sub14,movement1_speed1,Rest,IMU,1,Sub14_movement1_speed1.txt,298,2015,1718,1,1718,rows,,-0.037 -0.221 0.953,0.038 -0.174 0.962
+Sub14,movement2_speed0,Move,EEG,1,Sub14_movement2_speed0.xdf,32825,123862,91038,1,91038,,,-56158.7305,-56438.0547
+Sub14,movement2_speed0,Move,IMU,1,Sub14_movement2_speed0.txt,3184,12224,9041,1,9041,rows,,-0.048 -0.072 0.988,-0.039 -0.05 0.977
+Sub14,movement2_speed0,Rest,EEG,1,Sub14_movement2_speed0.xdf,4261,30295,26035,1,26035,,,-56015.3711,-56130.125
+Sub14,movement2_speed0,Rest,IMU,1,Sub14_movement2_speed0.txt,348,2933,2586,1,2586,rows,,-0.032 -0.102 0.986,-0.014 -0.132 0.987
+Sub14,movement2_speed1,Move,EEG,1,Sub14_movement2_speed1.xdf,24573,116319,91747,1,91747,,,-54522.8086,-55014.75
+Sub14,movement2_speed1,Move,IMU,1,Sub14_movement2_speed1.txt,2306,11416,9111,1,9111,rows,,-0.066 -0.026 0.98,0.003 0.015 0.98
+Sub14,movement2_speed1,Rest,EEG,1,Sub14_movement2_speed1.xdf,3944,20477,16534,1,16534,,,-54482.125,-54485.3945
+Sub14,movement2_speed1,Rest,IMU,1,Sub14_movement2_speed1.txt,258,1900,1643,1,1643,rows,,-0.046 0.023 0.967,-0.017 -0.053 0.987
+Sub14,movement3_speed0,Move,EEG,1,Sub14_movement3_speed0.xdf,23262,115719,92458,1,92458,,,-61272.1641,-60857.7539
+Sub14,movement3_speed0,Move,IMU,1,Sub14_movement3_speed0.txt,2211,11391,9181,1,9181,rows,,-0.019 -0.235 0.952,-0.036 -0.146 0.973
+Sub14,movement3_speed0,Rest,EEG,1,Sub14_movement3_speed0.xdf,4317,21422,17106,1,17106,,,-61344.9922,-61332.8047
+Sub14,movement3_speed0,Rest,IMU,1,Sub14_movement3_speed0.txt,330,2028,1699,1,1699,rows,,-0.032 -0.037 0.967,-0.018 -0.039 0.978
+Sub14,movement3_speed1,Move,EEG,1,Sub14_movement3_speed1.xdf,23744,115764,92021,1,92021,,,-60656.8477,-60454.1797
+Sub14,movement3_speed1,Move,IMU,1,Sub14_movement3_speed1.txt,2324,11461,9138,1,9138,rows,,-0.055 0.342 0.929,-0.068 0.272 0.91
+Sub14,movement3_speed1,Rest,EEG,1,Sub14_movement3_speed1.xdf,3364,20203,16840,1,16840,,,-60441.4688,-60777.1719
+Sub14,movement3_speed1,Rest,IMU,1,Sub14_movement3_speed1.txt,300,1972,1673,1,1673,rows,,-0.02 -0.094 0.988,-0.018 -0.099 0.988
+Sub14,movement4_speed0,Move,EEG,1,Sub14_movement4_speed0.xdf,22265,114532,92268,1,92268,,,-42.793663,5214.37305
+Sub14,movement4_speed0,Move,IMU,1,Sub14_movement4_speed0.txt,2153,11281,9163,1,9163,rows,rows past the end of the IMU file: the last 34 slots are empty (n/a),-0.055 -0.84 0.474,0.019 -0.977 0.56
+Sub14,movement4_speed0,Rest,EEG,1,Sub14_movement4_speed0.xdf,3159,20530,17372,1,17372,,,4915.02148,1427.60071
+Sub14,movement4_speed0,Rest,IMU,1,Sub14_movement4_speed0.txt,256,1980,1725,1,1725,rows,,0 -0.325 1.016,0.087 -0.405 0.888
+Sub14,movement4_speed1,Move,EEG,1,Sub14_movement4_speed1.xdf,41535,103586,62052,1,62052,,,-26610.4824,-11003.2002
+Sub14,movement4_speed1,Move,EEG,2,Sub14_movement4_speed1.xdf,316824,348852,32029,62053,94081,,,-8230.38867,-2172.12866
+Sub14,movement4_speed1,Move,IMU,1,Sub14_movement4_speed1.txt,3852,10012,6161,1,6161,rows,,-0.04 -0.148 0.675,-0.143 0.176 0.957
+Sub14,movement4_speed1,Move,IMU,2,Sub14_movement4_speed1.txt,31187,34367,3181,6162,9342,rows,,-0.048 -1.059 0.369,-0.097 -1.432 -0.205
+Sub14,movement4_speed1,Rest,EEG,1,Sub14_movement4_speed1.xdf,7874,25585,17712,1,17712,,,-25060.6348,-26382.1973
+Sub14,movement4_speed1,Rest,IMU,1,Sub14_movement4_speed1.txt,510,2269,1760,1,1760,rows,,0.016 -0.348 0.92,0.044 -0.4 0.889
+Sub14,movement5_speed0,Move,EEG,1,Sub14_movement5_speed0.xdf,24576,83618,59043,1,59043,,,10210.4473,-518.295471
+Sub14,movement5_speed0,Move,EEG,2,Sub14_movement5_speed0.xdf,103402,150030,46629,59044,105672,,,414.273499,209.822067
+Sub14,movement5_speed0,Move,IMU,1,Sub14_movement5_speed0.txt,2313,8175,5863,1,5863,rows,,0.037 -0.599 0.795,-0.127 -0.304 0.908
+Sub14,movement5_speed0,Move,IMU,2,Sub14_movement5_speed0.txt,10141,14771,4631,5864,10494,rows,,0.268 -0.311 0.847,-0.06 -0.153 0.968
+Sub14,movement5_speed0,Rest,EEG,1,Sub14_movement5_speed0.xdf,4905,21838,16934,1,16934,,,10423.2314,10471.6455
+Sub14,movement5_speed0,Rest,IMU,1,Sub14_movement5_speed0.txt,360,2041,1682,1,1682,rows,,0.002 -0.145 0.975,-0.034 -0.219 0.951
+Sub14,movement5_speed1,Move,EEG,1,Sub14_movement5_speed1.xdf,24306,121085,96780,1,96780,,,-2927.59863,-604.273193
+Sub14,movement5_speed1,Move,IMU,1,Sub14_movement5_speed1.txt,3295,12904,9610,1,9610,rows,,0.221 -0.394 0.986,-0.085 -0.478 0.51
+Sub14,movement5_speed1,Rest,EEG,1,Sub14_movement5_speed1.xdf,5520,22414,16895,1,16895,,,-820.007324,-2876.32129
+Sub14,movement5_speed1,Rest,IMU,1,Sub14_movement5_speed1.txt,1430,3108,1679,1,1679,rows,,0.054 -0.263 0.958,0.038 -0.326 0.941
+Sub15,Sit,Rest,EEG,1,Sub15_Sit.xdf,3205,154394,151190,1,151190,,,-50443.168,-49031.5234
+Sub15,Sit,Rest,IMU,1,Sub15_Sit.txt,217,15230,15014,1,15014,rows,,0.039 0.056 0.986,0.046 0.091 0.967
+Sub15,movement0_speed0,Move,EEG,1,Sub15_movement0_speed0.xdf,22150,113649,91500,1,91500,,,-46112.8086,-46264.9766
+Sub15,movement0_speed0,Move,IMU,1,Sub15_movement0_speed0.txt,1936,11021,9086,1,9086,rows,,0.021 -0.015 1.076,-0.014 0.091 1.013
+Sub15,movement0_speed0,Rest,EEG,1,Sub15_movement0_speed0.xdf,5162,21097,15936,1,15936,,,-45804.293,-46082.9414
+Sub15,movement0_speed0,Rest,IMU,1,Sub15_movement0_speed0.txt,249,1831,1583,1,1583,rows,,0.031 0.116 0.966,0.036 0.05 0.987
+Sub15,movement0_speed1,Move,EEG,1,Sub15_movement0_speed1.xdf,20828,36799,15972,1,15972,,,-45373.7227,-45244.2461
+Sub15,movement0_speed1,Move,EEG,2,Sub15_movement0_speed1.xdf,95047,187030,91984,15973,107956,,,-45693.6719,-45392.1602
+Sub15,movement0_speed1,Move,IMU,1,Sub15_movement0_speed1.txt,1977,3562,1586,1,1586,rows,,0.09 0.108 1.065,0.16 -0.044 0.555
+Sub15,movement0_speed1,Move,IMU,2,Sub15_movement0_speed1.txt,9347,18480,9134,1587,10720,rows,,0.087 -0.098 0.947,-0.024 -0.091 1.321
+Sub15,movement0_speed1,Rest,EEG,1,Sub15_movement0_speed1.xdf,4043,19878,15836,1,15836,,,-45498.7852,-45385.9492
+Sub15,movement0_speed1,Rest,IMU,1,Sub15_movement0_speed1.txt,310,1882,1573,1,1573,rows,,0.02 0.091 0.966,0.032 0.062 0.986
+Sub15,movement1_speed0,Move,EEG,1,Sub15_movement1_speed0.xdf,19457,114247,94791,1,94791,,,-43508.543,-44666.8594
+Sub15,movement1_speed0,Move,IMU,1,Sub15_movement1_speed0.txt,1868,11281,9414,1,9414,rows,,-0.014 0.059 0.888,0.185 0.033 1.167
+Sub15,movement1_speed0,Rest,EEG,1,Sub15_movement1_speed0.xdf,2532,18843,16312,1,16312,,,-41699.0625,-43361.1367
+Sub15,movement1_speed0,Rest,IMU,1,Sub15_movement1_speed0.txt,187,1806,1620,1,1620,rows,,0.018 0.189 0.97,0.035 0.068 0.987
+Sub15,movement1_speed1,Move,EEG,1,Sub15_movement1_speed1.xdf,20817,42401,21585,1,21585,,,-43913.4297,-44376.1094
+Sub15,movement1_speed1,Move,EEG,2,Sub15_movement1_speed1.xdf,110616,205482,94867,21586,116452,,,-45211.7969,-45901.4844
+Sub15,movement1_speed1,Move,IMU,1,Sub15_movement1_speed1.txt,1994,4137,2144,1,2144,rows,,-0.179 -0.253 0.846,0.209 -0.471 1.402
+Sub15,movement1_speed1,Move,IMU,2,Sub15_movement1_speed1.txt,10912,20331,9420,2145,11564,rows,,0.074 -0.132 0.832,0.329 -0.012 1.368
+Sub15,movement1_speed1,Rest,EEG,1,Sub15_movement1_speed1.xdf,2976,19199,16224,1,16224,,,-44344.0938,-43903.3633
+Sub15,movement1_speed1,Rest,IMU,1,Sub15_movement1_speed1.txt,223,1834,1612,1,1612,rows,,0.014 0.082 0.968,0.029 0.059 0.986
+Sub15,movement2_speed0,Move,EEG,1,Sub15_movement2_speed0.xdf,21818,114402,92585,1,92585,,,-46593.8086,-47539.832
+Sub15,movement2_speed0,Move,IMU,1,Sub15_movement2_speed0.txt,2103,11296,9194,1,9194,rows,,0.079 0.122 0.977,0.03 0.02 0.99
+Sub15,movement2_speed0,Rest,EEG,1,Sub15_movement2_speed0.xdf,4125,20374,16250,1,16250,,,-46225.7383,-46613.9609
+Sub15,movement2_speed0,Rest,IMU,1,Sub15_movement2_speed0.txt,346,1959,1614,1,1614,rows,,0.026 0.162 0.976,0.069 0.147 0.961
+Sub15,movement2_speed1,Move,EEG,1,Sub15_movement2_speed1.xdf,21326,112713,91388,1,91388,,,-45939.4609,-46649.9609
+Sub15,movement2_speed1,Move,IMU,1,Sub15_movement2_speed1.txt,2026,11100,9075,1,9075,rows,,0.073 0.093 0.961,0.022 0.054 0.987
+Sub15,movement2_speed1,Rest,EEG,1,Sub15_movement2_speed1.xdf,3811,20057,16247,1,16247,,,-45244.8164,-45926.3516
+Sub15,movement2_speed1,Rest,IMU,1,Sub15_movement2_speed1.txt,287,1901,1615,1,1615,rows,,0.024 0.114 0.967,0.044 0.108 0.966
+Sub15,movement3_speed0,Move,EEG,1,Sub15_movement3_speed0.xdf,26573,119772,93200,1,93200,,,-47496.7773,-48327.4023
+Sub15,movement3_speed0,Move,IMU,1,Sub15_movement3_speed0.txt,2591,11845,9255,1,9255,rows,,0.049 0.396 0.913,0.053 0.183 0.946
+Sub15,movement3_speed0,Rest,EEG,1,Sub15_movement3_speed0.xdf,2090,21751,19662,1,19662,,,-46342.1523,-47169.4688
+Sub15,movement3_speed0,Rest,IMU,1,Sub15_movement3_speed0.txt,160,2112,1953,1,1953,rows,,0.054 0.168 0.97,0.083 0.17 0.959
+Sub15,movement3_speed1,Move,EEG,1,Sub15_movement3_speed1.xdf,22953,115367,92415,1,92415,,,-46294.9297,-46995.332
+Sub15,movement3_speed1,Move,IMU,1,Sub15_movement3_speed1.txt,2220,11396,9177,1,9177,rows,,0.011 0.562 0.809,0.099 -0.609 0.858
+Sub15,movement3_speed1,Rest,EEG,1,Sub15_movement3_speed1.xdf,3136,20545,17410,1,17410,,,-45557.6016,-46218.3984
+Sub15,movement3_speed1,Rest,IMU,1,Sub15_movement3_speed1.txt,252,1981,1730,1,1730,rows,,0.067 0.193 0.95,0.064 0.127 0.975
+Sub15,movement4_speed0,Move,EEG,1,Sub15_movement4_speed0.xdf,20936,113439,92504,1,92504,,,-58183.8555,-58245.1641
+Sub15,movement4_speed0,Move,IMU,1,Sub15_movement4_speed0.txt,1981,11166,9186,1,9186,rows,,0.069 -0.462 0.74,0.048 -0.925 0.483
+Sub15,movement4_speed0,Rest,EEG,1,Sub15_movement4_speed0.xdf,3466,19635,16170,1,16170,,,-58039.0391,-58212.7422
+Sub15,movement4_speed0,Rest,IMU,1,Sub15_movement4_speed0.txt,246,1851,1606,1,1606,rows,,0.032 0.062 0.988,0.037 -0.007 0.99
+Sub15,movement4_speed1,Move,EEG,1,Sub15_movement4_speed1.xdf,22290,115257,92968,1,92968,,,-47515.4219,-48193.9922
+Sub15,movement4_speed1,Move,IMU,1,Sub15_movement4_speed1.txt,2504,11735,9232,1,9232,rows,,0.067 -0.184 0.889,0.009 -0.921 0.792
+Sub15,movement4_speed1,Rest,EEG,1,Sub15_movement4_speed1.xdf,3223,20179,16957,1,16957,,,-47249.2148,-47569.6055
+Sub15,movement4_speed1,Rest,IMU,1,Sub15_movement4_speed1.txt,611,2295,1685,1,1685,rows,,0.026 0.102 0.967,0.038 0.033 0.989
+Sub15,movement5_speed0,Move,EEG,1,Sub15_movement5_speed0.xdf,22026,112588,90563,1,90563,,,-37970.9258,-66933.75
+Sub15,movement5_speed0,Move,IMU,1,Sub15_movement5_speed0.txt,2118,11110,8993,1,8993,rows,,0.088 -0.128 1.181,0.001 -0.277 0.837
+Sub15,movement5_speed0,Rest,EEG,1,Sub15_movement5_speed0.xdf,3941,20371,16431,1,16431,,,-34245.1836,-37733.1719
+Sub15,movement5_speed0,Rest,IMU,1,Sub15_movement5_speed0.txt,322,1953,1632,1,1632,rows,,0.021 0.141 0.964,0.043 0.085 0.966
+Sub15,movement5_speed1,Move,EEG,1,Sub15_movement5_speed1.xdf,24068,116617,92550,1,92550,,,-56894.0469,-40568.5625
+Sub15,movement5_speed1,Move,IMU,1,Sub15_movement5_speed1.txt,2304,11493,9190,1,9190,rows,,0.159 -0.362 1.117,0.315 -0.062 0.748
+Sub15,movement5_speed1,Rest,EEG,1,Sub15_movement5_speed1.xdf,5081,21461,16381,1,16381,,,-57145.5898,-56880.5977
+Sub15,movement5_speed1,Rest,IMU,1,Sub15_movement5_speed1.txt,418,2045,1628,1,1628,rows,,-0.003 0.053 0.991,0.035 -0.029 0.988
+Sub16,Sit,Rest,EEG,1,Sub16_Sit.xdf,9016,160822,151807,1,151807,,,-49149.0586,-50763.0742
+Sub16,Sit,Rest,IMU,1,Sub16_Sit.txt,813,15887,15075,1,15075,rows,,0.07 -0.094 0.985,0.099 -0.108 0.964
+Sub16,movement0_speed0,Move,EEG,1,Sub16_movement0_speed0.xdf,21720,120474,98755,1,98755,,,-49456.7422,-49105.3203
+Sub16,movement0_speed0,Move,IMU,1,Sub16_movement0_speed0.txt,2091,11896,9806,1,9806,rows,,-0.038 -0.116 1.033,-0.154 -0.007 0.979
+Sub16,movement0_speed0,Rest,EEG,1,Sub16_movement0_speed0.xdf,3656,20166,16511,1,16511,,,-49327.5156,-49428.0977
+Sub16,movement0_speed0,Rest,IMU,1,Sub16_movement0_speed0.txt,297,1936,1640,1,1640,rows,,0.033 -0.053 0.983,0.072 -0.101 0.987
+Sub16,movement0_speed1,Move,EEG,1,Sub16_movement0_speed1.xdf,26965,120078,93114,1,93114,,,-49883,-49567.5508
+Sub16,movement0_speed1,Move,IMU,1,Sub16_movement0_speed1.txt,2536,11782,9247,1,9247,rows,,0.014 -0.126 0.457,-0.052 -0.035 1.096
+Sub16,movement0_speed1,Rest,EEG,1,Sub16_movement0_speed1.xdf,3760,20100,16341,1,16341,,,-48682.6445,-49888.7109
+Sub16,movement0_speed1,Rest,IMU,1,Sub16_movement0_speed1.txt,232,1854,1623,1,1623,rows,,0.031 -0.069 0.977,0.051 -0.095 0.987
+Sub16,movement1_speed0,Move,EEG,1,Sub16_movement1_speed0.xdf,21600,114014,92415,1,92415,,,-55449.2656,-54804.1211
+Sub16,movement1_speed0,Move,IMU,1,Sub16_movement1_speed0.txt,2645,11821,9177,1,9177,rows,,-0.017 -0.173 0.989,-0.219 -0.114 0.716
+Sub16,movement1_speed0,Rest,EEG,1,Sub16_movement1_speed0.xdf,3948,20447,16500,1,16500,,,-55370.3164,-55363.1055
+Sub16,movement1_speed0,Rest,IMU,1,Sub16_movement1_speed0.txt,892,2530,1639,1,1639,rows,,0.032 -0.042 0.989,0.031 -0.062 0.99
+Sub16,movement1_speed1,Move,EEG,1,Sub16_movement1_speed1.xdf,19544,116606,97063,1,97063,,,-51057.2148,-52714.8398
+Sub16,movement1_speed1,Move,IMU,1,Sub16_movement1_speed1.txt,1883,11504,9639,1,9639,rows,rows past the end of the IMU file: the last 17 slots are empty (n/a),0.227 -0.117 0.839,-0.091 -0.045 0.985
+Sub16,movement1_speed1,Rest,EEG,1,Sub16_movement1_speed1.xdf,2679,18338,15660,1,15660,,,-46551.9258,-51016.6406
+Sub16,movement1_speed1,Rest,IMU,1,Sub16_movement1_speed1.txt,208,1762,1555,1,1555,rows,,0.066 -0.022 0.979,0.066 -0.054 0.991
+Sub16,movement2_speed0,Move,EEG,1,Sub16_movement2_speed0.xdf,22986,115134,92149,1,92149,,,-58092.9727,-58082.9805
+Sub16,movement2_speed0,Move,IMU,1,Sub16_movement2_speed0.txt,2118,11268,9151,1,9151,rows,,0.028 -0.075 0.985,0.098 -0.155 0.976
+Sub16,movement2_speed0,Rest,EEG,1,Sub16_movement2_speed0.xdf,4341,20744,16404,1,16404,,,-56715.3398,-57958.9609
+Sub16,movement2_speed0,Rest,IMU,1,Sub16_movement2_speed0.txt,266,1895,1630,1,1630,rows,,0.083 -0.023 0.987,0.081 -0.047 0.985
+Sub16,movement2_speed1,Move,EEG,1,Sub16_movement2_speed1.xdf,22248,115556,93309,1,93309,,,-55037.5625,-56120.7227
+Sub16,movement2_speed1,Move,IMU,1,Sub16_movement2_speed1.txt,2144,11409,9266,1,9266,rows,,0.015 -0.019 0.982,-0.055 -0.065 0.963
+Sub16,movement2_speed1,Rest,EEG,1,Sub16_movement2_speed1.xdf,4220,20004,15785,1,15785,,,-54262.1836,-54915.2422
+Sub16,movement2_speed1,Rest,IMU,1,Sub16_movement2_speed1.txt,354,1921,1568,1,1568,rows,,0.044 0.052 0.986,0.062 -0.013 0.989
+Sub16,movement3_speed0,Move,EEG,1,Sub16_movement3_speed0.xdf,21659,114013,92355,1,92355,,,-32492.9785,-32165.7148
+Sub16,movement3_speed0,Move,IMU,1,Sub16_movement3_speed0.txt,2085,11255,9171,1,9171,rows,,0.088 -0.622 0.824,0.174 -0.839 0.564
+Sub16,movement3_speed0,Rest,EEG,1,Sub16_movement3_speed0.xdf,3367,20291,16925,1,16925,,,-32561.5996,-32580.2422
+Sub16,movement3_speed0,Rest,IMU,1,Sub16_movement3_speed0.txt,268,1948,1681,1,1681,rows,,0.07 -0.069 0.985,0.055 -0.073 0.987
+Sub16,movement3_speed1,Move,EEG,1,Sub16_movement3_speed1.xdf,23254,115700,92447,1,92447,,,-20825.3984,-25613.1699
+Sub16,movement3_speed1,Move,IMU,1,Sub16_movement3_speed1.txt,2224,11403,9180,1,9180,rows,,-0.01 0.25 0.954,-0.115 0.096 0.771
+Sub16,movement3_speed1,Rest,EEG,1,Sub16_movement3_speed1.xdf,5181,21376,16196,1,16196,,,-20241.8418,-20859.209
+Sub16,movement3_speed1,Rest,IMU,1,Sub16_movement3_speed1.txt,429,2038,1610,1,1610,rows,,0.091 -0.196 0.952,0.098 -0.218 0.95
+Sub16,movement4_speed0,Move,EEG,1,Sub16_movement4_speed0.xdf,28886,79000,50115,1,50115,,,-19812.5488,-19788.7383
+Sub16,movement4_speed0,Move,IMU,1,Sub16_movement4_speed0.txt,2003,6979,4977,1,4977,rows,,0.008 -0.506 0.869,0.364 -0.305 0.816
+Sub16,movement4_speed0,Rest,EEG,1,Sub16_movement4_speed0.xdf,10510,26925,16416,1,16416,,,-19217.4902,-19770.4199
+Sub16,movement4_speed0,Rest,IMU,1,Sub16_movement4_speed0.txt,178,1808,1631,1,1631,rows,,0.032 -0.32 0.944,0.089 -0.311 0.94
+Sub16,movement4_speed1,Move,EEG,1,Sub16_movement4_speed1.xdf,22730,114483,91754,1,91754,,,-20006.5801,-24364.3945
+Sub16,movement4_speed1,Move,IMU,1,Sub16_movement4_speed1.txt,2120,11231,9112,1,9112,rows,,0.112 -0.194 0.97,-0.023 -0.065 0.958
+Sub16,movement4_speed1,Rest,EEG,1,Sub16_movement4_speed1.xdf,3507,20355,16849,1,16849,,,-19123.0371,-19967.6387
+Sub16,movement4_speed1,Rest,IMU,1,Sub16_movement4_speed1.txt,211,1883,1673,1,1673,rows,,0.066 -0.222 0.953,0.044 -0.211 0.975
+Sub16,movement5_speed0,Move,EEG,1,Sub16_movement5_speed0.xdf,21253,114735,93483,1,93483,,,-27691.6348,-32948.6094
+Sub16,movement5_speed0,Move,IMU,1,Sub16_movement5_speed0.txt,1961,11243,9283,1,9283,rows,,0.144 -0.129 0.984,0.035 -0.075 1.389
+Sub16,movement5_speed0,Rest,EEG,1,Sub16_movement5_speed0.xdf,3799,20123,16325,1,16325,,,-26122.082,-27611.8711
+Sub16,movement5_speed0,Rest,IMU,1,Sub16_movement5_speed0.txt,228,1849,1622,1,1622,rows,,0.141 -0.137 0.961,0.104 -0.106 0.967
+Sub16,movement5_speed1,Move,EEG,1,Sub16_movement5_speed1.xdf,24538,114876,90339,1,90339,,,-23547.1348,-14291.2578
+Sub16,movement5_speed1,Move,IMU,1,Sub16_movement5_speed1.txt,2383,11354,8972,1,8972,rows,,0.036 -0.399 0.932,0.016 -0.556 0.655
+Sub16,movement5_speed1,Rest,EEG,1,Sub16_movement5_speed1.xdf,5847,23023,17177,1,17177,,,-25247.3574,-24148.2363
+Sub16,movement5_speed1,Rest,IMU,1,Sub16_movement5_speed1.txt,527,2233,1707,1,1707,rows,,0.125 -0.149 0.966,0.145 -0.098 0.964
+Sub17,Sit,Rest,EEG,1,Sub17_sit.xdf,10877,168892,158016,1,158016,,,-11615.125,-21817.0605
+Sub17,Sit,Rest,IMU,1,Sub17_sit.txt,337,16027,15691,1,15691,rows,,0.106 -0.338 0.915,0.139 -0.375 0.901
+Sub17,movement0_speed0,Move,EEG,1,Sub17_movement0_speed0.xdf,20541,113776,93236,1,93236,,,-28631.5723,-30630.1172
+Sub17,movement0_speed0,Move,IMU,1,Sub17_movement0_speed0.txt,1892,11149,9258,1,9258,rows,,-0.029 -0.301 0.968,0.135 -0.221 0.939
+Sub17,movement0_speed0,Rest,EEG,1,Sub17_movement0_speed0.xdf,3903,20142,16240,1,16240,,,-28535.9121,-28613.2324
+Sub17,movement0_speed0,Rest,IMU,1,Sub17_movement0_speed0.txt,240,1852,1613,1,1613,rows,,0.016 -0.01 0.989,0.045 -0.176 0.977
+Sub17,movement0_speed1,Move,EEG,1,Sub17_movement0_speed1.xdf,23752,116739,92988,1,92988,,,-25243.1875,-27217.1738
+Sub17,movement0_speed1,Move,IMU,1,Sub17_movement0_speed1.txt,2183,11416,9234,1,9234,rows,,-0.012 -0.272 0.997,0.094 -0.121 0.882
+Sub17,movement0_speed1,Rest,EEG,1,Sub17_movement0_speed1.xdf,5697,22936,17240,1,17240,,,-24540.748,-25240.9336
+Sub17,movement0_speed1,Rest,IMU,1,Sub17_movement0_speed1.txt,390,2102,1713,1,1713,rows,,0.106 -0.125 0.963,0.173 -0.27 0.935
+Sub17,movement1_speed0,Move,EEG,1,Sub17_movement1_speed0.xdf,21253,114013,92761,1,92761,,,-35455.7734,-36436.1445
+Sub17,movement1_speed0,Move,IMU,1,Sub17_movement1_speed0.txt,1984,11194,9211,1,9211,rows,,0.098 -0.339 0.938,0.165 -0.391 0.861
+Sub17,movement1_speed0,Rest,EEG,1,Sub17_movement1_speed0.xdf,4221,20053,15833,1,15833,,,-35125.4102,-35502.8828
+Sub17,movement1_speed0,Rest,IMU,1,Sub17_movement1_speed0.txt,292,1864,1573,1,1573,rows,,-0.014 -0.109 1.006,0.129 -0.313 0.94
+Sub17,movement1_speed1,Move,EEG,1,Sub17_movement1_speed1.xdf,24429,115925,91497,1,91497,,,-32420.6934,-33224.543
+Sub17,movement1_speed1,Move,IMU,1,Sub17_movement1_speed1.txt,2068,11153,9086,1,9086,rows,,0.025 -0.308 0.943,0.13 -0.24 1.14
+Sub17,movement1_speed1,Rest,EEG,1,Sub17_movement1_speed1.xdf,6487,23814,17328,1,17328,,,-32014.1074,-32448.6992
+Sub17,movement1_speed1,Rest,IMU,1,Sub17_movement1_speed1.txt,286,2006,1721,1,1721,rows,,-0.132 -0.178 0.985,0.111 -0.242 0.947
+Sub17,movement2_speed0,Move,EEG,1,Sub17_movement2_speed0.xdf,25054,116466,91413,1,91413,,,-39010.5078,-40092.375
+Sub17,movement2_speed0,Move,IMU,1,Sub17_movement2_speed0.txt,2411,11488,9078,1,9078,rows,,0.126 -0.142 0.962,0.166 -0.115 0.974
+Sub17,movement2_speed0,Rest,EEG,1,Sub17_movement2_speed0.xdf,5301,23522,18222,1,18222,,,-38702.7773,-39039.0469
+Sub17,movement2_speed0,Rest,IMU,1,Sub17_movement2_speed0.txt,450,2260,1811,1,1811,rows,,0.114 -0.126 0.964,0.103 -0.174 0.974
+Sub17,movement2_speed1,Move,EEG,1,Sub17_movement2_speed1.xdf,24453,116167,91715,1,91715,,,-37268.9453,-38499.9414
+Sub17,movement2_speed1,Move,IMU,1,Sub17_movement2_speed1.txt,2329,11436,9108,1,9108,rows,,-0.024 -0.131 0.986,-0.003 -0.099 0.985
+Sub17,movement2_speed1,Rest,EEG,1,Sub17_movement2_speed1.xdf,6990,23250,16261,1,16261,,,-36953.7539,-37313.4531
+Sub17,movement2_speed1,Rest,IMU,1,Sub17_movement2_speed1.txt,595,2209,1615,1,1615,rows,,0.181 -0.22 0.955,0.18 -0.232 0.934
+Sub17,movement3_speed0,Move,EEG,1,Sub17_movement3_speed0.xdf,24159,115943,91785,1,91785,,,-40775.5664,-41806.7617
+Sub17,movement3_speed0,Move,IMU,1,Sub17_movement3_speed0.txt,2241,11354,9114,1,9114,rows,,0.099 -0.275 0.937,0.11 -0.164 0.97
+Sub17,movement3_speed0,Rest,EEG,1,Sub17_movement3_speed0.xdf,6156,22919,16764,1,16764,,,-40515.582,-40712.9727
+Sub17,movement3_speed0,Rest,IMU,1,Sub17_movement3_speed0.txt,454,2118,1665,1,1665,rows,,0.085 0.004 0.989,0.1 -0.177 0.976
+Sub17,movement3_speed1,Move,EEG,1,Sub17_movement3_speed1.xdf,28388,119875,91488,1,91488,,,-40785.8125,-41907.5859
+Sub17,movement3_speed1,Move,IMU,1,Sub17_movement3_speed1.txt,2272,11356,9085,1,9085,rows,,0.104 -0.094 0.946,0.143 -0.744 0.925
+Sub17,movement3_speed1,Rest,EEG,1,Sub17_movement3_speed1.xdf,8442,26050,17609,1,17609,,,-40554.8594,-40891.3047
+Sub17,movement3_speed1,Rest,IMU,1,Sub17_movement3_speed1.txt,291,2040,1750,1,1750,rows,,0.11 -0.127 0.961,0.11 -0.169 0.975
+Sub17,movement4_speed0,Move,EEG,1,Sub17_movement4_speed0.xdf,21303,113789,92487,1,92487,,,-41560.625,-43466.6133
+Sub17,movement4_speed0,Move,IMU,1,Sub17_movement4_speed0.txt,2035,11219,9185,1,9185,rows,,0.31 -0.378 0.845,0.084 -0.155 0.966
+Sub17,movement4_speed0,Rest,EEG,1,Sub17_movement4_speed0.xdf,3386,19949,16564,1,16564,,,-40369.1289,-41456.4375
+Sub17,movement4_speed0,Rest,IMU,1,Sub17_movement4_speed0.txt,256,1901,1646,1,1646,rows,,0.176 -0.028 0.975,0.222 -0.27 0.939
+Sub17,movement4_speed1,Move,EEG,1,Sub17_movement4_speed1.xdf,22879,115055,92177,1,92177,,,-42389.2109,-45119.6211
+Sub17,movement4_speed1,Move,IMU,1,Sub17_movement4_speed1.txt,1998,11151,9154,1,9154,rows,,0.033 -0.491 0.93,0.282 -0.033 0.918
+Sub17,movement4_speed1,Rest,EEG,1,Sub17_movement4_speed1.xdf,5563,21250,15688,1,15688,,,-42352.7188,-42319.8828
+Sub17,movement4_speed1,Rest,IMU,1,Sub17_movement4_speed1.txt,278,1835,1558,1,1558,rows,,0.014 0.057 0.99,0.064 -0.11 0.986
+Sub17,movement5_speed0,Move,EEG,1,Sub17_movement5_speed0.xdf,23393,118100,94708,1,94708,,,-24856.4746,-23937.625
+Sub17,movement5_speed0,Move,IMU,1,Sub17_movement5_speed0.txt,2161,11565,9405,1,9405,rows,,0.117 -0.146 0.998,-0.073 -0.152 0.92
+Sub17,movement5_speed0,Rest,EEG,1,Sub17_movement5_speed0.xdf,4674,21584,16911,1,16911,,,-26209.6406,-25027.7207
+Sub17,movement5_speed0,Rest,IMU,1,Sub17_movement5_speed0.txt,302,1981,1680,1,1680,rows,,0.06 -0.068 0.969,0.134 -0.298 0.932
+Sub17,movement5_speed1,Move,EEG,1,Sub17_movement5_speed1.xdf,27706,119974,92269,1,92269,,,-44968.9297,-32417.8281
+Sub17,movement5_speed1,Move,IMU,1,Sub17_movement5_speed1.txt,2585,11747,9163,1,9163,rows,,-0.011 -0.359 1.13,-0.366 -0.077 0.844
+Sub17,movement5_speed1,Rest,EEG,1,Sub17_movement5_speed1.xdf,10616,26367,15752,1,15752,,,-44602.4883,-44948.0898
+Sub17,movement5_speed1,Rest,IMU,1,Sub17_movement5_speed1.txt,888,2452,1565,1,1565,rows,,0.016 -0.204 0.974,0.106 -0.297 0.932
+Sub18,movement0_speed0,Move,EEG,1,Sub18_movement0_speed0.xdf,45920,142197,96278,1,96278,,,-90128.3047,-89678.6328
+Sub18,movement0_speed0,Move,IMU,1,Sub18_movement0_speed0.txt,3920,13362,9561,1,9561,rows,rows past the end of the IMU file: the last 118 slots are empty (n/a),-0.112 -0.193 0.91,-0.043 -0.192 0.975
+Sub18,movement0_speed0,Rest,EEG,1,Sub18_movement0_speed0.xdf,18255,35101,16847,1,16847,,,-91811.2578,-90150.9688
+Sub18,movement0_speed0,Rest,IMU,1,Sub18_movement0_speed0.txt,1173,2846,1674,1,1674,rows,,0.022 -0.094 0.989,-0.013 -0.188 0.963
+Sub18,movement0_speed1,Move,EEG,1,Sub18_movement0_speed1.xdf,152313,244554,92242,1,92242,,,-94965.8203,-91711.2344
+Sub18,movement0_speed1,Move,IMU,1,Sub18_movement0_speed1.txt,14955,24114,9160,1,9160,rows,,0.058 -0.11 1.502,-0.419 -0.331 1.111
+Sub18,movement0_speed1,Rest,EEG,1,Sub18_movement0_speed1.xdf,11988,28724,16737,1,16737,,,-93133.2969,-93309.1953
+Sub18,movement0_speed1,Rest,EEG,2,Sub18_movement0_speed1.xdf,151049,152028,980,16738,17717,,,-97993.4453,-94929.1562
+Sub18,movement0_speed1,Rest,IMU,1,Sub18_movement0_speed1.txt,1021,2682,1662,1,1662,rows,,-0.025 -0.028 0.99,0.018 -0.104 0.964
+Sub18,movement0_speed1,Rest,IMU,2,Sub18_movement0_speed1.txt,14830,14927,98,1663,1760,rows,,0.227 -0.434 0.904,-0.209 -0.156 0.928
+Sub18,movement1_speed0,Move,EEG,1,Sub18_movement1_speed0.xdf,32398,62992,30595,1,30595,,,-91360.9062,-91433.9375
+Sub18,movement1_speed0,Move,EEG,2,Sub18_movement1_speed0.xdf,64693,64917,225,30596,30820,,,-91757.1094,-91758.0703
+Sub18,movement1_speed0,Move,EEG,3,Sub18_movement1_speed0.xdf,82151,173132,90982,30821,121802,,,-92290.7422,-90191.9688
+Sub18,movement1_speed0,Move,IMU,1,Sub18_movement1_speed0.txt,4299,7336,3038,1,3038,rows,,-0.267 -0.203 1.056,-0.005 -0.16 0.945
+Sub18,movement1_speed0,Move,IMU,2,Sub18_movement1_speed0.txt,7506,7527,22,3039,3060,rows,,0.072 -0.169 1.001,0.18 -0.133 0.949
+Sub18,movement1_speed0,Move,IMU,3,Sub18_movement1_speed0.txt,9240,18274,9035,3061,12095,rows,,0.194 -0.162 0.855,-0.08 -0.269 0.874
+Sub18,movement1_speed0,Rest,EEG,1,Sub18_movement1_speed0.xdf,6065,27106,21042,1,21042,,,-91865.4141,-91685.9531
+Sub18,movement1_speed0,Rest,IMU,1,Sub18_movement1_speed0.txt,1684,3773,2090,1,2090,rows,,-0.03 -0.099 0.985,-0.081 -0.24 0.947
+Sub18,movement1_speed1,Move,EEG,1,Sub18_movement1_speed1.xdf,32704,125587,92884,1,92884,,,-89715.6641,-91253.8438
+Sub18,movement1_speed1,Move,IMU,1,Sub18_movement1_speed1.txt,3155,12378,9224,1,9224,rows,,0.099 -0.176 0.971,0.252 -0.615 1.204
+Sub18,movement1_speed1,Rest,EEG,1,Sub18_movement1_speed1.xdf,5696,22020,16325,1,16325,,,-91125.8047,-90458.7266
+Sub18,movement1_speed1,Rest,IMU,1,Sub18_movement1_speed1.txt,473,2094,1622,1,1622,rows,,-0.005 -0.163 0.968,-0.161 0.117 0.973
+Sub18,movement2_speed0,Move,EEG,1,Sub18_movement2_speed0.xdf,36417,127197,90781,1,90781,,,-90813.2578,-90422.2656
+Sub18,movement2_speed0,Move,IMU,1,Sub18_movement2_speed0.txt,3417,12431,9015,1,9015,rows,,0.093 -0.104 0.963,-0.128 -0.175 0.971
+Sub18,movement2_speed0,Rest,EEG,1,Sub18_movement2_speed0.xdf,16195,31733,15539,1,15539,,,-90627.875,-90749.8281
+Sub18,movement2_speed0,Rest,IMU,1,Sub18_movement2_speed0.txt,1409,2952,1544,1,1544,rows,,0.066 -0.095 0.985,0.028 -0.224 0.95
+Sub18,movement2_speed1,Move,EEG,1,Sub18_movement2_speed1.xdf,36734,132413,95680,1,95680,,,-90691.3203,-90209.9297
+Sub18,movement2_speed1,Move,IMU,1,Sub18_movement2_speed1.txt,3488,12988,9501,1,9501,rows,,0.054 -0.119 0.984,0.101 -0.171 0.963
+Sub18,movement2_speed1,Rest,EEG,1,Sub18_movement2_speed1.xdf,7188,31672,24485,1,24485,,,-89401.8828,-90924.1094
+Sub18,movement2_speed1,Rest,IMU,1,Sub18_movement2_speed1.txt,554,2985,2432,1,2432,rows,,0.032 -0.082 0.988,0.047 -0.155 0.962
+Sub18,movement3_speed0,Move,EEG,1,Sub18_movement3_speed0.xdf,93559,94707,1149,1,1149,,,-90302.8906,-90247.125
+Sub18,movement3_speed0,Move,EEG,2,Sub18_movement3_speed0.xdf,94888,160379,65492,1150,66641,,,-90325.2344,-90087.3359
+Sub18,movement3_speed0,Move,IMU,1,Sub18_movement3_speed0.txt,9240,9353,114,1,114,rows,,0.064 0.154 0.972,0.012 -0.237 0.95
+Sub18,movement3_speed0,Move,IMU,2,Sub18_movement3_speed0.txt,9373,15876,6504,115,6618,rows,,0.01 -0.247 0.946,-0.027 -0.063 0.974
+Sub18,movement3_speed0,Rest,EEG,1,Sub18_movement3_speed0.xdf,3946,25081,21136,1,21136,,,-87193.7344,-88616.0469
+Sub18,movement3_speed0,Rest,IMU,1,Sub18_movement3_speed0.txt,343,2442,2100,1,2100,rows,,-0.048 0.001 0.989,-0.054 -0.122 0.966
+Sub18,movement3_speed1,Move,EEG,1,Sub18_movement3_speed1.xdf,25479,115663,90185,1,90185,,,-89711.7109,-90996.4219
+Sub18,movement3_speed1,Move,IMU,1,Sub18_movement3_speed1.txt,2423,11377,8955,1,8955,rows,,0.066 0.098 0.963,0.024 0.099 0.992
+Sub18,movement3_speed1,Rest,EEG,1,Sub18_movement3_speed1.xdf,6001,22963,16963,1,16963,,,-88843.2266,-89782.75
+Sub18,movement3_speed1,Rest,IMU,1,Sub18_movement3_speed1.txt,489,2173,1685,1,1685,rows,,0.082 -0.06 0.963,0.071 -0.128 0.966
+Sub18,movement4_speed0,Move,EEG,1,Sub18_movement4_speed0.xdf,24700,115636,90937,1,90937,,,-90123.4766,-87299.7266
+Sub18,movement4_speed0,Move,IMU,1,Sub18_movement4_speed0.txt,2380,11409,9030,1,9030,rows,,0.1 -0.109 0.948,-0.335 -0.313 1.033
+Sub18,movement4_speed0,Rest,EEG,1,Sub18_movement4_speed0.xdf,5006,22011,17006,1,17006,,,-91504.4062,-88069.3047
+Sub18,movement4_speed0,Rest,IMU,1,Sub18_movement4_speed0.txt,425,2114,1690,1,1690,rows,,0.023 -0.163 0.985,-0.032 -0.254 0.947
+Sub18,movement4_speed1,Move,EEG,1,Sub18_movement4_speed1.xdf,26115,79543,53429,1,53429,,,-89731.1797,-91306.3594
+Sub18,movement4_speed1,Move,EEG,2,Sub18_movement4_speed1.xdf,102269,142788,40520,53430,93949,,,-90336.7656,-82020.5078
+Sub18,movement4_speed1,Move,IMU,1,Sub18_movement4_speed1.txt,2545,7850,5306,1,5306,rows,,0.074 -0.804 1.47,0.044 -0.346 0.922
+Sub18,movement4_speed1,Move,IMU,2,Sub18_movement4_speed1.txt,10108,14131,4024,5307,9330,rows,,-0.165 -0.12 0.84,0.067 0.074 0.717
+Sub18,movement4_speed1,Rest,EEG,1,Sub18_movement4_speed1.xdf,3047,3406,360,1,360,,,-90497.1719,-90374.1328
+Sub18,movement4_speed1,Rest,EEG,2,Sub18_movement4_speed1.xdf,4807,21716,16910,361,17270,,,-90051.3984,-89612.7109
+Sub18,movement4_speed1,Rest,EEG,3,Sub18_movement4_speed1.xdf,25615,25897,283,17271,17553,,,-89634.5156,-89706.7109
+Sub18,movement4_speed1,Rest,IMU,1,Sub18_movement4_speed1.txt,254,289,36,1,36,rows,,0.053 -0.151 0.961,0.029 -0.168 0.974
+Sub18,movement4_speed1,Rest,IMU,2,Sub18_movement4_speed1.txt,430,2107,1678,37,1714,rows,,-0.045 -0.174 0.916,-0.038 -0.124 0.965
+Sub18,movement4_speed1,Rest,IMU,3,Sub18_movement4_speed1.txt,2496,2525,30,1715,1744,rows,,-0.019 -0.006 1.006,-0.11 -0.402 0.818
+Sub18,movement5_speed0,Move,EEG,1,Sub18_movement5_speed0.xdf,26768,116598,89831,1,89831,,,-86987.6953,-72608.1562
+Sub18,movement5_speed0,Move,IMU,1,Sub18_movement5_speed0.txt,2570,11489,8920,1,8920,rows,,0.119 -0.682 0.635,0.171 -0.609 1.115
+Sub18,movement5_speed0,Rest,EEG,1,Sub18_movement5_speed0.xdf,5164,24592,19429,1,19429,,,-83124.2266,-86947.3828
+Sub18,movement5_speed0,Rest,IMU,1,Sub18_movement5_speed0.txt,435,2354,1930,1,1930,slot map,,-0.024 -0.39 0.898,0.081 -0.459 0.895
+Sub18,movement5_speed1,Move,EEG,1,Sub18_movement5_speed1.xdf,35791,125732,89942,1,89942,,,-92850.5234,-77047.0547
+Sub18,movement5_speed1,Move,IMU,1,Sub18_movement5_speed1.txt,7381,16311,8931,1,8931,rows,,0.485 -1.067 0.612,-0.279 -0.49 0.954
+Sub18,movement5_speed1,Rest,EEG,1,Sub18_movement5_speed1.xdf,6606,32836,26231,1,26231,,,-96146.6094,-96127.9531
+Sub18,movement5_speed1,Rest,IMU,1,Sub18_movement5_speed1.txt,4483,7087,2605,1,2605,rows,,-0.004 -0.256 0.952,-0.031 -0.228 0.933
+Sub18,sit,Rest,EEG,1,Sub18_sit.xdf,9142,160293,151152,1,151152,,,-94952.9219,-92165.2891
+Sub18,sit,Rest,IMU,1,Sub18_sit.txt,494,15502,15009,1,15009,rows,,0.178 -0.384 0.885,-0.08 -0.39 0.913
+Sub19,Sit,Rest,EEG,1,Sub19_Sit.xdf,3763,153763,150001,1,150001,,,-95955.6875,-93705.7188
+Sub19,Sit,Rest,IMU,1,Sub19_Sit.txt,299,15193,14895,1,14895,rows,,-0.044 -0.292 0.936,-0.03 -0.335 0.94
+Sub19,movement0_speed0,Move,EEG,1,Sub19_movement0_speed0.xdf,22057,112552,90496,1,90496,,,-93215.9766,-93330.3047
+Sub19,movement0_speed0,Move,IMU,1,Sub19_movement0_speed0.txt,2087,11073,8987,1,8987,rows,,0.037 -0.047 0.941,0.148 -0.07 0.668
+Sub19,movement0_speed0,Rest,EEG,1,Sub19_movement0_speed0.xdf,4370,20922,16553,1,16553,,,-93477.6562,-93193.4219
+Sub19,movement0_speed0,Rest,IMU,1,Sub19_movement0_speed0.txt,330,1974,1645,1,1645,rows,,-0.08 0.062 0.986,-0.05 -0.048 0.989
+Sub19,movement0_speed1,Move,EEG,1,Sub19_movement0_speed1.xdf,65391,122696,57306,1,57306,,,-82283.7031,-88875.8906
+Sub19,movement0_speed1,Move,EEG,2,Sub19_movement0_speed1.xdf,138662,173792,35131,57307,92437,,,-89785.2891,-89386.0859
+Sub19,movement0_speed1,Move,IMU,1,Sub19_movement0_speed1.txt,13262,18951,5690,1,5690,rows,,-0.031 -0.03 0.981,-0.119 -0.063 0.98
+Sub19,movement0_speed1,Move,IMU,2,Sub19_movement0_speed1.txt,20538,24027,3490,5691,9180,rows,,-0.07 -0.091 1.28,-0.083 0.056 0.903
+Sub19,movement0_speed1,Rest,EEG,1,Sub19_movement0_speed1.xdf,6337,22748,16412,1,16412,,,-92359.5156,-91546.7344
+Sub19,movement0_speed1,Rest,IMU,1,Sub19_movement0_speed1.txt,7398,9028,1631,1,1631,rows,,-0.095 0.032 0.968,-0.069 -0.021 0.987
+Sub19,movement1_speed0,Move,EEG,1,Sub19_movement1_speed0.xdf,19277,109816,90540,1,90540,,,-102013.539,-103479.289
+Sub19,movement1_speed0,Move,IMU,1,Sub19_movement1_speed0.txt,1827,10818,8992,1,8992,rows,,-0.079 -0.043 1.094,-0.163 -0.05 0.973
+Sub19,movement1_speed0,Rest,EEG,1,Sub19_movement1_speed0.xdf,4055,18908,14854,1,14854,,,-100661.812,-102117.719
+Sub19,movement1_speed0,Rest,IMU,1,Sub19_movement1_speed0.txt,316,1791,1476,1,1476,rows,,-0.062 0.13 0.962,-0.044 -0.026 0.926
+Sub19,movement1_speed1,Move,EEG,1,Sub19_movement1_speed1.xdf,19566,109853,90288,1,90288,,,-93749.5859,-95626.5234
+Sub19,movement1_speed1,Move,IMU,1,Sub19_movement1_speed1.txt,1882,10847,8966,1,8966,rows,,0.02 -0.015 1.037,0.03 0.067 0.967
+Sub19,movement1_speed1,Rest,EEG,1,Sub19_movement1_speed1.xdf,3168,19253,16086,1,16086,,,-94500.7969,-93725.7578
+Sub19,movement1_speed1,Rest,IMU,1,Sub19_movement1_speed1.txt,254,1851,1598,1,1598,rows,,-0.101 0.074 0.966,-0.589 -0.003 1.23
+Sub19,movement2_speed0,Move,EEG,1,Sub19_movement2_speed0.xdf,20872,111036,90165,1,90165,,,-102948.289,-102823.43
+Sub19,movement2_speed0,Move,IMU,1,Sub19_movement2_speed0.txt,1803,10756,8954,1,8954,rows,,-0.076 0.006 0.986,-0.174 0.429 0.854
+Sub19,movement2_speed0,Rest,EEG,1,Sub19_movement2_speed0.xdf,5137,20162,15026,1,15026,,,-103341.75,-102787.414
+Sub19,movement2_speed0,Rest,IMU,1,Sub19_movement2_speed0.txt,240,1732,1493,1,1493,rows,,-0.072 0.108 0.961,-0.096 0.006 0.985
+Sub19,movement2_speed1,Move,EEG,1,Sub19_movement2_speed1.xdf,17960,107462,89503,1,89503,,,-101865.156,-102595.242
+Sub19,movement2_speed1,Move,IMU,1,Sub19_movement2_speed1.txt,1753,10640,8888,1,8888,rows,,-0.091 0.012 0.971,-0.012 0.14 0.985
+Sub19,movement2_speed1,Rest,EEG,1,Sub19_movement2_speed1.xdf,3944,17313,13370,1,13370,,,-102750.18,-101753.547
+Sub19,movement2_speed1,Rest,IMU,1,Sub19_movement2_speed1.txt,361,1688,1328,1,1328,rows,,-0.069 0.112 0.963,-0.066 0.099 0.964
+Sub19,movement3_speed0,Move,EEG,1,Sub19_movement3_speed0.xdf,23038,85144,62107,1,62107,,,-91185,-99695.9844
+Sub19,movement3_speed0,Move,EEG,2,Sub19_movement3_speed0.xdf,97162,133639,36478,62108,98585,,,-100355.609,-102434.352
+Sub19,movement3_speed0,Move,IMU,1,Sub19_movement3_speed0.txt,2247,8413,6167,1,6167,rows,,-0.045 0.194 0.97,-0.123 0.307 0.924
+Sub19,movement3_speed0,Move,IMU,2,Sub19_movement3_speed0.txt,9608,13230,3623,6168,9790,rows,,0.085 -0.381 0.941,-0.075 -0.11 0.963
+Sub19,movement3_speed0,Rest,EEG,1,Sub19_movement3_speed0.xdf,3217,22582,19366,1,19366,,,-86319.6172,-91084.1094
+Sub19,movement3_speed0,Rest,IMU,1,Sub19_movement3_speed0.txt,279,2201,1923,1,1923,rows,,-0.019 0.036 0.968,-0.042 0.202 0.95
+Sub19,movement3_speed1,Move,EEG,1,Sub19_movement3_speed1.xdf,25956,122300,96345,1,96345,,,-102794.789,-101651.453
+Sub19,movement3_speed1,Move,IMU,1,Sub19_movement3_speed1.txt,2468,12035,9568,1,9568,rows,,-0.006 -0.517 0.752,-0.012 -0.726 0.91
+Sub19,movement3_speed1,Rest,EEG,1,Sub19_movement3_speed1.xdf,3344,20726,17383,1,17383,,,-103438.398,-102732.938
+Sub19,movement3_speed1,Rest,IMU,1,Sub19_movement3_speed1.txt,223,1949,1727,1,1727,rows,,-0.077 0.149 0.975,-0.074 0.119 0.963
+Sub19,movement4_speed0,Move,EEG,1,Sub19_movement4_speed0.xdf,19265,109623,90359,1,90359,,,-36376.3438,-33458.8789
+Sub19,movement4_speed0,Move,IMU,1,Sub19_movement4_speed0.txt,1865,10837,8973,1,8973,rows,,-0.028 -0.984 0.544,-0.303 -0.135 0.892
+Sub19,movement4_speed0,Rest,EEG,1,Sub19_movement4_speed0.xdf,3590,19030,15441,1,15441,,,-36874.2422,-36401.8555
+Sub19,movement4_speed0,Rest,IMU,1,Sub19_movement4_speed0.txt,308,1841,1534,1,1534,rows,,-0.016 -0.049 0.967,-0.039 -0.801 0.566
+Sub19,movement4_speed1,Move,EEG,1,Sub19_movement4_speed1.xdf,22557,112530,89974,1,89974,,,-72470.9844,-38353.1914
+Sub19,movement4_speed1,Move,IMU,1,Sub19_movement4_speed1.txt,2155,11089,8935,1,8935,rows,,-0.06 -0.267 0.985,0.174 0.152 0.935
+Sub19,movement4_speed1,Rest,EEG,1,Sub19_movement4_speed1.xdf,3777,21799,18023,1,18023,,,-72397.8125,-72088.9453
+Sub19,movement4_speed1,Rest,IMU,1,Sub19_movement4_speed1.txt,290,2080,1791,1,1791,rows,,-0.057 0.053 0.986,-0.032 0.01 0.991
+Sub19,movement5_speed0,Move,EEG,1,Sub19_movement5_speed0.xdf,47594,80399,32806,1,32806,,,-31536.8711,-26755.4824
+Sub19,movement5_speed0,Move,IMU,1,Sub19_movement5_speed0.txt,4662,7919,3258,1,3258,rows,,-0.153 -0.075 0.979,-0.02 -0.668 0.746
+Sub19,movement5_speed0,Rest,EEG,1,Sub19_movement5_speed0.xdf,29726,46948,17223,1,17223,,,-28059.2383,-31491.4277
+Sub19,movement5_speed0,Rest,IMU,1,Sub19_movement5_speed0.txt,2888,4598,1711,1,1711,rows,,-0.129 0.1 0.965,-0.089 -0.16 0.968
+Sub19,movement5_speed1,Move,EEG,1,Sub19_movement5_speed1.xdf,19035,107117,88083,1,88083,,,-48048.2969,-35126.1992
+Sub19,movement5_speed1,Move,IMU,1,Sub19_movement5_speed1.txt,1813,10559,8747,1,8747,rows,,-0.184 -0.232 1.333,-0.058 -0.396 1.393
+Sub19,movement5_speed1,Rest,EEG,1,Sub19_movement5_speed1.xdf,3712,18264,14553,1,14553,,,-49262.7031,-47977.0547
+Sub19,movement5_speed1,Rest,IMU,1,Sub19_movement5_speed1.txt,292,1737,1446,1,1446,rows,,-0.081 0.11 0.967,-0.055 0.014 0.978
+Sub20,Sit,Rest,EEG,1,Sub20_sit.xdf,5019,92508,87490,1,87490,,,-83193.125,-81696.6719
+Sub20,Sit,Rest,EEG,2,Sub20_sit.xdf,108899,227161,118263,87491,205753,,,-81802.5156,-79639.6016
+Sub20,Sit,Rest,IMU,1,Sub20_Sit.txt,233,8920,8688,1,8688,rows,,-0.017 -0.209 0.971,-0.077 -0.327 0.938
+Sub20,Sit,Rest,IMU,2,Sub20_Sit.txt,10549,22291,11743,8689,20431,rows,,0.128 -0.383 0.911,0.055 -0.069 0.986
+Sub20,movement0_speed0,Move,EEG,1,Sub20_movement0_speed0.xdf,22218,114027,91810,1,91810,,,-76997.2734,-77722.8359
+Sub20,movement0_speed0,Move,IMU,1,Sub20_movement0_speed0.txt,2035,11152,9118,1,9118,rows,,-0.139 0.016 0.987,-0.064 0.204 1.195
+Sub20,movement0_speed0,Rest,EEG,1,Sub20_movement0_speed0.xdf,4759,21008,16250,1,16250,,,-78306.9922,-76915.9297
+Sub20,movement0_speed0,Rest,IMU,1,Sub20_movement0_speed0.txt,301,1914,1614,1,1614,rows,,-0.028 0.024 0.967,-0.012 0.116 0.965
+Sub20,movement0_speed1,Move,EEG,1,Sub20_movement0_speed1.xdf,23866,115648,91783,1,91783,,,-78445.3203,-77704.5547
+Sub20,movement0_speed1,Move,IMU,1,Sub20_movement0_speed1.txt,2349,11462,9114,1,9114,rows,,0.107 -0.084 0.857,0.161 0.107 0.965
+Sub20,movement0_speed1,Rest,EEG,1,Sub20_movement0_speed1.xdf,4048,21537,17490,1,17490,,,-78458.8906,-78411.8516
+Sub20,movement0_speed1,Rest,IMU,1,Sub20_movement0_speed1.txt,381,2117,1737,1,1737,rows,,0.009 0.053 0.974,0.062 0.031 0.986
+Sub20,movement1_speed0,Move,EEG,1,Sub20_movement1_speed0.xdf,37114,145597,108484,1,108484,,,-81374.5781,-71950.1875
+Sub20,movement1_speed0,Move,IMU,1,Sub20_movement1_speed0.txt,3497,14269,10773,1,10773,rows,,0.257 -0.008 0.945,-0.055 -0.553 0.851
+Sub20,movement1_speed0,Rest,EEG,1,Sub20_movement1_speed0.xdf,4108,35377,31270,1,31270,,,-80576.8516,-81190.5938
+Sub20,movement1_speed0,Rest,IMU,1,Sub20_movement1_speed0.txt,219,3324,3106,1,3106,rows,,-0.003 0.061 0.985,0.011 0.045 0.989
+Sub20,movement1_speed1,Move,EEG,1,Sub20_movement1_speed1.xdf,31729,122831,91103,1,91103,,,-78466.8906,-79357.8828
+Sub20,movement1_speed1,Move,IMU,1,Sub20_movement1_speed1.txt,2829,11875,9047,1,9047,rows,,0.173 -0.049 0.841,0.052 -0.231 1.08
+Sub20,movement1_speed1,Rest,EEG,1,Sub20_movement1_speed1.xdf,5887,22022,16136,1,16136,,,-76965.6875,-78959.7422
+Sub20,movement1_speed1,Rest,IMU,1,Sub20_movement1_speed1.txt,262,1864,1603,1,1603,rows,,0.04 0.01 0.988,0.053 0.063 0.985
+Sub20,movement2_speed0,Move,EEG,1,Sub20_movement2_speed0.xdf,21036,112008,90973,1,90973,,,-84511.1172,-86643.625
+Sub20,movement2_speed0,Move,IMU,1,Sub20_movement2_speed0.txt,2046,11079,9034,1,9034,rows,,0.009 0.144 0.967,-0.156 -0.008 0.962
+Sub20,movement2_speed0,Rest,EEG,1,Sub20_movement2_speed0.xdf,2942,19905,16964,1,16964,,,-83099.9141,-84327.1016
+Sub20,movement2_speed0,Rest,IMU,1,Sub20_movement2_speed0.txt,249,1934,1686,1,1686,rows,,-0.035 0.065 0.987,-0.004 -0.018 0.992
+Sub20,movement2_speed1,Move,EEG,1,Sub20_movement2_speed1.xdf,32061,122318,90258,1,90258,,,-83348.4922,-83937.4922
+Sub20,movement2_speed1,Move,IMU,1,Sub20_movement2_speed1.txt,3064,12026,8963,1,8963,rows,,-0.022 0.068 0.986,-0.003 -0.051 0.887
+Sub20,movement2_speed1,Rest,EEG,1,Sub20_movement2_speed1.xdf,3074,18955,15882,1,15882,,,-75450.9688,-74024
+Sub20,movement2_speed1,Rest,IMU,1,Sub20_movement2_speed1.txt,186,1763,1578,1,1578,rows,,0.013 0.013 0.965,0.073 0.065 0.984
+Sub20,movement3_speed0,Move,EEG,1,Sub20_movement3_speed0.xdf,21678,111880,90203,1,90203,,,-52518.0117,-63076.5586
+Sub20,movement3_speed0,Move,IMU,1,Sub20_movement3_speed0.txt,2089,11046,8958,1,8958,rows,,-0.026 0.269 0.954,-0.098 0.465 0.871
+Sub20,movement3_speed0,Rest,EEG,1,Sub20_movement3_speed0.xdf,2825,19972,17148,1,17148,,,-43570.0469,-51570.5391
+Sub20,movement3_speed0,Rest,IMU,1,Sub20_movement3_speed0.txt,217,1920,1704,1,1704,rows,,-0.047 0.088 0.969,0.053 0.074 0.965
+Sub20,movement3_speed1,Move,EEG,1,Sub20_movement3_speed1.xdf,21793,32443,10651,1,10651,,,-89459.2812,-89219.4141
+Sub20,movement3_speed1,Move,EEG,2,Sub20_movement3_speed1.xdf,41160,120722,79563,10652,90214,,,-89571.6406,-91091.3672
+Sub20,movement3_speed1,Move,IMU,1,Sub20_movement3_speed1.txt,2067,3124,1058,1,1058,rows,,0.008 0.138 0.954,-0.218 0.617 0.759
+Sub20,movement3_speed1,Move,IMU,2,Sub20_movement3_speed1.txt,3991,11891,7901,1059,8959,rows,,-0.179 0.428 0.889,0.087 -0.237 0.935
+Sub20,movement3_speed1,Rest,EEG,1,Sub20_movement3_speed1.xdf,3345,19609,16265,1,16265,,,-88857.6641,-89662.5156
+Sub20,movement3_speed1,Rest,IMU,1,Sub20_movement3_speed1.txt,235,1850,1616,1,1616,rows,,0.014 0.023 0.974,0.029 0.056 0.968
+Sub20,movement4_speed0,Move,EEG,1,Sub20_movement4_speed0.xdf,24481,116223,91743,1,91743,,,-83085.7969,-63201.7773
+Sub20,movement4_speed0,Move,IMU,1,Sub20_movement4_speed0.txt,2344,11453,9110,1,9110,rows,,0.093 -0.304 1.496,-0.007 0.045 0.933
+Sub20,movement4_speed0,Rest,EEG,1,Sub20_movement4_speed0.xdf,5918,22955,17038,1,17038,,,-81262.3438,-83061
+Sub20,movement4_speed0,Rest,IMU,1,Sub20_movement4_speed0.txt,501,2193,1693,1,1693,rows,,-0.057 0.085 1.019,0.002 0.044 0.985
+Sub20,movement4_speed1,Move,EEG,1,Sub20_movement4_speed1.xdf,24372,63068,38697,1,38697,,,-64130.1484,-63518.3516
+Sub20,movement4_speed1,Move,EEG,2,Sub20_movement4_speed1.xdf,131478,181674,50197,38698,88894,,,-72319.6328,-71562.8438
+Sub20,movement4_speed1,Move,IMU,1,Sub20_movement4_speed1.txt,2378,6219,3842,1,3842,rows,,0.232 -0.448 0.785,-0.176 -0.324 1.052
+Sub20,movement4_speed1,Move,IMU,2,Sub20_movement4_speed1.txt,13014,17998,4985,3843,8827,rows,,-0.009 -0.381 1.161,0.12 -0.307 0.86
+Sub20,movement4_speed1,Rest,EEG,1,Sub20_movement4_speed1.xdf,2267,22252,19986,1,19986,,,-63691.5664,-64476.5625
+Sub20,movement4_speed1,Rest,IMU,1,Sub20_movement4_speed1.txt,183,2167,1985,1,1985,rows,,-0.016 0.059 0.971,0.022 -0.006 0.978
+Sub20,movement5_speed0,Move,EEG,1,Sub20_movement5_speed0.xdf,23020,33813,10794,1,10794,,,-74723.5312,-76623.8438
+Sub20,movement5_speed0,Move,EEG,2,Sub20_movement5_speed0.xdf,35600,123193,87594,10795,98388,,,-76360.6328,-77223.5156
+Sub20,movement5_speed0,Move,IMU,1,Sub20_movement5_speed0.txt,2105,3176,1072,1,1072,rows,,-0.007 0.065 1.153,-0.066 0.108 0.991
+Sub20,movement5_speed0,Move,IMU,2,Sub20_movement5_speed0.txt,3355,12053,8699,1073,9771,rows,,0.001 0.331 1.214,0.032 0.269 0.891
+Sub20,movement5_speed0,Rest,EEG,1,Sub20_movement5_speed0.xdf,4166,21439,17274,1,17274,,,-78809.5547,-74252.2422
+Sub20,movement5_speed0,Rest,IMU,1,Sub20_movement5_speed0.txt,233,1948,1716,1,1716,rows,,-0.033 0.091 0.965,0.095 -0.049 0.988
+Sub20,movement5_speed1,Move,EEG,1,Sub20_movement5_speed1.xdf,23335,112777,89443,1,89443,,,-78833.4922,-57769.3164
+Sub20,movement5_speed1,Move,IMU,1,Sub20_movement5_speed1.txt,2185,11066,8882,1,8882,rows,,0.017 -0.257 0.868,0.156 -0.225 0.949
+Sub20,movement5_speed1,Rest,EEG,1,Sub20_movement5_speed1.xdf,3856,21818,17963,1,17963,,,-82336.0156,-79305.75
+Sub20,movement5_speed1,Rest,IMU,1,Sub20_movement5_speed1.txt,251,2034,1784,1,1784,rows,,-0.004 0.053 0.948,0.053 -0.073 0.987

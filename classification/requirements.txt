@@ -1,0 +1,8 @@
+torch==2.8.0
+scikit-learn==1.6.1
+einops==0.8.1
+tqdm==4.67.1
+PyYAML==6.0.3
+mne==1.4.2
+numpy==2.0.2
+scipy==1.13.1

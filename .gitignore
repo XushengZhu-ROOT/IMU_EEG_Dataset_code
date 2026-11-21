@@ -1,1 +1,9 @@
 .DS_Store
+__pycache__/
+*.pyc
+*.asv
+out/
+pretrained_weights/
+models_weights/
+fold_results/
+epochs/
