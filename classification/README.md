@@ -1,6 +1,6 @@
 # Movement classification
 
-The pretrained EEG model CBraMod is fine-tuned to classify 1-s EEG epochs of the movement periods into the six movements (labels 0-5: walkstraight, walkcurved, headshake, headnod, pickup, stairs). Leave-one-subject-out cross-validation runs 20 folds; in each fold one participant is the test set, another participant the validation set and the other 18 the training set. Each fold trains for 50 epochs, and the weights of the epoch with the highest balanced accuracy on the validation participant give the test predictions.
+The pretrained EEG model CBraMod is fine-tuned to classify 1-s EEG epochs of the movement periods into the six movements (labels 0-5: walkstraight, walkcurved, headshake, headnod, pickup, stairs). Leave-one-subject-out cross-validation runs 20 folds (test, validation and 18 training participants); each fold trains for 50 epochs and keeps the epoch with the best validation balanced accuracy.
 
 ## Input
 
@@ -26,8 +26,8 @@ The MATLAB functions need EEGLAB with the CleanLine and clean_rawdata plugins. T
 
        bash classification/run_loso.sh
 
-Each fold folder holds the selected model (`best_model_*.pth`), `config.yaml`, `training_logs.json`, `training_summary.json` and the test predictions: `motortask_cbramod_foldNN.npz` (epoch_id, y_true, y_pred, y_prob, subject_id) and `motortask_cbramod_foldNN.json` (participants, selected epoch, balanced accuracy, settings). In `training_summary.json`, `test_bacc` is the balanced accuracy and `test_f1` the macro-F1 over the classes present in the test participant.
+Each fold writes the selected model, its training logs and the test predictions (`motortask_cbramod_foldNN.npz`).
 
 ## Origin
 
-The training code (`finetune_*.py`, `datasets/`, `models/`) and `run_loso.sh` are the six-movement part of `cbramod_finetune` in [EEG-Review-Paper-Repo](https://github.com/XushengZhu-ROOT/EEG-Review-Paper-Repo) (commit c0a6ae6), with participant labels as in the dataset; `make_epochs.py` holds the epoching that prepared its input. The training code is adapted from [CBraMod](https://github.com/wjq-learning/CBraMod) (MIT licence, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)); `models/cbramod.py` and `models/criss_cross_transformer.py` are unchanged copies. `preprocess_eeg_forASR.m` and `apply_asr.m` were written by Ella (HsinYu) Shih.
+The training code is the six-movement part of `cbramod_finetune` in [EEG-Review-Paper-Repo](https://github.com/XushengZhu-ROOT/EEG-Review-Paper-Repo), adapted from [CBraMod](https://github.com/wjq-learning/CBraMod) (MIT licence, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
