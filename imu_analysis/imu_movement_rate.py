@@ -1,6 +1,6 @@
 """Movement rate and intensity of every Move segment with usable IMU data. Rate: one-way time across the room in s
 (straight walking), steps per minute (curved walking, stairs), cycles per minute (head shaking, nodding), pick-ups per
-minute (picking up); also for the first and last 60 s. Intensity: rms acceleration at 0.3-10 Hz (g).
+minute (picking up). Intensity: rms acceleration at 0.3-10 Hz (g). Both also for the first and last 60 s.
 
     python imu_analysis/imu_movement_rate.py --bids /path/to/dataset --out /path/to/output
 
@@ -119,7 +119,8 @@ def one_segment(g, Y0, scale=GYRO_SCALE):
     ghat = acc.mean(0) / np.linalg.norm(acc.mean(0))
     a_v = acc @ ghat
     r = dict(sub=g.sub, cond=g.cond, movement=mv, task=TASK[mv], speed=g.speed, duration_s=round(dur, 2), imu_usable=g.imu_usable,
-             intensity_acc_g=intensity(acc), gyro_rms=round(float(np.sqrt((band(gyro, 0.3, 10.0) ** 2).sum(1).mean())), 2))
+             intensity_acc_g=intensity(acc), gyro_rms=round(float(np.sqrt((band(gyro, 0.3, 10.0) ** 2).sum(1).mean())), 2),
+             intensity_first_60s=intensity(acc[:int(60 * FS)]), intensity_last_60s=intensity(acc[-int(60 * FS):]))
     cad, q = cadence(a_v)
     first, last = None, None
     if mv in (0, 1, 5):
@@ -184,6 +185,10 @@ def summary(T):
             rows.append(dict(task=task, measure='first 60 s vs last 60 s (both speeds)', unit=x.main_unit.iloc[0], n_pairs=len(fl),
                              slow_median=round(fl.first_60s.median(), 2), fast_median=round(fl.last_60s.median(), 2),
                              wilcoxon_p=float(f'{stats.wilcoxon(fl.last_60s, fl.first_60s).pvalue:.2e}')))
+        fi = x[['intensity_first_60s', 'intensity_last_60s']].astype(float).dropna()
+        rows.append(dict(task=task, measure='intensity, first 60 s vs last 60 s (both speeds)', unit='g (0.3-10 Hz rms)', n_pairs=len(fi),
+                         slow_median=round(fi.intensity_first_60s.median(), 3), fast_median=round(fi.intensity_last_60s.median(), 3),
+                         wilcoxon_p=float(f'{stats.wilcoxon(fi.intensity_last_60s, fi.intensity_first_60s).pvalue:.2e}')))
     return pd.DataFrame(rows)
 
 

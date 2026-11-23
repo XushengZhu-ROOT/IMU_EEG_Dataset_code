@@ -84,8 +84,10 @@ def run_subject(sub):
 
 
 def summary(T, K):
+    S = rs.load_tables()['segments'][['sub', 'cond', 'seg', 'eeg_channels']]
+    T = T.merge(S, on=['sub', 'cond', 'seg'], how='left')
     res = T[(T.seg == 'Rest') & (T.imu_usable != 'no')]
-    mv = T[(T.seg == 'Move') & T.R11.notna()]
+    mv = T[(T.seg == 'Move') & T.R11.notna() & (T.eeg_channels == '1-20')]    # the 30-channel headset has other CGX axes
     Rm = np.array([[mv[f'R{i + 1}{j + 1}'].mean() for j in range(3)] for i in range(3)])
     U, _, Vt = np.linalg.svd(Rm)
     Rp = U @ Vt
@@ -99,12 +101,13 @@ def summary(T, K):
     def iqr(x, d):
         return f'{x.median():.{d}f} [{x.quantile(.25):.{d}f}, {x.quantile(.75):.{d}f}]'
 
-    def xyz(p):
-        return f"x {res[p + 'x'].mean():.3f}, y {res[p + 'y'].mean():.3f}, z {res[p + 'z'].mean():.3f}"
+    def xyz(p, f='mean'):
+        return ', '.join(f"{a} {getattr(res[p + a], f)():.3f}" for a in 'xyz')
 
-    rows = [('gravity at Rest, mean over segments (g)', xyz('imu_g_'), len(res)),
+    G = res[['imu_g_x', 'imu_g_y', 'imu_g_z']]
+    rows = [('gravity at Rest, median over segments (g)', xyz('imu_g_', 'median'), len(res)),
             ('segments whose gravity lies closest to +Z',
-             int((res[['imu_g_x', 'imu_g_y', 'imu_g_z']].abs().idxmax(axis=1) == 'imu_g_z').sum()), len(res)),
+             int(((G.abs().idxmax(axis=1) == 'imu_g_z') & (G.imu_g_z > 0)).sum()), len(res)),
             ('tilt of the IMU from gravity at Rest (deg): median [IQR], max', f'{iqr(tilt, 1)}, {tilt.max():.1f}', len(res)),
             ('picking up: accY p1 / median / p99 (g), median over segments',
              ' / '.join(f'{pu[c].median():.2f}' for c in ('pickup_accY_p1', 'pickup_accY_p50', 'pickup_accY_p99')), len(pu)),
@@ -114,7 +117,7 @@ def summary(T, K):
             ('clipped samples / samples with data (all segments)',
              f'{int(T.gyro_clipped_samples.sum())} / {int(T.slots_with_data.sum())}', len(T)),
             ('CGX gravity at Rest, mean over segments (g)', xyz('cgx_g_'), len(res)),
-            ('IMU-to-CGX rotation, mean over Move segments (rows: IMU X, Y, Z; columns: CGX axes)',
+            ('IMU-to-CGX rotation, mean over Move segments of the 20-channel headset (rows: IMU X, Y, Z; columns: CGX axes)',
              np.array2string(Rp, precision=2, suppress_small=True).replace('\n', ' '), len(mv)),
             ('spread of that rotation over segments (deg): median, p95', f'{np.median(ang):.1f}, {np.percentile(ang, 95):.1f}', len(mv))]
     return pd.DataFrame(rows, columns=['item', 'value', 'n'])

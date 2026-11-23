@@ -10,6 +10,7 @@ Writes, for <setting> 40s_0.3-10Hz and 10s_0.3-10Hz (window length and band):
     imu_eeg_correlation_group_<setting>.csv        per movement, speed and channel
     imu_eeg_correlation_axis_speed_<setting>.csv   per movement and speed, mean over channels
     imu_eeg_correlation_speed_test_<setting>.csv   fast vs slow, paired t-test
+    imu_eeg_correlation_above_chance_<setting>.csv per movement, channels and participants above chance (Wilcoxon)
 With --grid, only imu_eeg_correlation_grid.csv (one row per window length and band).
 """
 import argparse
@@ -171,6 +172,21 @@ def trial_table(T, s):
     return pd.DataFrame(rows)
 
 
+def above_chance_test(tr):
+    """Per movement (both speeds) and sensor: channels whose mean rho over the trials is above chance, and participants
+    whose rho minus chance, averaged over channels and trials, is above zero (Wilcoxon signed-rank test)."""
+    rows = []
+    for mv in MOVEMENTS:
+        y = tr[tr.movement == mv]
+        for s, c in (('acc', 'Acc*'), ('gyro', 'Gyro*')):
+            rho = y[[f'{s}_star_{e}' for e in EEG20]].to_numpy()
+            ch = y[[f'chance_{s}_star_{e}' for e in EEG20]].to_numpy()
+            d = pd.Series((rho - ch).mean(1), index=y['sub'].to_numpy()).groupby(level=0).mean()
+            rows.append(dict(task=SHORT[mv], imu=c, channels_above_chance=int((rho.mean(0) > ch.mean(0)).sum()), n_channels=len(EEG20),
+                             subjects_above_chance=int((d > 0).sum()), n_subjects=len(d), wilcoxon_p=float(f'{stats.wilcoxon(d).pvalue:.2e}')))
+    return pd.DataFrame(rows)
+
+
 def final_tables(T, s):
     """Group, axis-speed and speed-test tables of one setting."""
     k = setting_name(s)
@@ -230,7 +246,10 @@ if __name__ == '__main__':
     else:
         for s in SETTINGS:
             k = setting_name(s)
-            trial_table(T, s).to_csv(out / f'imu_eeg_correlation_trials_{k}.csv', index=False)
+            tr = trial_table(T, s)
+            tr.to_csv(out / f'imu_eeg_correlation_trials_{k}.csv', index=False)
+            above = above_chance_test(tr)
+            above.to_csv(out / f'imu_eeg_correlation_above_chance_{k}.csv', index=False)
             group, axis, test = final_tables(T, s)
             group.to_csv(out / f'imu_eeg_correlation_group_{k}.csv', index=False)
             axis.to_csv(out / f'imu_eeg_correlation_axis_speed_{k}.csv', index=False)
@@ -238,3 +257,4 @@ if __name__ == '__main__':
             print(k)
             print(axis.drop(columns=[c for c in axis if c.startswith('r_')]).to_string(index=False))
             print(test[test.measure == 'rho above chance'].to_string(index=False))
+            print(above.to_string(index=False, formatters={'wilcoxon_p': '{:.2g}'.format}))
